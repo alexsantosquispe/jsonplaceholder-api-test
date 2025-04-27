@@ -7,9 +7,7 @@ interface PostDetailModalProps {
 }
 
 export const PostDetailModal = ({ postId, onClose }: PostDetailModalProps) => {
-  const { post, comments, isLoading } = usePostDetails(postId);
-
-  if (isLoading) return <>loading...</>;
+  const { post, comments } = usePostDetails(postId);
 
   return (
     <Modal onClose={onClose}>

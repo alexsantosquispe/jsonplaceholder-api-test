@@ -46,27 +46,6 @@ It is ideal for developers looking for a simple, scalable example of data fetchi
 
 ---
 
-## 📂 Project Structure
-
-```
-jsonplaceholder-api-test/
-│
-├── src/
-│   ├── api/
-│   │   └── jsonplaceholder.ts
-│   ├── components/
-│   │   └── UsersList.tsx
-│   ├── App.tsx
-│   └── main.tsx
-├── public/
-├── tailwind.config.ts
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-```
-
----
-
 ## 🛠️ Getting Started
 
 ### Prerequisites
