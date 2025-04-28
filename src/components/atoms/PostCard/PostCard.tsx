@@ -8,10 +8,12 @@ export const PostCard = ({ id, title, body }: PostCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onClose = () => {
-    setIsOpen((prev) => !prev);
+    document.body.style.overflow = 'unset';
+    setIsOpen(false);
   };
 
   const openModal = () => {
+    document.body.style.overflow = 'hidden';
     setIsOpen(true);
   };
 

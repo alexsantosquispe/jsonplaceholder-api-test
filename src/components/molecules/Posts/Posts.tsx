@@ -27,7 +27,7 @@ export const Posts = () => {
   if (error || !data?.length) return null;
 
   return (
-    <div className="flex flex-col gap-y-6 rounded-lg border border-gray-200 px-6 py-6">
+    <div className="flex flex-col gap-y-6 rounded-lg px-6 md:border md:border-gray-200 md:py-6">
       <div className="flex gap-4">
         <span className="rounded-sm bg-green-100 px-2 py-1 text-base font-normal text-green-800">
           GET

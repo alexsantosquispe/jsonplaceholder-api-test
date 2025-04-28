@@ -4,18 +4,20 @@ import { Post, PostComment } from '../../../../types';
 
 export const usePostDetails = (postId: string) => {
   const { data: post, isLoading: isPostLoading } = useQuery<Post>({
-    queryKey: ['postById'],
+    queryKey: ['postById', postId],
     queryFn: () => getPostById(postId),
-    staleTime: 0
+    staleTime: 0,
+    enabled: !!postId
   });
 
   const { data: comments, isLoading: isCommentsLoading } = useQuery<
     PostComment[]
   >({
-    queryKey: ['comments'],
+    queryKey: ['comments', postId],
     queryFn: () => getCommentsByPostId(postId),
-    staleTime: 0
+    staleTime: 0,
+    enabled: !!postId
   });
 
-  return { post, comments, isLoading: isPostLoading || isCommentsLoading };
+  return { post, comments, isPostLoading, isCommentsLoading };
 };

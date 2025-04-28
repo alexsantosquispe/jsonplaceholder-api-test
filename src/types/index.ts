@@ -12,3 +12,7 @@ export interface PostComment {
   email: string;
   body: string;
 }
+
+export interface BaseIconProps {
+  className?: string;
+}
