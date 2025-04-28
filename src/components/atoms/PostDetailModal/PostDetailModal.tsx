@@ -1,3 +1,4 @@
+import useKeyPress from '../../../hooks/useKeyPress';
 import { Comments } from '../../molecules/Comments/Comments';
 import { Modal } from '../Modal/Modal';
 import { SkeletonForModal } from '../Skeleton/Skeleton';
@@ -29,6 +30,8 @@ export const PostDetail = ({ postId }: { postId: string }) => {
 };
 
 export const PostDetailModal = ({ postId, onClose }: PostDetailModalProps) => {
+  useKeyPress('Escape', onClose);
+
   return (
     <Modal onClose={onClose}>
       <PostDetail postId={postId} />
