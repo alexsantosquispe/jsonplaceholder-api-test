@@ -14,3 +14,23 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins), Helvetica, sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 0.375rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
