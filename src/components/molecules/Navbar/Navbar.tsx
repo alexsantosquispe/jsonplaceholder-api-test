@@ -1,9 +1,10 @@
+import cn from 'clsx';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { NavbarLogo } from './components/NavbarLogo';
-import cn from 'clsx';
-import { NavbarMenu } from './components/NavbarMenu';
+
 import { MenuButton } from './components/MenuButton';
+import { NavbarLogo } from './components/NavbarLogo';
+import { NavbarMenu } from './components/NavbarMenu';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

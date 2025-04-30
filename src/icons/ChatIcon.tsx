@@ -1,4 +1,5 @@
 import { twMerge } from 'tailwind-merge';
+
 import { SvgIconProps } from '../types';
 
 export const ChatIcon = ({ className = '' }: SvgIconProps) => {

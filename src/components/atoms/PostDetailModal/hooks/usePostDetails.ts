@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+
 import { getCommentsByPostId, getPostById } from '../../../../services/api';
 import { Post, PostComment } from '../../../../types';
 

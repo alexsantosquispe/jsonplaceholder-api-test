@@ -1,9 +1,10 @@
-import { Fragment } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { Fragment } from 'react';
+
 import { getAlbums } from '../../../services/api';
 import { Album } from '../../../types';
-import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
 import { AlbumItem } from '../../atoms/AlbumItem/AlbumItem';
+import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
 
 const GRID_STYLE =
   'grid gap-2 md:gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5';

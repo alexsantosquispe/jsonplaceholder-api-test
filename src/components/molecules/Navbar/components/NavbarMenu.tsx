@@ -1,6 +1,7 @@
-import { twMerge } from 'tailwind-merge';
-import { NavbarLink } from './NavbarLink';
 import cn from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+import { NavbarLink } from './NavbarLink';
 
 interface NavbarMenuProps {
   isMenuOpen: boolean;

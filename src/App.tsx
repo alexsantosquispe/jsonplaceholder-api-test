@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
 import { Navbar } from './components/molecules/Navbar/Navbar';
-import { Posts } from './components/organisms/Posts/Posts';
 import { Albums } from './components/organisms/Albums/Albums';
+import { Posts } from './components/organisms/Posts/Posts';
 import { Todos } from './components/organisms/Todos/Todos';
 
 function App() {
