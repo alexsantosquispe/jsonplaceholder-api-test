@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { Fragment } from 'react';
 
 import { getTodos } from '../../../services/api';
 import { Todo } from '../../../types';

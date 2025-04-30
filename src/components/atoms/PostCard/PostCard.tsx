@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { Post } from '../../../types';
 import { PostDetailModal } from '../PostDetailModal/PostDetailModal';
 

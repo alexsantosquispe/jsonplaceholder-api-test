@@ -120,3 +120,64 @@ Distributed under the MIT License. See `LICENSE` for more information.
 # 📢 Short description for GitHub "About" section:
 
 > Example project fetching and managing data from JSONPlaceholder using React Query, Axios, Tailwind CSS, and TypeScript. Built with Vite for a fast and modern developer experience.
+
+# VS Code Extensions
+
+This project includes recommended VS Code extensions to enhance your development experience. When you open the project in VS Code, you'll be prompted to install these extensions. Here's what each extension does:
+
+## Recommended Extensions
+
+1. **ESLint** (`dbaeumer.vscode-eslint`)
+
+   - Integrates ESLint into VS Code
+   - Provides real-time linting feedback
+   - Automatically fixes linting issues on save
+
+2. **Prettier** (`esbenp.prettier-vscode`)
+
+   - Code formatter that enforces consistent style
+   - Supports JavaScript, TypeScript, CSS, and more
+   - Formats code on save
+
+3. **Tailwind CSS IntelliSense** (`bradlc.vscode-tailwindcss`)
+
+   - Provides autocomplete, syntax highlighting, and linting for Tailwind CSS
+   - Shows preview of colors and spacing values
+   - Hover previews of complete class names
+
+4. **TypeScript Next** (`ms-vscode.vscode-typescript-next`)
+
+   - Enhanced TypeScript support
+   - Better type checking and IntelliSense
+   - Improved error reporting
+
+5. **Auto Rename Tag** (`formulahendry.auto-rename-tag`)
+
+   - Automatically renames paired HTML/XML tags
+   - Works with JSX/TSX files
+   - Saves time when refactoring component names
+
+6. **Path Intellisense** (`christian-kohler.path-intellisense`)
+
+   - Autocompletes filenames in import statements
+   - Works with relative and absolute paths
+   - Supports various file extensions
+
+7. **Color Highlight** (`naumovs.color-highlight`)
+
+   - Highlights web colors in your code
+   - Shows color previews
+   - Supports hex, rgb, hsl, and named colors
+
+8. **Code Spell Checker** (`streetsidesoftware.code-spell-checker`)
+   - Catches common spelling errors in code
+   - Supports multiple languages
+   - Customizable dictionary
+
+## Installation
+
+These extensions will be automatically recommended when you open the project in VS Code. You can install them by:
+
+1. Opening the project in VS Code
+2. Clicking "Install All" when prompted
+3. Or manually installing them from the Extensions view (Ctrl+Shift+X / Cmd+Shift+X)

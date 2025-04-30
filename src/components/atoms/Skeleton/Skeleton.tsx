@@ -1,5 +1,6 @@
 import { Fragment } from 'react/jsx-runtime';
 import { twMerge } from 'tailwind-merge';
+
 import { AvatarIcon } from '../../../icons';
 
 interface SkeletonProps {

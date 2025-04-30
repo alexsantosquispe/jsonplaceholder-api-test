@@ -1,6 +1,6 @@
+import cn from 'clsx';
 import { NavLink, NavLinkRenderProps } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
-import cn from 'clsx';
 
 interface NavbarLinkProps {
   label: string;

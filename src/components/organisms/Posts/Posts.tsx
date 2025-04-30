@@ -1,10 +1,11 @@
+import { useQuery } from '@tanstack/react-query';
 import { Fragment } from 'react';
+
 import { getPosts } from '../../../services/api';
 import { Post } from '../../../types';
-import { PostCard } from '../../atoms/PostCard/PostCard';
-import { useQuery } from '@tanstack/react-query';
-import { Skeleton } from '../../atoms/Skeleton/Skeleton';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
+import { PostCard } from '../../atoms/PostCard/PostCard';
+import { Skeleton } from '../../atoms/Skeleton/Skeleton';
 
 const GRID_STYLE = 'grid gap-4 md:grid-cols-2 lg:grid-cols-4';
 

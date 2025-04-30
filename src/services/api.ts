@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { Album, Photo, Post, PostComment, Todo, User } from '../types';
 
 const apiClient = axios.create({
