@@ -86,6 +86,108 @@ It is ideal for developers looking for a simple, scalable example of data fetchi
 
 ---
 
+## 📁 Project Structure
+
+```
+src/
+├── assets/         # Static assets like images, fonts, etc.
+├── components/     # React components organized using Atomic Design
+│   ├── atoms/     # Basic building blocks (buttons, inputs, etc.)
+│   ├── molecules/ # Combinations of atoms (forms, cards, etc.)
+│   └── organisms/ # Complex components (sections, layouts)
+├── context/       # React Context providers and hooks
+├── hooks/         # Custom React hooks
+├── icons/         # SVG icons and icon components
+├── services/      # API services and data fetching logic
+├── types/         # TypeScript type definitions
+├── App.tsx        # Main application component
+└── main.tsx       # Application entry point
+
+Configuration Files:
+├── .storybook/    # Storybook configuration
+├── .vscode/       # VS Code settings and recommendations
+├── jest.config.ts # Jest testing configuration
+├── vite.config.ts # Vite build configuration
+└── tailwind.config.js # Tailwind CSS configuration
+```
+
+### Key Directories
+
+- **components/**: Uses Atomic Design methodology
+
+  - `atoms/`: Smallest, indivisible components (buttons, inputs)
+  - `molecules/`: Simple combinations of atoms (search forms, comment cards)
+  - `organisms/`: Complex combinations of molecules and atoms (navigation bars, post lists)
+
+- **services/**: Contains API integration logic and data fetching services using Axios and React Query
+
+- **context/**: React Context providers for global state management
+
+- **hooks/**: Reusable custom React hooks for shared logic
+
+- **types/**: TypeScript interfaces, types, and enums shared across the application
+
+### Architecture Decisions
+
+- **Atomic Design**: Components are organized following atomic design principles for better scalability and reusability
+- **Type Safety**: Comprehensive TypeScript types for enhanced development experience
+- **API Integration**: Centralized API services with React Query for efficient data fetching and caching
+- **Testing**: Jest and React Testing Library for unit and integration tests
+- **Documentation**: Storybook for component documentation and visual testing
+
+### Component Structure Best Practices
+
+Each component should follow this file structure:
+
+```
+components/
+└── ComponentName/
+    ├── ComponentName.tsx        # Main component file
+    ├── ComponentName.test.tsx   # Test file
+    └── ComponentName.stories.ts # Storybook file
+```
+
+### Best Practices
+
+1. **Component Organization**
+
+   - Use PascalCase for component names and files
+   - Keep components focused and single-responsibility
+   - Export components as named exports
+   - Define interfaces/types within the component file or in a central types directory
+
+2. **Testing**
+
+   - Test component rendering
+   - Test user interactions
+   - Test error states
+   - Use meaningful test descriptions
+   - Use data-testid for test selectors
+
+3. **Storybook**
+
+   - Document all possible states
+   - Include default and edge cases
+   - Use args for dynamic props
+   - Add documentation in comments
+   - Enable autodocs for automatic documentation
+
+4. **TypeScript**
+
+   - Define strict prop types
+   - Use interfaces for props
+   - Use generics when needed
+   - Avoid any type
+   - Keep types close to where they're used
+
+5. **Props**
+   - Use descriptive prop names
+   - Make props required unless optional
+   - Provide default props when needed
+   - Document complex props
+
+---
+
 ## 🌐 API Source
 
 - [JSONPlaceholder API](https://jsonplaceholder.typicode.com/)
@@ -96,6 +198,56 @@ It is ideal for developers looking for a simple, scalable example of data fetchi
 
 ```bash
 npm install axios @tanstack/react-query tailwindcss
+```
+
+---
+
+## 📜 Available Scripts
+
+### Development
+
+```bash
+# Start the development server
+npm run dev
+
+# Build the project for production
+npm run build
+
+# Preview the production build locally
+npm run preview
+```
+
+### Code Quality
+
+```bash
+# Run ESLint to check for code issues
+npm run lint
+
+# Run ESLint and automatically fix issues
+npm run lint:fix
+
+# Format code using Prettier
+npm run format
+```
+
+### Testing
+
+```bash
+# Run Jest tests
+npm run test
+
+# Update Jest snapshots
+npm run test:update
+```
+
+### Documentation
+
+```bash
+# Start Storybook development server
+npm run storybook
+
+# Build Storybook for production
+npm run build-storybook
 ```
 
 ---
