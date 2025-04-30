@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EndpointTitle Styles should match snapshot 1`] = `
+<div>
+  <div
+    class="flex gap-4"
+  >
+    <span
+      class="rounded-sm bg-green-100 px-2 py-1 text-base font-normal text-green-800 uppercase dark:bg-green-950 dark:text-green-400"
+    >
+      GET
+    </span>
+    <h1
+      class="text-2xl font-bold dark:text-white"
+    >
+      Posts
+    </h1>
+  </div>
+</div>
+`;
