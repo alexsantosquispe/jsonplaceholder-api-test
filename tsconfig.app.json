@@ -30,6 +30,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["src/**/*", "*.ts", "*.tsx"],
+  "include": ["src/**/*", "*.ts", "*.tsx", ".storybook/**/*"],
   "exclude": ["node_modules"]
 }
