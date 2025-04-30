@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { getTodos } from '../../../services/api';
 import { Todo } from '../../../types';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
-import { TodoItem } from '../../atoms/TodoItem';
+import { TodoItem } from '../../atoms/TodoItem/TodoItem';
 
 export const Todos = () => {
   const { data, error } = useQuery<Todo[]>({

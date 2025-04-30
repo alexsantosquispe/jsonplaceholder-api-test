@@ -1,7 +1,7 @@
 import cn from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-import { Todo } from '../../types';
+import { Todo } from '../../../types';
 
 type TodoItemProps = Omit<Todo, 'userId'>;
 

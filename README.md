@@ -6,6 +6,8 @@
 [![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)](https://axios-http.com/)
 [![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)](https://tanstack.com/query/latest)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
+[![Testing Library](https://img.shields.io/badge/Testing_Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/)
 
 ---
 
@@ -33,6 +35,9 @@ It is ideal for developers looking for a simple, scalable example of data fetchi
 - React Query (@tanstack/react-query)
 - Tailwind CSS
 - ESLint + Prettier
+- Jest
+- React Testing Library
+- Testing Library Jest DOM
 
 ---
 
@@ -98,28 +103,9 @@ npm install axios @tanstack/react-query tailwindcss
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!  
-If you find a bug or have an idea for improvement:
-
-- Fork the project.
-- Create your feature branch (`git checkout -b feature/awesome-feature`).
-- Commit your changes (`git commit -m 'Add awesome feature'`).
-- Push to the branch (`git push origin feature/awesome-feature`).
-- Open a Pull Request.
-
----
-
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-# 📢 Short description for GitHub "About" section:
-
-> Example project fetching and managing data from JSONPlaceholder using React Query, Axios, Tailwind CSS, and TypeScript. Built with Vite for a fast and modern developer experience.
 
 # VS Code Extensions
 
