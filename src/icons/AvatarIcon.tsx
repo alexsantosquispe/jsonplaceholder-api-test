@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge';
-import { BaseIconProps } from '../types';
+import { SvgIconProps } from '../types';
 
-export const AvatarIcon = ({ className = '' }: BaseIconProps) => {
+export const AvatarIcon = ({ className = '' }: SvgIconProps) => {
   return (
     <div className="relative h-10 w-10 overflow-hidden rounded-full bg-gray-100">
       <svg

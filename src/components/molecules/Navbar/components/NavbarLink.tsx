@@ -1,0 +1,27 @@
+import { NavLink, NavLinkRenderProps } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
+import cn from 'clsx';
+
+interface NavbarLinkProps {
+  label: string;
+  path: string;
+  onClick?: () => void;
+}
+
+export const NavbarLink = ({ label, path, onClick }: NavbarLinkProps) => {
+  const linkActiveHandler = ({ isActive }: NavLinkRenderProps) =>
+    twMerge(
+      'w-full py-3 px-4 md:w-fit',
+      cn({ 'text-black': isActive, 'hover:text-black': !isActive })
+    );
+
+  return (
+    <NavLink
+      to={path}
+      className={linkActiveHandler}
+      onClick={onClick ? onClick : undefined}
+    >
+      {label}
+    </NavLink>
+  );
+};

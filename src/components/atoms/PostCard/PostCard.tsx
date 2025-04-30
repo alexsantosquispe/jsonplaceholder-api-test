@@ -21,7 +21,7 @@ export const PostCard = ({ id, title, body }: PostCardProps) => {
     <>
       <a
         key={id}
-        className="flex h-auto w-full flex-col gap-4 rounded-lg border border-gray-200 bg-white px-4 py-6 shadow-sm hover:cursor-pointer hover:bg-gray-100"
+        className="flex h-auto w-full flex-col gap-4 rounded-lg border border-gray-200 bg-white px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
         onClick={openModal}
       >
         <h4 className="text-base leading-7 font-semibold capitalize">
