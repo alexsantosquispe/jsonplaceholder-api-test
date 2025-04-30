@@ -16,13 +16,11 @@ export const PostDetail = ({ postId }: { postId: string }) => {
   if (isPostLoading || isCommentsLoading) return <SkeletonForModal />;
 
   return post ? (
-    <div className="flex w-full flex-col gap-6 rounded-lg px-4 md:gap-8">
-      <h3 className="line-clamp-5 text-lg leading-8 font-medium capitalize md:text-4xl md:leading-11">
+    <div className="flex w-full flex-col gap-6 rounded-lg px-4 md:gap-8 dark:text-white">
+      <h3 className="line-clamp-5 text-xl leading-8 font-bold capitalize md:text-4xl md:leading-11">
         {post?.title}
       </h3>
-      <p className="text-base leading-7 font-normal text-gray-800">
-        {post.body}.
-      </p>
+      <p className="text-base leading-7 font-normal">{post.body}.</p>
 
       {comments && <Comments comments={comments} />}
     </div>

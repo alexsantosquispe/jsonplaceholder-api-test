@@ -7,16 +7,16 @@ export const AlbumItem = ({ id, title }: AlbumItemProps) => {
   return (
     <div
       key={id}
-      className="flex h-[5rem] items-center gap-3 rounded-lg border border-gray-200 pr-1 pl-3 md:gap-4"
+      className="flex h-[5rem] items-center gap-3 rounded-lg border border-gray-200 pr-2 pl-3 md:gap-4 dark:border-white/30 dark:text-white"
     >
       <div>
-        <FolderIcon className="size-6" />
+        <FolderIcon className="size-6 dark:fill-yellow-400 dark:text-yellow-400" />
       </div>
-      <span className="line-clamp-2 w-full text-xs font-medium uppercase">
+      <span className="line-clamp-2 w-full text-xs font-semibold uppercase">
         {title}
       </span>
-      <div className="p-2 hover:cursor-pointer hover:rounded-md hover:bg-gray-100">
-        <ChevronRightIcon className="size-4 text-black/70" />
+      <div className="p-2 hover:cursor-pointer hover:rounded-md hover:bg-gray-100 dark:hover:bg-white/10">
+        <ChevronRightIcon className="size-4 font-bold text-black/70 dark:text-yellow-400" />
       </div>
     </div>
   );

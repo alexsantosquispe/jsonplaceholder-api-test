@@ -20,18 +20,18 @@ export const CommentCard = ({ name, email, body }: CommentCardProps) => {
           </div>
 
           <div className="flex w-full flex-col gap-2">
-            <p className="text-[0.8125rem] leading-6 font-normal text-gray-800 md:text-sm">
+            <p className="text-[0.8125rem] leading-6 font-normal md:text-sm">
               {body}.
             </p>
 
             <div className="flex space-x-8">
-              <div className="flex items-center gap-1 text-xs text-gray-400">
+              <div className="flex items-center gap-1 text-xs text-gray-400 dark:text-white/50">
                 <HeartIcon />
                 {/* This length is only used to simulate the counter */}
                 {`${name.length}`}
               </div>
-              <div className="flex items-center gap-1 text-xs text-gray-400">
-                <ChatIcon className="text-gray-400" />
+              <div className="flex items-center gap-1 text-xs text-gray-400 dark:text-white/50">
+                <ChatIcon />
                 {/* This length is only used to simulate the counter */}
                 {`${email.length}`}
               </div>

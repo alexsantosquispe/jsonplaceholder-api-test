@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import cn from 'clsx';
 import { NavbarLogo } from './components/NavbarLogo';
+import cn from 'clsx';
 import { NavbarMenu } from './components/NavbarMenu';
 import { MenuButton } from './components/MenuButton';
 
@@ -17,12 +17,14 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="fixed flex w-full justify-center border-b border-b-gray-100 bg-white/60 backdrop-blur-sm md:h-[4rem]">
+    <header className="fixed flex w-full justify-center border-b border-b-gray-100 bg-white/60 backdrop-blur-sm md:h-[4rem] dark:border-b-white/10 dark:bg-black/70">
       <nav className="flex w-full max-w-[80rem] flex-col items-center justify-between md:flex-row md:px-6">
         <div
           className={twMerge(
             'flex w-full items-center justify-between py-2 md:border-none',
-            cn({ 'border-b border-b-gray-100': isMenuOpen })
+            cn({
+              'border-b border-b-gray-100 dark:border-b-white/10': isMenuOpen
+            })
           )}
         >
           <NavbarLogo />

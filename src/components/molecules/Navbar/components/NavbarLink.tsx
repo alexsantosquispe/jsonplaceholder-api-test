@@ -12,7 +12,10 @@ export const NavbarLink = ({ label, path, onClick }: NavbarLinkProps) => {
   const linkActiveHandler = ({ isActive }: NavLinkRenderProps) =>
     twMerge(
       'w-full py-3 px-4 md:w-fit',
-      cn({ 'text-black': isActive, 'hover:text-black': !isActive })
+      cn({
+        'text-black dark:text-white': isActive,
+        'hover:text-black dark:hover:text-white': !isActive
+      })
     );
 
   return (

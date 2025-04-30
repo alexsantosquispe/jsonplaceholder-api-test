@@ -21,15 +21,13 @@ export const PostCard = ({ id, title, body }: PostCardProps) => {
     <>
       <a
         key={id}
-        className="flex h-auto w-full flex-col gap-4 rounded-lg border border-gray-200 bg-white px-4 py-6 hover:cursor-pointer hover:bg-gray-100"
+        className="flex h-auto w-full flex-col gap-4 rounded-lg border border-gray-200 px-4 py-6 text-black hover:cursor-pointer hover:border-gray-300 hover:bg-gray-50 dark:border-white/30 dark:text-white dark:hover:border-white/20 dark:hover:bg-white/10"
         onClick={openModal}
       >
         <h4 className="text-base leading-7 font-semibold capitalize">
           {title}
         </h4>
-        <p className="text-sm leading-6 font-normal text-gray-800 normal-case">
-          {body}
-        </p>
+        <p className="text-sm leading-6 font-normal normal-case">{body}.</p>
       </a>
       {isOpen && <PostDetailModal postId={String(id)} onClose={onClose} />}
     </>

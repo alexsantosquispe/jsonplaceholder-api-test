@@ -17,7 +17,7 @@ export const Posts = () => {
   if (isLoading) {
     return (
       <Skeleton
-        countItems={12}
+        countItems={15}
         classNames={{
           container: GRID_STYLE
         }}
@@ -28,7 +28,7 @@ export const Posts = () => {
   if (error || !data?.length) return null;
 
   return (
-    <div className="flex flex-col gap-y-6 rounded-lg px-4 md:px-6 md:py-6">
+    <div className="flex flex-col gap-y-6 rounded-lg px-4 md:px-6 md:py-6 dark:text-white">
       <EndpointTitle methodLabel="GET" label="POSTS" />
 
       <div className={GRID_STYLE}>

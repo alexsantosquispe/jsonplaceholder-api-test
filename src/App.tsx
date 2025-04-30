@@ -7,7 +7,7 @@ import { Todos } from './components/organisms/Todos/Todos';
 
 function App() {
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col dark:bg-black">
       <Navbar />
       <main className="mt-[4rem] flex max-w-[80rem] justify-center self-center py-6">
         <Routes>

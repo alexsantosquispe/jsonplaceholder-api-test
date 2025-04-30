@@ -12,7 +12,7 @@ const HeaderModal = ({ onClose }: Pick<ModalProps, 'onClose'>) => {
   return (
     <div className="flex w-full justify-end gap-8 px-4 py-2">
       <button
-        className="self-end text-gray-700 hover:cursor-pointer hover:text-black"
+        className="self-end text-gray-700 hover:cursor-pointer hover:text-black dark:text-white/70 dark:hover:text-white"
         onClick={onClose}
       >
         &#x2715;
@@ -56,8 +56,8 @@ export const Modal = ({
   containerClassName
 }: ModalProps) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/80">
-      <div className="mx-4 flex h-9/10 w-full flex-col rounded-lg bg-white md:w-3/4 md:pb-8 lg:max-h-[35rem] lg:min-h-[32rem] lg:w-1/2">
+    <div className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm dark:bg-black/40">
+      <div className="m-4 flex h-8/10 w-full flex-col rounded-lg border border-gray-100 bg-white md:w-3/4 md:pb-8 lg:max-h-[35rem] lg:min-h-[40rem] lg:w-1/2 dark:border-white/10 dark:bg-black">
         <HeaderModal onClose={onClose} />
 
         <div
