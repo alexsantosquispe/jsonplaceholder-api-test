@@ -55,6 +55,7 @@ export const SkeletonCommentItem = () => {
           <div className={TEXT_LINE_STYLE}></div>
           <div className={TEXT_LINE_STYLE}></div>
           <div className={TEXT_LINE_STYLE}></div>
+          <div className={TEXT_LINE_STYLE}></div>
         </div>
       </div>
     </div>
@@ -71,12 +72,13 @@ export const SkeletonForModal = () => {
         <div className={TEXT_LINE_STYLE}></div>
         <div className={TEXT_LINE_STYLE}></div>
         <div className={TEXT_LINE_STYLE}></div>
+        <div className={TEXT_LINE_STYLE}></div>
         <div className={twMerge(TEXT_LINE_STYLE, 'max-w-7/8')}></div>
         <div className={twMerge(TEXT_LINE_STYLE, 'mb-4 max-w-2/3')}></div>
 
         <div className="flex w-full flex-col gap-y-4 py-4">
           <div className={twMerge(TEXT_LINE_STYLE, 'h-2.5 w-16')}></div>
-
+          <SkeletonCommentItem />
           <SkeletonCommentItem />
         </div>
       </div>

@@ -1,5 +1,17 @@
-import { ChatIcon } from './ChatIcon';
-import { HeartIcon } from './HeartIcon';
 import { AvatarIcon } from './AvatarIcon';
+import { ChatIcon } from './ChatIcon';
+import { ChevronRightIcon } from './ChevronRightIcon';
+import { CloseIcon } from './CloseIcon';
+import { HeartIcon } from './HeartIcon';
+import { FolderIcon } from './FolderIcon';
+import { MenuIcon } from './MenuIcon';
 
-export { ChatIcon, HeartIcon, AvatarIcon };
+export {
+  AvatarIcon,
+  ChatIcon,
+  ChevronRightIcon,
+  CloseIcon,
+  HeartIcon,
+  FolderIcon,
+  MenuIcon
+};

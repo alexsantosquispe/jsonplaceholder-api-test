@@ -1,0 +1,23 @@
+import { twMerge } from 'tailwind-merge';
+import { NavbarLink } from './NavbarLink';
+import cn from 'clsx';
+
+interface NavbarMenuProps {
+  isMenuOpen: boolean;
+  onSelectOption: () => void;
+}
+
+export const NavbarMenu = ({ isMenuOpen, onSelectOption }: NavbarMenuProps) => {
+  return (
+    <div
+      className={twMerge(
+        'flex w-full flex-col items-start overflow-hidden md:flex-row md:items-center md:justify-end md:gap-x-2 md:text-black/55',
+        cn({ 'h-0 md:h-auto': !isMenuOpen, 'h-auto': isMenuOpen })
+      )}
+    >
+      <NavbarLink label="Posts" path="/" onClick={onSelectOption} />
+      <NavbarLink label="Albums" path="/albums" onClick={onSelectOption} />
+      <NavbarLink label="Todos" path="/todos" onClick={onSelectOption} />
+    </div>
+  );
+};
