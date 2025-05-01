@@ -7,6 +7,7 @@ import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 import reactPlugin from 'eslint-plugin-react';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import importPlugin from 'eslint-plugin-import';
+import unusedImports from 'eslint-plugin-unused-imports';
 
 export default [
   {
@@ -35,7 +36,8 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'jsx-a11y': jsxA11yPlugin,
-      import: importPlugin
+      import: importPlugin,
+      'unused-imports': unusedImports
     },
     settings: {
       'import/parsers': {
@@ -53,18 +55,88 @@ export default [
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      ...reactPlugin.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
       ],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' }
+      '@typescript-eslint/no-unused-vars': 'error',
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_'
+        }
       ],
+      'no-shadow': 'off',
+      '@typescript-eslint/no-shadow': ['error'],
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-unused-vars': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      '@typescript-eslint/no-magic-numbers': [
+        'warn',
+        {
+          ignore: [-1, 0, 1, 2],
+          ignoreEnums: true,
+          ignoreNumericLiteralTypes: true,
+          ignoreReadonlyClassProperties: true,
+          ignoreTypeIndexes: true,
+          ignoreDefaultValues: true,
+          ignoreArrayIndexes: true,
+          enforceConst: true
+        }
+      ],
+      // JSX specific rules
+      'react/jsx-boolean-value': ['error', 'never'],
+      'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
+      'react/jsx-closing-tag-location': 'error',
+      'react/jsx-curly-spacing': ['error', { when: 'never' }],
+      'react/jsx-equals-spacing': ['error', 'never'],
+      'react/jsx-first-prop-new-line': ['error', 'multiline'],
+      'react/jsx-fragments': ['error', 'syntax'],
+      'react/jsx-indent': ['error', 2],
+      'react/jsx-indent-props': ['error', 2],
+      'react/jsx-key': ['error', { checkFragmentShorthand: true }],
+      'react/jsx-max-props-per-line': [
+        'error',
+        { maximum: 1, when: 'multiline' }
+      ],
+      'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
+      'react/jsx-pascal-case': ['error', { allowAllCaps: false }],
+      'react/jsx-props-no-multi-spaces': 'error',
+      'react/jsx-tag-spacing': [
+        'error',
+        {
+          closingSlash: 'never',
+          beforeSelfClosing: 'always',
+          afterOpening: 'never',
+          beforeClosing: 'never'
+        }
+      ],
+      'react/jsx-wrap-multilines': [
+        'error',
+        {
+          declaration: 'parens-new-line',
+          assignment: 'parens-new-line',
+          return: 'parens-new-line',
+          arrow: 'parens-new-line',
+          condition: 'parens-new-line',
+          logical: 'parens-new-line',
+          prop: 'parens-new-line'
+        }
+      ],
+      'react/self-closing-comp': [
+        'error',
+        {
+          component: true,
+          html: true
+        }
+      ],
       'import/order': [
         'warn',
         {
