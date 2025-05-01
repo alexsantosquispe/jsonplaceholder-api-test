@@ -12,6 +12,7 @@
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 [![Testing Library](https://img.shields.io/badge/Testing_Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/)
 [![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
+[![Husky](https://img.shields.io/badge/Husky-000000?style=for-the-badge&logo=git&logoColor=white)](https://typicode.github.io/husky/)
 
 ---
 
@@ -22,11 +23,46 @@ It is ideal for developers looking for a simple, scalable example of data fetchi
 
 ## 📖 About the Project
 
-- 📡 Fetches user data from the [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) endpoint.
-- 🔄 Manages loading, error, and success states cleanly using React Query.
-- 🎨 Applies modern, responsive UI design with Tailwind CSS.
-- 🧹 Clean and maintainable code with TypeScript, ESLint, and Prettier.
-- ⚡ Fast development experience with Vite.
+This project serves as a comprehensive example of modern React application development, showcasing best practices in code organization, testing, and development workflow. Key features include:
+
+### Data Management & API Integration
+
+- 📡 Implements efficient data fetching using [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API
+- 🔄 Leverages React Query for powerful server-state management with built-in caching
+- 🎯 Demonstrates proper API error handling and loading states
+- 🔌 Uses Axios for type-safe HTTP requests
+
+### Development Experience
+
+- ⚡ Lightning-fast development with Vite bundler
+- 🧪 Comprehensive testing setup with Jest and React Testing Library
+- 📚 Component documentation and testing with Storybook
+- 🎨 Modern UI styling using Tailwind CSS with responsive design
+
+### Code Quality & Standards
+
+- 🧹 Strict TypeScript configuration for type safety
+- ✨ Automated code formatting with Prettier
+- 🚨 Extensive ESLint rules for code quality
+- 🔍 Pre-commit and pre-push hooks with Husky for:
+  - Linting checks
+  - Type checking
+  - Unit test verification
+  - Code formatting
+
+### Architecture & Organization
+
+- 🏗️ Follows Atomic Design principles for component organization
+- 📦 Modular and maintainable code structure
+- 🎯 Custom hooks for reusable logic
+- 🔄 Context-based state management where appropriate
+
+This project is ideal for developers looking to:
+
+- Learn modern React application architecture
+- Understand TypeScript best practices
+- Implement automated code quality tools
+- Set up a professional development workflow
 
 ---
 
@@ -44,6 +80,7 @@ It is ideal for developers looking for a simple, scalable example of data fetchi
 - Testing Library Jest DOM
 - ESLint + Prettier
 - Storybook
+- Husky (Git hooks)
 
 ---
 
@@ -89,43 +126,121 @@ It is ideal for developers looking for a simple, scalable example of data fetchi
 ## 📁 Project Structure
 
 ```
-src/
-├── assets/         # Static assets like images, fonts, etc.
-├── components/     # React components organized using Atomic Design
-│   ├── atoms/     # Basic building blocks (buttons, inputs, etc.)
-│   ├── molecules/ # Combinations of atoms (forms, cards, etc.)
-│   └── organisms/ # Complex components (sections, layouts)
-├── context/       # React Context providers and hooks
-├── hooks/         # Custom React hooks
-├── icons/         # SVG icons and icon components
-├── services/      # API services and data fetching logic
-├── types/         # TypeScript type definitions
-├── App.tsx        # Main application component
-└── main.tsx       # Application entry point
-
-Configuration Files:
-├── .storybook/    # Storybook configuration
-├── .vscode/       # VS Code settings and recommendations
-├── jest.config.ts # Jest testing configuration
-├── vite.config.ts # Vite build configuration
-└── tailwind.config.js # Tailwind CSS configuration
+├── src/                        # Source code
+│   ├── assets/                # Static assets (images, fonts, etc.)
+│   ├── components/            # React components (Atomic Design)
+│   │   ├── atoms/            # Basic building blocks
+│   │   │   ├── AlbumItem/    # Individual album display
+│   │   │   ├── CommentCard/  # Single comment component
+│   │   │   ├── EndpointTitle/# API endpoint title display
+│   │   │   ├── Modal/        # Reusable modal component
+│   │   │   ├── PostCard/     # Individual post display
+│   │   │   ├── PostDetailModal/ # Post details modal
+│   │   │   ├── Skeleton/     # Loading skeleton components
+│   │   │   └── TodoItem/     # Individual todo item
+│   │   ├── molecules/        # Combinations of atoms
+│   │   │   ├── Comments/     # Comments section
+│   │   │   └── Navbar/       # Navigation components
+│   │   └── organisms/        # Complex components
+│   │       ├── Albums/       # Albums section
+│   │       ├── Posts/        # Posts section
+│   │       └── Todos/        # Todos section
+│   ├── context/              # React Context definitions
+│   ├── hooks/                # Custom React hooks
+│   ├── icons/                # SVG icons and icon components
+│   ├── services/             # API and service integrations
+│   └── types/                # TypeScript type definitions
+│
+├── public/                   # Public static assets
+│
+├── .storybook/              # Storybook configuration
+├── .husky/                  # Git hooks configuration
+├── .vscode/                 # VS Code settings
+│
+├── Configuration Files
+│   ├── .eslintrc.cjs       # ESLint configuration
+│   ├── .prettierrc         # Prettier configuration
+│   ├── jest.config.ts      # Jest testing configuration
+│   ├── jest.setup.ts       # Jest setup file
+│   ├── tsconfig.json       # TypeScript configuration
+│   ├── tsconfig.app.json   # App-specific TS config
+│   ├── tsconfig.jest.json  # Jest-specific TS config
+│   ├── tsconfig.node.json  # Node-specific TS config
+│   ├── vite.config.ts      # Vite configuration
+│   └── tailwind.config.js  # Tailwind CSS configuration
 ```
 
 ### Key Directories
 
-- **components/**: Uses Atomic Design methodology
+#### Components (Atomic Design)
 
-  - `atoms/`: Smallest, indivisible components (buttons, inputs)
-  - `molecules/`: Simple combinations of atoms (search forms, comment cards)
-  - `organisms/`: Complex combinations of molecules and atoms (navigation bars, post lists)
+- **atoms/**: Smallest, indivisible components
 
-- **services/**: Contains API integration logic and data fetching services using Axios and React Query
+  - `AlbumItem/`: Display individual album information
+  - `CommentCard/`: Render single comment with user details
+  - `Modal/`: Reusable modal dialog component
+  - `PostCard/`: Display individual post with actions
+  - `Skeleton/`: Loading state placeholder components
+  - `TodoItem/`: Individual todo item with status
 
-- **context/**: React Context providers for global state management
+- **molecules/**: Combinations of atoms
 
-- **hooks/**: Reusable custom React hooks for shared logic
+  - `Comments/`: Comment section with list and form
+  - `Navbar/`: Navigation bar with routing and actions
 
-- **types/**: TypeScript interfaces, types, and enums shared across the application
+- **organisms/**: Complex, self-contained sections
+  - `Albums/`: Complete albums view with management
+  - `Posts/`: Full posts section with CRUD operations
+  - `Todos/`: Complete todos management interface
+
+#### Core Functionality
+
+- **context/**: Application-wide state management
+
+  - Theme context
+  - Authentication state
+  - Global UI state
+
+- **hooks/**: Reusable logic
+
+  - API data fetching hooks
+  - UI interaction hooks
+  - Utility hooks
+
+- **services/**: External integrations
+  - API client configuration
+  - API endpoints and methods
+  - Service utilities
+
+#### Configuration
+
+- **.storybook/**: Storybook setup and addons
+- **.husky/**: Git hooks for code quality
+- **.vscode/**: Editor settings and recommended extensions
+
+### File Organization Best Practices
+
+1. **Component Structure**
+
+   ```
+   ComponentName/
+   ├── index.ts           # Export file
+   ├── ComponentName.tsx  # Main component
+   ├── ComponentName.test.tsx    # Tests
+   ├── ComponentName.stories.tsx # Storybook
+   └── hooks/             # Component-specific hooks
+   ```
+
+2. **Testing Files**
+
+   - Co-located with components
+   - Snapshot tests in `__snapshots__/`
+   - E2E tests in separate directory
+
+3. **Type Definitions**
+   - Global types in `types/`
+   - Component-specific types with components
+   - API types in `services/types`
 
 ### Architecture Decisions
 
@@ -186,142 +301,53 @@ components/
    - Provide default props when needed
    - Document complex props
 
----
+### ESLint Rules and Best Practices
 
-## 🌐 API Source
+The project enforces strict code quality standards through ESLint with the following rule configurations:
 
-- [JSONPlaceholder API](https://jsonplaceholder.typicode.com/)
+#### TypeScript & General Rules
 
----
+- **`@typescript-eslint/no-unused-vars`**: Prevents unused variable declarations
+- **`@typescript-eslint/no-shadow`**: Prevents variable name shadowing
+- **`@typescript-eslint/no-explicit-any`**: Warns against using the `any` type
+- **`no-console`**: Only allows `console.warn` and `console.error`
+- **`@typescript-eslint/no-magic-numbers`**: Enforces constants for magic numbers with exceptions for common values (-1, 0, 1, 2)
 
-## 📦 Main Dependencies
+#### React & JSX Rules
 
-```bash
-npm install axios @tanstack/react-query tailwindcss
-```
+1. **Component Structure**
 
----
+   - **`react/react-in-jsx-scope`**: Disabled (not needed with new JSX transform)
+   - **`react/prop-types`**: Disabled (using TypeScript for prop validation)
+   - **`react/self-closing-comp`**: Enforces self-closing for components without children
 
-## 📜 Available Scripts
+2. **JSX Formatting**
 
-### Development
+   - **`react/jsx-boolean-value`**: Enforces shorthand boolean props
+   - **`react/jsx-closing-bracket-location`**: Ensures consistent closing bracket placement
+   - **`react/jsx-closing-tag-location`**: Enforces consistent closing tag location
+   - **`react/jsx-curly-spacing`**: No spaces inside curly braces
+   - **`react/jsx-equals-spacing`**: No spaces around equals in props
+   - **`react/jsx-indent`**: 2-space indentation
+   - **`react/jsx-indent-props`**: 2-space indentation for props
+   - **`react/jsx-max-props-per-line`**: One prop per line in multiline components
+   - **`react/jsx-pascal-case`**: Enforces PascalCase for component names
 
-```bash
-# Start the development server
-npm run dev
+3. **JSX Best Practices**
+   - **`react/jsx-key`**: Requires keys in array-rendered components
+   - **`react/jsx-no-duplicate-props`**: Prevents duplicate props
+   - **`react/jsx-fragments`**: Enforces fragment syntax
+   - **`react/jsx-wrap-multilines`**: Proper wrapping of multiline JSX
 
-# Build the project for production
-npm run build
+#### Import Rules
 
-# Preview the production build locally
-npm run preview
-```
-
-### Code Quality
-
-```bash
-# Run ESLint to check for code issues
-npm run lint
-
-# Run ESLint and automatically fix issues
-npm run lint:fix
-
-# Format code using Prettier
-npm run format
-```
-
-### Testing
-
-```bash
-# Run Jest tests
-npm run test
-
-# Update Jest snapshots
-npm run test:update
-```
-
-### Documentation
-
-```bash
-# Start Storybook development server
-npm run storybook
-
-# Build Storybook for production
-npm run build-storybook
-```
-
----
-
-## 🧪 How to Use
-
-1. After starting the project, you will see a simple user list rendered on the page.
-2. You can check loading and error states by simulating network errors.
-3. The UI is responsive and adapts to different screen sizes.
-4. Easily extend the project to consume other JSONPlaceholder endpoints (e.g., posts, comments).
-
----
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-# VS Code Extensions
-
-This project includes recommended VS Code extensions to enhance your development experience. When you open the project in VS Code, you'll be prompted to install these extensions. Here's what each extension does:
-
-## Recommended Extensions
-
-1. **ESLint** (`dbaeumer.vscode-eslint`)
-
-   - Integrates ESLint into VS Code
-   - Provides real-time linting feedback
-   - Automatically fixes linting issues on save
-
-2. **Prettier** (`esbenp.prettier-vscode`)
-
-   - Code formatter that enforces consistent style
-   - Supports JavaScript, TypeScript, CSS, and more
-   - Formats code on save
-
-3. **Tailwind CSS IntelliSense** (`bradlc.vscode-tailwindcss`)
-
-   - Provides autocomplete, syntax highlighting, and linting for Tailwind CSS
-   - Shows preview of colors and spacing values
-   - Hover previews of complete class names
-
-4. **TypeScript Next** (`ms-vscode.vscode-typescript-next`)
-
-   - Enhanced TypeScript support
-   - Better type checking and IntelliSense
-   - Improved error reporting
-
-5. **Auto Rename Tag** (`formulahendry.auto-rename-tag`)
-
-   - Automatically renames paired HTML/XML tags
-   - Works with JSX/TSX files
-   - Saves time when refactoring component names
-
-6. **Path Intellisense** (`christian-kohler.path-intellisense`)
-
-   - Autocompletes filenames in import statements
-   - Works with relative and absolute paths
-   - Supports various file extensions
-
-7. **Color Highlight** (`naumovs.color-highlight`)
-
-   - Highlights web colors in your code
-   - Shows color previews
-   - Supports hex, rgb, hsl, and named colors
-
-8. **Code Spell Checker** (`streetsidesoftware.code-spell-checker`)
-   - Catches common spelling errors in code
-   - Supports multiple languages
-   - Customizable dictionary
-
-## Installation
-
-These extensions will be automatically recommended when you open the project in VS Code. You can install them by:
-
-1. Opening the project in VS Code
-2. Clicking "Install All" when prompted
-3. Or manually installing them from the Extensions view (Ctrl+Shift+X / Cmd+Shift+X)
+1. **Import Organization**
+   - **`import/order`**: Enforces import grouping and alphabetical ordering:
+     - Built-in and external modules first
+     - Internal modules second
+     - Relative imports last
+     - Newlines between groups
+2. **Import Validation**
+   - **`import/no-unresolved`**: Ensures all imports can be resolved
+   - **`import/named`**: Validates named imports
+   - \*\*`

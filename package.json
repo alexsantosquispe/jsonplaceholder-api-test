@@ -11,6 +11,7 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write .",
     "test": "jest",
+    "test:coverage": "npm test -- --watchAll=false --coverage",
     "test:update": "jest --updateSnapshot",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
