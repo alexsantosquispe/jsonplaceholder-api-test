@@ -1,7 +1,7 @@
 import { QueryClient } from '@tanstack/react-query';
 
 const MILLISECONDS_IN_SECOND = 1000;
-const STALE_TIME_SECONDS = 10;
+const STALE_TIME_SECONDS = 30;
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -22,7 +22,7 @@ export const PostDetail = ({ postId }: { postId: string }) => {
       </h3>
       <p className="text-base leading-7 font-normal">{post.body}.</p>
 
-      {comments && <Comments comments={comments} />}
+      {comments && <Comments comments={comments || []} />}
     </div>
   ) : null;
 };
