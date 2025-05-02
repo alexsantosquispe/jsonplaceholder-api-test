@@ -5,20 +5,20 @@ import { getAlbums } from '../../../services/api';
 import { Album } from '../../../types';
 import { AlbumItem } from '../../atoms/AlbumItem/AlbumItem';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
+import { Skeleton } from '../../atoms/Skeleton/Skeleton';
 
 const GRID_STYLE =
   'grid gap-2 md:gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5';
 
 export const Albums = () => {
-  const { data, error } = useQuery<Album[]>({
+  const { data, error, isLoading } = useQuery<Album[]>({
     queryKey: ['albums'],
     queryFn: getAlbums
   });
 
-  //TODO: Complete the skeleton component for albums.
-  // if (isLoading) {
-  //   return <Skeleton countItems={12} classNames={{ container: GRID_STYLE }} />;
-  // }
+  if (isLoading) {
+    return <Skeleton countItems={12} classNames={{ container: GRID_STYLE }} />;
+  }
 
   if (error || !data?.length) return null;
 

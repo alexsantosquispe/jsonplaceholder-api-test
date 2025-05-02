@@ -11,7 +11,8 @@ interface SkeletonProps {
   };
 }
 
-const TEXT_LINE_STYLE = 'mb-2.5 min-w-60 h-2 w-full rounded-full bg-gray-200';
+const TEXT_LINE_STYLE =
+  'mb-2.5 min-w-60 h-2 w-full rounded-full bg-gray-200 dark:bg-white/15';
 
 export const SkeletonItem = ({ className = '' }: { className?: string }) => {
   return (

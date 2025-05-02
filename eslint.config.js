@@ -11,7 +11,13 @@ import tseslint from 'typescript-eslint';
 
 export default [
   {
-    ignores: ['dist/**', 'node_modules/**', '.eslintrc.cjs']
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '.eslintrc.cjs',
+      'coverage/**',
+      '.storybook-static/**'
+    ]
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,

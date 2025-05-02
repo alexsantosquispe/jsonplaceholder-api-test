@@ -8,6 +8,7 @@ import { PostCard } from '../../atoms/PostCard/PostCard';
 import { Skeleton } from '../../atoms/Skeleton/Skeleton';
 
 const GRID_STYLE = 'grid gap-4 md:grid-cols-2 lg:grid-cols-4';
+const SKELETON_COUNT_ITEMS = 15;
 
 export const Posts = () => {
   const { data, isLoading, error } = useQuery<Post[]>({
@@ -18,7 +19,7 @@ export const Posts = () => {
   if (isLoading) {
     return (
       <Skeleton
-        countItems={15}
+        countItems={SKELETON_COUNT_ITEMS}
         classNames={{
           container: GRID_STYLE
         }}

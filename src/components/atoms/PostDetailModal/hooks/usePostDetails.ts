@@ -7,7 +7,6 @@ export const usePostDetails = (postId: string) => {
   const { data: post, isLoading: isPostLoading } = useQuery<Post>({
     queryKey: ['postById', postId],
     queryFn: () => getPostById(postId),
-    staleTime: 0,
     enabled: !!postId
   });
 
@@ -16,7 +15,6 @@ export const usePostDetails = (postId: string) => {
   >({
     queryKey: ['comments', postId],
     queryFn: () => getCommentsByPostId(postId),
-    staleTime: 0,
     enabled: !!postId
   });
 

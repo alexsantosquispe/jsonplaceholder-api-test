@@ -21,9 +21,11 @@ export const getPostById = async (id: string): Promise<Post> => {
 };
 
 export const getCommentsByPostId = async (
-  id: string
+  postId: string
 ): Promise<PostComment[]> => {
-  const response = await apiClient.get<PostComment[]>(`/posts/${id}/comments`);
+  const response = await apiClient.get<PostComment[]>(
+    `/posts/${postId}/comments`
+  );
   return response.data;
 };
 
