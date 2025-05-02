@@ -5,7 +5,6 @@ import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -38,12 +37,11 @@ export default [
       }
     },
     plugins: {
+      import: importPlugin,
       react: reactPlugin,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      'jsx-a11y': jsxA11yPlugin,
-      import: importPlugin,
-      'unused-imports': unusedImports
+      'jsx-a11y': jsxA11yPlugin
     },
     settings: {
       'import/parsers': {
@@ -68,16 +66,9 @@ export default [
       ],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
-      'unused-imports/no-unused-imports': 'error',
-      'unused-imports/no-unused-vars': [
-        'error',
-        {
-          vars: 'all',
-          varsIgnorePattern: '^_',
-          args: 'after-used',
-          argsIgnorePattern: '^_'
-        }
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' }
       ],
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': ['error'],
@@ -144,7 +135,7 @@ export default [
         }
       ],
       'import/order': [
-        'warn',
+        'error',
         {
           groups: [
             ['builtin', 'external'],
