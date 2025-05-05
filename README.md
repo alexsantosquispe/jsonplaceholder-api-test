@@ -130,17 +130,7 @@ This project is ideal for developers looking to:
 │   ├── assets/                # Static assets (images, fonts, etc.)
 │   ├── components/            # React components (Atomic Design)
 │   │   ├── atoms/            # Basic building blocks
-│   │   │   ├── AlbumItem/    # Individual album display
-│   │   │   ├── CommentCard/  # Single comment component
-│   │   │   ├── EndpointTitle/# API endpoint title display
-│   │   │   ├── Modal/        # Reusable modal component
-│   │   │   ├── PostCard/     # Individual post display
-│   │   │   ├── PostDetailModal/ # Post details modal
-│   │   │   ├── Skeleton/     # Loading skeleton components
-│   │   │   └── TodoItem/     # Individual todo item
 │   │   ├── molecules/        # Combinations of atoms
-│   │   │   ├── Comments/     # Comments section
-│   │   │   └── Navbar/       # Navigation components
 │   │   └── organisms/        # Complex components
 │   │       ├── Albums/       # Albums section
 │   │       ├── Posts/        # Posts section
@@ -150,8 +140,6 @@ This project is ideal for developers looking to:
 │   ├── icons/                # SVG icons and icon components
 │   ├── services/             # API and service integrations
 │   └── types/                # TypeScript type definitions
-│
-├── public/                   # Public static assets
 │
 ├── .storybook/              # Storybook configuration
 ├── .husky/                  # Git hooks configuration
@@ -176,30 +164,15 @@ This project is ideal for developers looking to:
 
 - **atoms/**: Smallest, indivisible components
 
-  - `AlbumItem/`: Display individual album information
-  - `CommentCard/`: Render single comment with user details
-  - `Modal/`: Reusable modal dialog component
-  - `PostCard/`: Display individual post with actions
-  - `Skeleton/`: Loading state placeholder components
-  - `TodoItem/`: Individual todo item with status
-
 - **molecules/**: Combinations of atoms
 
-  - `Comments/`: Comment section with list and form
-  - `Navbar/`: Navigation bar with routing and actions
-
 - **organisms/**: Complex, self-contained sections
-  - `Albums/`: Complete albums view with management
-  - `Posts/`: Full posts section with CRUD operations
-  - `Todos/`: Complete todos management interface
 
 #### Core Functionality
 
 - **context/**: Application-wide state management
 
   - Theme context
-  - Authentication state
-  - Global UI state
 
 - **hooks/**: Reusable logic
 
@@ -211,36 +184,6 @@ This project is ideal for developers looking to:
   - API client configuration
   - API endpoints and methods
   - Service utilities
-
-#### Configuration
-
-- **.storybook/**: Storybook setup and addons
-- **.husky/**: Git hooks for code quality
-- **.vscode/**: Editor settings and recommended extensions
-
-### File Organization Best Practices
-
-1. **Component Structure**
-
-   ```
-   ComponentName/
-   ├── index.ts           # Export file
-   ├── ComponentName.tsx  # Main component
-   ├── ComponentName.test.tsx    # Tests
-   ├── ComponentName.stories.tsx # Storybook
-   └── hooks/             # Component-specific hooks
-   ```
-
-2. **Testing Files**
-
-   - Co-located with components
-   - Snapshot tests in `__snapshots__/`
-   - E2E tests in separate directory
-
-3. **Type Definitions**
-   - Global types in `types/`
-   - Component-specific types with components
-   - API types in `services/types`
 
 ### Architecture Decisions
 
@@ -261,93 +204,3 @@ components/
     ├── ComponentName.test.tsx   # Test file
     └── ComponentName.stories.ts # Storybook file
 ```
-
-### Best Practices
-
-1. **Component Organization**
-
-   - Use PascalCase for component names and files
-   - Keep components focused and single-responsibility
-   - Export components as named exports
-   - Define interfaces/types within the component file or in a central types directory
-
-2. **Testing**
-
-   - Test component rendering
-   - Test user interactions
-   - Test error states
-   - Use meaningful test descriptions
-   - Use data-testid for test selectors
-
-3. **Storybook**
-
-   - Document all possible states
-   - Include default and edge cases
-   - Use args for dynamic props
-   - Add documentation in comments
-   - Enable autodocs for automatic documentation
-
-4. **TypeScript**
-
-   - Define strict prop types
-   - Use interfaces for props
-   - Use generics when needed
-   - Avoid any type
-   - Keep types close to where they're used
-
-5. **Props**
-   - Use descriptive prop names
-   - Make props required unless optional
-   - Provide default props when needed
-   - Document complex props
-
-### ESLint Rules and Best Practices
-
-The project enforces strict code quality standards through ESLint with the following rule configurations:
-
-#### TypeScript & General Rules
-
-- **`@typescript-eslint/no-unused-vars`**: Prevents unused variable declarations
-- **`@typescript-eslint/no-shadow`**: Prevents variable name shadowing
-- **`@typescript-eslint/no-explicit-any`**: Warns against using the `any` type
-- **`no-console`**: Only allows `console.warn` and `console.error`
-- **`@typescript-eslint/no-magic-numbers`**: Enforces constants for magic numbers with exceptions for common values (-1, 0, 1, 2)
-
-#### React & JSX Rules
-
-1. **Component Structure**
-
-   - **`react/react-in-jsx-scope`**: Disabled (not needed with new JSX transform)
-   - **`react/prop-types`**: Disabled (using TypeScript for prop validation)
-   - **`react/self-closing-comp`**: Enforces self-closing for components without children
-
-2. **JSX Formatting**
-
-   - **`react/jsx-boolean-value`**: Enforces shorthand boolean props
-   - **`react/jsx-closing-bracket-location`**: Ensures consistent closing bracket placement
-   - **`react/jsx-closing-tag-location`**: Enforces consistent closing tag location
-   - **`react/jsx-curly-spacing`**: No spaces inside curly braces
-   - **`react/jsx-equals-spacing`**: No spaces around equals in props
-   - **`react/jsx-indent`**: 2-space indentation
-   - **`react/jsx-indent-props`**: 2-space indentation for props
-   - **`react/jsx-max-props-per-line`**: One prop per line in multiline components
-   - **`react/jsx-pascal-case`**: Enforces PascalCase for component names
-
-3. **JSX Best Practices**
-   - **`react/jsx-key`**: Requires keys in array-rendered components
-   - **`react/jsx-no-duplicate-props`**: Prevents duplicate props
-   - **`react/jsx-fragments`**: Enforces fragment syntax
-   - **`react/jsx-wrap-multilines`**: Proper wrapping of multiline JSX
-
-#### Import Rules
-
-1. **Import Organization**
-   - **`import/order`**: Enforces import grouping and alphabetical ordering:
-     - Built-in and external modules first
-     - Internal modules second
-     - Relative imports last
-     - Newlines between groups
-2. **Import Validation**
-   - **`import/no-unresolved`**: Ensures all imports can be resolved
-   - **`import/named`**: Validates named imports
-   - \*\*`
