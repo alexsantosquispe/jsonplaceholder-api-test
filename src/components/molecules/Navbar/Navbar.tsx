@@ -18,7 +18,7 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="fixed flex w-full justify-center border-b border-b-gray-100 bg-white/60 backdrop-blur-sm md:h-[4rem] dark:border-b-white/10 dark:bg-black/70">
+    <header className="fixed flex w-full justify-center border-b border-b-gray-100 bg-white/60 backdrop-blur-sm md:h-[4rem] dark:border-b-white/10 dark:bg-black/50">
       <nav className="flex w-full max-w-[80rem] flex-col items-center justify-between md:flex-row md:px-6">
         <div
           className={twMerge(

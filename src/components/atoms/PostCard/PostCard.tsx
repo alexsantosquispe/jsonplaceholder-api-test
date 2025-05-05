@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import { Post } from '../../../types';
 import { PostDetailModal } from '../PostDetailModal/PostDetailModal';
@@ -22,7 +23,11 @@ export const PostCard = ({ id, title, body }: PostCardProps) => {
     <>
       <a
         key={id}
-        className="flex h-auto w-full flex-col gap-4 rounded-lg border border-gray-200 px-4 py-6 text-black hover:cursor-pointer hover:border-gray-300 hover:bg-gray-50 dark:border-white/30 dark:text-white dark:hover:border-white/20 dark:hover:bg-white/10"
+        className={twMerge(
+          'flex h-auto w-full flex-col gap-4 rounded-lg border px-4 py-6',
+          'border-gray-200 text-black hover:cursor-pointer hover:border-gray-100 hover:bg-gray-50',
+          'dark:border-white/10 dark:text-white dark:hover:border-white/5 dark:hover:bg-white/5'
+        )}
         onClick={openModal}
       >
         <h4 className="text-base leading-7 font-semibold capitalize">

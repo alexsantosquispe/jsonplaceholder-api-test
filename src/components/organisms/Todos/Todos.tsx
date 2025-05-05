@@ -4,13 +4,18 @@ import { Fragment } from 'react';
 import { getTodos } from '../../../services/api';
 import { Todo } from '../../../types';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
+import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 import { TodoItem } from '../../atoms/TodoItem/TodoItem';
 
 export const Todos = () => {
-  const { data, error } = useQuery<Todo[]>({
+  const { data, error, isLoading } = useQuery<Todo[]>({
     queryKey: ['todos'],
     queryFn: getTodos
   });
+
+  if (isLoading) {
+    return <LoadingScreen containerClassName="-mt-[4rem]" />;
+  }
 
   if (error || !data?.length) return null;
 
