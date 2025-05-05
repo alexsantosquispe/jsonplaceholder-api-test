@@ -5,7 +5,7 @@ import { getAlbums } from '../../../services/api';
 import { Album } from '../../../types';
 import { AlbumItem } from '../../atoms/AlbumItem/AlbumItem';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
-import { Skeleton } from '../../atoms/Skeleton/Skeleton';
+import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 
 const GRID_STYLE =
   'grid gap-2 md:gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5';
@@ -17,7 +17,7 @@ export const Albums = () => {
   });
 
   if (isLoading) {
-    return <Skeleton countItems={12} classNames={{ container: GRID_STYLE }} />;
+    return <LoadingScreen containerClassName="-mt-[4rem]" />;
   }
 
   if (error || !data?.length) return null;

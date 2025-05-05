@@ -15,7 +15,7 @@ export default [
       'node_modules/**',
       '.eslintrc.cjs',
       'coverage/**',
-      '.storybook-static/**'
+      'storybook-static/**'
     ]
   },
   js.configs.recommended,
