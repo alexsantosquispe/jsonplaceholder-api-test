@@ -7,12 +7,11 @@ interface MenuButtonProps {
 
 export const MenuButton = ({ isOpen, onClick }: MenuButtonProps) => {
   return (
-    <button className="block h-4.5 px-4 md:hidden md:p-0" onClick={onClick}>
-      {isOpen ? (
-        <CloseIcon className="dark:text-white" />
-      ) : (
-        <MenuIcon className="dark:text-white" />
-      )}
+    <button
+      className="block h-4.5 px-4 md:hidden md:p-0 dark:text-white"
+      onClick={onClick}
+    >
+      {isOpen ? <CloseIcon /> : <MenuIcon />}
     </button>
   );
 };
