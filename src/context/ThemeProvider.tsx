@@ -23,8 +23,8 @@ export const ThemeProvider = ({ children }: Props) => {
   }, [currentTheme]);
 
   useEffect(() => {
-    const stored = getStoredTheme();
-    if (stored) return;
+    const storedTheme = getStoredTheme();
+    if (storedTheme) return;
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
