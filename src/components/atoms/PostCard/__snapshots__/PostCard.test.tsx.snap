@@ -3,7 +3,7 @@
 exports[`PostCard should match snapshot 1`] = `
 <div>
   <a
-    class="flex h-auto w-full flex-col gap-4 rounded-lg border px-4 py-6 border-gray-200 text-black hover:cursor-pointer hover:bg-gray-100 dark:border-white/10 dark:text-white dark:hover:border-white/10 dark:hover:bg-white/10"
+    class="flex h-auto w-full flex-col gap-4 rounded-lg border px-4 py-6 border-gray-200 hover:cursor-pointer hover:bg-gray-100 dark:border-white/10 dark:hover:border-white/10 dark:hover:bg-white/10"
   >
     <h4
       class="text-base leading-7 font-semibold capitalize"
@@ -11,7 +11,7 @@ exports[`PostCard should match snapshot 1`] = `
       Test
     </h4>
     <p
-      class="text-sm leading-6 font-normal normal-case"
+      class="text-primary/70 text-xs leading-6 font-normal normal-case md:text-sm dark:text-white/70"
     >
       Test
       .

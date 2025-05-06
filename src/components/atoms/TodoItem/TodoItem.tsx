@@ -14,7 +14,7 @@ export const TodoItem = ({ id, title, completed }: TodoItemProps) => {
   };
 
   return (
-    <div className="flex h-[4rem] items-center gap-x-4 rounded-lg border border-gray-200 px-4 dark:border-white/30 dark:text-white">
+    <div className="flex h-[4rem] items-center gap-x-4 rounded-lg border border-gray-200 px-4 dark:border-white/10 dark:text-white">
       <div className="relative">
         <input
           id={id.toString()}

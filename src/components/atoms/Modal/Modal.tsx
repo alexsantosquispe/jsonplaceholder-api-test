@@ -56,7 +56,7 @@ export const Modal = ({
   containerClassName
 }: ModalProps) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm dark:bg-black/40">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm dark:bg-black/15">
       <div className="m-4 flex h-8/10 w-full flex-col rounded-lg border border-gray-100 bg-white md:w-3/4 md:pb-8 lg:max-h-[35rem] lg:min-h-[40rem] lg:w-1/2 dark:border-white/10 dark:bg-black">
         <HeaderModal onClose={onClose} />
 
