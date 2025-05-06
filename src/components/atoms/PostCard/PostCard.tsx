@@ -25,8 +25,8 @@ export const PostCard = ({ id, title, body }: PostCardProps) => {
         key={id}
         className={twMerge(
           'flex h-auto w-full flex-col gap-4 rounded-lg border px-4 py-6',
-          'border-gray-200 text-black hover:cursor-pointer hover:border-gray-100 hover:bg-gray-50',
-          'dark:border-white/10 dark:text-white dark:hover:border-white/5 dark:hover:bg-white/5'
+          'border-gray-200 text-black hover:cursor-pointer hover:bg-gray-100',
+          'dark:border-white/10 dark:text-white dark:hover:border-white/10 dark:hover:bg-white/10'
         )}
         onClick={openModal}
       >

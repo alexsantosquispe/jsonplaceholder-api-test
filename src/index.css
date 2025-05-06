@@ -8,6 +8,8 @@
 
 @theme {
   --font-poppins: 'Poppins', sans-serif;
+  --color-primary: #171717;
+  --color-accent: var(--color-blue-600);
 }
 
 body {
