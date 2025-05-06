@@ -22,7 +22,7 @@ export const Posts = () => {
   if (error || !data?.length) return null;
 
   return (
-    <div className="flex flex-col gap-y-6 rounded-lg px-4 md:px-6 md:py-6 dark:text-white/80">
+    <div className="text-primary/90 flex flex-col gap-y-6 rounded-lg px-4 md:px-6 md:py-6 dark:text-white/80">
       <EndpointTitle methodLabel="GET" label="POSTS" />
 
       <div className={GRID_STYLE}>

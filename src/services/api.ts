@@ -15,13 +15,13 @@ export const getPosts = async (): Promise<Post[]> => {
   return response.data;
 };
 
-export const getPostById = async (id: string): Promise<Post> => {
+export const getPostById = async (id: number): Promise<Post> => {
   const response = await apiClient.get<Post>(`/posts/${id}`);
   return response.data;
 };
 
 export const getCommentsByPostId = async (
-  postId: string
+  postId: number
 ): Promise<PostComment[]> => {
   const response = await apiClient.get<PostComment[]>(
     `/posts/${postId}/comments`
@@ -34,7 +34,7 @@ export const getAlbums = async (): Promise<Album[]> => {
   return response.data;
 };
 
-export const getPhotosByAlbumId = async (albumId: string): Promise<Photo[]> => {
+export const getPhotosByAlbumId = async (albumId: number): Promise<Photo[]> => {
   const response = await apiClient.get<Photo[]>(`/albums/${albumId}/photos`);
   return response.data;
 };
@@ -44,7 +44,7 @@ export const getTodos = async (): Promise<Todo[]> => {
   return response.data;
 };
 
-export const getTodosByUserId = async (userId: string): Promise<Todo[]> => {
+export const getTodosByUserId = async (userId: number): Promise<Todo[]> => {
   const response = await apiClient.get<Todo[]>(`/users/${userId}/todos`);
   return response.data;
 };
