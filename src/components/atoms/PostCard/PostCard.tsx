@@ -1,43 +1,37 @@
-import { useState } from 'react';
+import cn from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 import { Post } from '../../../types';
-import { PostDetailModal } from '../PostDetailModal/PostDetailModal';
 
-type PostCardProps = Omit<Post, 'userId'>;
+type PostCardProps = Omit<Post, 'userId'> & {
+  isPostSelected?: boolean;
+};
 
-export const PostCard = ({ id, title, body }: PostCardProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const onClose = () => {
-    document.body.style.overflow = 'unset';
-    setIsOpen(false);
-  };
-
-  const openModal = () => {
-    document.body.style.overflow = 'hidden';
-    setIsOpen(true);
-  };
-
+export const PostCard = ({
+  id,
+  title,
+  body,
+  isPostSelected = false
+}: PostCardProps) => {
   return (
-    <>
-      <a
-        key={id}
-        className={twMerge(
-          'flex h-auto w-full flex-col gap-4 rounded-lg border px-4 py-6',
-          'border-gray-200 hover:cursor-pointer hover:bg-gray-100',
-          'dark:border-white/10 dark:hover:border-white/10 dark:hover:bg-white/10'
-        )}
-        onClick={openModal}
-      >
-        <h4 className="text-base leading-7 font-semibold capitalize">
-          {title}
-        </h4>
-        <p className="text-primary/70 text-xs leading-6 font-normal normal-case md:text-sm dark:text-white/70">
-          {body}.
-        </p>
-      </a>
-      {isOpen && <PostDetailModal postId={id} onClose={onClose} />}
-    </>
+    <div
+      key={id}
+      className={twMerge(
+        'flex h-auto w-full flex-col gap-2 rounded-lg border p-3',
+        'border-gray-200 hover:cursor-pointer hover:bg-gray-100',
+        'dark:border-white/10 dark:hover:bg-white/10',
+        cn({
+          'md:border-gray-200 md:bg-gray-100 md:dark:border-white/10 md:dark:bg-white/10':
+            isPostSelected
+        })
+      )}
+    >
+      <h4 className="text-base leading-7 font-medium capitalize md:text-sm md:leading-6">
+        {title}
+      </h4>
+      <p className="text-primary/70 text-sm leading-6 font-normal normal-case md:text-xs md:leading-5 dark:text-white/70">
+        {body}.
+      </p>
+    </div>
   );
 };
