@@ -1,11 +1,11 @@
 import cn from 'clsx';
+import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
-
-import { PlusCircle } from '../../../icons';
 
 interface ButtonProps {
   label: string;
   type: 'button' | 'submit';
+  icon?: ReactNode;
   onClick?: () => void;
   isDisabled?: boolean;
   className?: string;
@@ -16,7 +16,8 @@ export const Button = ({
   type = 'button',
   onClick,
   isDisabled,
-  className = ''
+  className = '',
+  icon = null
 }: ButtonProps) => {
   return (
     <button
@@ -34,7 +35,7 @@ export const Button = ({
       type={type}
       onClick={onClick}
     >
-      <PlusCircle className="size-4" />
+      {icon}
       {label}
     </button>
   );

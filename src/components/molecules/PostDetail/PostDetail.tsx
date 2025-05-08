@@ -1,10 +1,8 @@
-import { Outlet, useNavigate, useParams } from 'react-router-dom';
-import { twMerge } from 'tailwind-merge';
+import { useParams } from 'react-router-dom';
 
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 import { Comments } from '../Comments/Comments';
 import { usePostDetails } from './hooks/usePostDetails';
-import { ArrowLeftIcon } from '../../../icons';
 
 export const PostDetail = () => {
   const params = useParams();
@@ -27,34 +25,4 @@ export const PostDetail = () => {
       {comments && <Comments comments={comments || []} />}
     </div>
   ) : null;
-};
-
-export const PostDetailContainer = ({
-  className = ''
-}: {
-  className?: string;
-}) => {
-  const navigate = useNavigate();
-
-  return (
-    <div
-      className={twMerge(
-        'w-full flex-col gap-y-4 md:col-span-6 md:flex md:overflow-hidden',
-        className
-      )}
-    >
-      <button
-        className="flex items-center gap-x-2 md:hidden"
-        onClick={() => {
-          navigate('/posts', { replace: true });
-        }}
-      >
-        <ArrowLeftIcon className="size-4" />
-        Go back
-      </button>
-      <div className="md:overflow-auto md:p-4">
-        <Outlet />
-      </div>
-    </div>
-  );
 };
