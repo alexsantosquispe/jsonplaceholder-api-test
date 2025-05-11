@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Fragment } from 'react';
 
 import { getTodos } from '../../../services/api';
-import { Todo } from '../../../types';
+import { Todo } from '../../../services/api.types';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 import { TodoItem } from '../../atoms/TodoItem/TodoItem';

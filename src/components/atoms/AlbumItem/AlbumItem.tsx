@@ -1,5 +1,5 @@
 import { ChevronRightIcon, FolderIcon } from '../../../icons';
-import { Album } from '../../../types';
+import { Album } from '../../../services/api.types';
 
 type AlbumItemProps = Omit<Album, 'userId'>;
 

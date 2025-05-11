@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Fragment } from 'react';
 
 import { getAlbums } from '../../../services/api';
-import { Album } from '../../../types';
+import { Album } from '../../../services/api.types';
 import { AlbumItem } from '../../atoms/AlbumItem/AlbumItem';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
