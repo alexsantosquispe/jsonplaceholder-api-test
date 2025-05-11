@@ -1,7 +1,7 @@
 import cn from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-import { Post } from '../../../types';
+import { Post } from '../../../services/api.types';
 
 type PostCardProps = Omit<Post, 'userId'> & {
   isPostSelected?: boolean;

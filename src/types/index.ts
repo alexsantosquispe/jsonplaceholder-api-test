@@ -1,69 +1,21 @@
+import { Control, FieldValues } from 'react-hook-form';
+
 export interface SvgIconProps {
   className?: string;
 }
 
-type GeoType = {
-  lat: string;
-  lng: string;
-};
-
-type AddressType = {
-  street: string;
-  suite: string;
-  city: string;
-  zipcode: string;
-  geo: GeoType;
-};
-
-type CompanyType = {
+export interface InputProps {
+  label: string;
   name: string;
-  catchPhrase: string;
-  bs: string;
+  control: Control<FieldValues>;
+  placeholder?: string;
+  type?: string;
+  errorMessage?: string;
+  isDisabled?: boolean;
+  isRequired?: boolean;
+}
+
+export type TextAreaProps = Omit<InputProps, 'type'> & {
+  rows?: number;
+  cols?: number;
 };
-
-export interface Post {
-  id: number;
-  userId: number;
-  title: string;
-  body: string;
-}
-
-export interface PostComment {
-  id: number;
-  postId: number;
-  name: string;
-  email: string;
-  body: string;
-}
-
-export interface Album {
-  id: number;
-  userId: number;
-  title: string;
-}
-
-export interface Photo {
-  id: number;
-  albumId: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
-}
-
-export interface Todo {
-  id: number;
-  userId: number;
-  title: string;
-  completed: boolean;
-}
-
-export interface User {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: AddressType;
-  phone: string;
-  website: string;
-  company: CompanyType;
-}

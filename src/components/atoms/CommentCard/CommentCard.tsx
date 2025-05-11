@@ -1,5 +1,5 @@
 import { ChatIcon, HeartIcon, AvatarIcon } from '../../../icons';
-import { PostComment } from '../../../types';
+import { PostComment } from '../../../services/api.types';
 
 type CommentCardProps = Omit<PostComment, 'id' | 'postId'>;
 

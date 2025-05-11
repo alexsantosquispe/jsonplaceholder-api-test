@@ -2,6 +2,7 @@ import { ArrowLeftIcon } from './ArrowLeftIcon';
 import { AvatarIcon } from './AvatarIcon';
 import { ChatIcon } from './ChatIcon';
 import { ChevronRightIcon } from './ChevronRightIcon';
+import { ChevronUpDownIcon } from './ChevronUpDownIcon';
 import { CloseIcon } from './CloseIcon';
 import { FolderIcon } from './FolderIcon';
 import { HeartIcon } from './HeartIcon';
@@ -21,5 +22,6 @@ export {
   MenuIcon,
   MoonIcon,
   PlusCircle,
-  SunIcon
+  SunIcon,
+  ChevronUpDownIcon
 };

@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { getCommentsByPostId, getPostById } from '../../../../services/api';
-import { Post, PostComment } from '../../../../types';
+import { Post, PostComment } from '../../../../services/api.types';
 
 export const usePostDetails = (postId: number) => {
   const { data: post, isLoading: isPostLoading } = useQuery<Post>({

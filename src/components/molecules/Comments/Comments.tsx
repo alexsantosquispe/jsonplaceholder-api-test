@@ -1,6 +1,6 @@
 import { Fragment } from 'react/jsx-runtime';
 
-import { PostComment } from '../../../types';
+import { PostComment } from '../../../services/api.types';
 import { CommentCard } from '../../atoms/CommentCard/CommentCard';
 
 type CommentsProps = {

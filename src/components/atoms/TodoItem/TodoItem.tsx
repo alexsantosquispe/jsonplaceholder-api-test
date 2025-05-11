@@ -2,7 +2,7 @@ import cn from 'clsx';
 import { ChangeEvent, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { Todo } from '../../../types';
+import { Todo } from '../../../services/api.types';
 
 type TodoItemProps = Omit<Todo, 'userId'>;
 

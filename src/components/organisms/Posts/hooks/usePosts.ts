@@ -4,7 +4,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import { useIsMobile } from '../../../../hooks/useIsMobile';
 import { getPosts } from '../../../../services/api';
-import { Post } from '../../../../types';
+import { Post } from '../../../../services/api.types';
 
 export const usePosts = () => {
   const navigate = useNavigate();

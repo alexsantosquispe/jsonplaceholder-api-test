@@ -4,10 +4,10 @@ import { SvgIconProps } from '../types';
 
 export const AvatarIcon = ({ className = '' }: SvgIconProps) => {
   return (
-    <div className="relative h-10 w-10 overflow-hidden rounded-full bg-gray-100">
+    <div className="relative h-10 w-10 overflow-hidden rounded-full bg-gray-100 dark:bg-white/20">
       <svg
         className={twMerge(
-          'absolute -left-1 h-12 w-12 text-gray-400',
+          'absolute -left-1 h-12 w-12 text-gray-300 dark:text-black/60',
           className
         )}
         fill="currentColor"
