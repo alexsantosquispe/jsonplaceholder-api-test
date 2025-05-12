@@ -30,6 +30,7 @@ export const InputField = ({
               {isRequired && <span className="text-rose-600">&nbsp;*</span>}
             </label>
             <input
+              id={name}
               name={name}
               onChange={onChange}
               value={value}

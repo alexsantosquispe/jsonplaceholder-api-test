@@ -12,15 +12,22 @@ import {
 } from './api.types';
 
 const apiClient = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com',
+  baseURL: import.meta.env.VITE_API_URL,
   headers: {
     'Content-Type': 'application/json'
   },
   timeout: 3000
 });
 
+const PAGE_SIZE_LIMIT = 10;
+
 export const getPosts = async (): Promise<Post[]> => {
-  const response = await apiClient.get<Post[]>('/posts');
+  const response = await apiClient.get<Post[]>('/posts', {
+    params: {
+      _page: 1,
+      _limit: PAGE_SIZE_LIMIT
+    }
+  });
   return response.data;
 };
 

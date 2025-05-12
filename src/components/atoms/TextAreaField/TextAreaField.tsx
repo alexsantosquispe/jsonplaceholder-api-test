@@ -31,6 +31,7 @@ export const TextAreaField = ({
               {isRequired && <span className="text-rose-600">&nbsp;*</span>}
             </label>
             <textarea
+              id={name}
               name={name}
               placeholder={placeholder}
               disabled={isDisabled}

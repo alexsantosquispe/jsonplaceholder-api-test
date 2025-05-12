@@ -47,6 +47,7 @@ export const SelectField = ({
             </label>
             <div className="relative">
               <select
+                id={name}
                 name={name}
                 onChange={onChange}
                 value={value}
@@ -60,17 +61,20 @@ export const SelectField = ({
                 )}
               >
                 {optionsWithPlaceholder.map((option: SelectOption) => (
-                  <option key={option.value} value={option.value}>
+                  <option
+                    key={option.value}
+                    value={option.value}
+                    className="text-red-300"
+                  >
                     {option.label}
                   </option>
                 ))}
               </select>
               <ChevronUpDownIcon
-                className="text-primary/80 pointer-events-none absolute top-1/2 right-2 -translate-y-1/2"
+                className="text-primary/80 pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 dark:text-white/80"
                 aria-hidden="true"
               />
             </div>
-
             {errorMessage && (
               <span className={INPUT_FIELD_ERROR}>{errorMessage}</span>
             )}
