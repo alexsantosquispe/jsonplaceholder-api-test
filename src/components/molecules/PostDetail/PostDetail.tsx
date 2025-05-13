@@ -15,9 +15,9 @@ export const PostDetail = () => {
 
   return post ? (
     <div className="flex w-full flex-col gap-4 rounded-lg md:gap-5">
-      <h3 className="text-xl leading-7 font-bold capitalize md:text-2xl md:leading-10">
+      <h2 className="text-xl leading-7 font-bold capitalize md:text-2xl md:leading-10">
         {post?.title}
-      </h3>
+      </h2>
       <p className="text-primary/80 text-sm leading-6 md:text-base md:leading-8 dark:text-white/70">
         {post.body}.
       </p>
