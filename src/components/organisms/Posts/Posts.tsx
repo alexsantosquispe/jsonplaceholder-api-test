@@ -5,7 +5,7 @@ import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 import { PostDetailContainer } from '../../molecules/PostDetail/PostDetailContainer';
 import { PostsSideBar } from '../../molecules/PostsSideBar/PostsSideBar';
 
-export const Posts = () => {
+const Posts = () => {
   const { data, isLoading, error, postId, isMobile } = usePosts();
 
   if (isLoading) return <LoadingScreen containerClassName="-mt-[4rem]" />;
@@ -26,3 +26,5 @@ export const Posts = () => {
     </div>
   );
 };
+
+export default Posts;

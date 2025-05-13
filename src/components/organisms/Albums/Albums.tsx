@@ -10,7 +10,7 @@ import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 const GRID_STYLE =
   'grid gap-2 md:gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5';
 
-export const Albums = () => {
+const Albums = () => {
   const { data, error, isLoading } = useQuery<Album[]>({
     queryKey: ['albums'],
     queryFn: getAlbums
@@ -36,3 +36,5 @@ export const Albums = () => {
     </div>
   );
 };
+
+export default Albums;
