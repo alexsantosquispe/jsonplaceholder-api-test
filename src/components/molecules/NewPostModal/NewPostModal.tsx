@@ -3,7 +3,9 @@ import { useCreateNewPost } from './hooks/useCreateNewPost';
 import { Modal } from '../../atoms/Modal/Modal';
 import { ModalProps } from '../../atoms/Modal/Modal.types';
 
-export const NewPostModal = ({ onClose }: Pick<ModalProps, 'onClose'>) => {
+type NewPostModalProps = Pick<ModalProps, 'onClose'>;
+
+export const NewPostModal = ({ onClose }: NewPostModalProps) => {
   const { createPostTrigger, isLoading } = useCreateNewPost(onClose);
 
   return (

@@ -16,6 +16,7 @@ interface PostsSideBarProps {
 
 export const PostsSideBarHeader = () => {
   const [isPostModalOpen, setIsPostModalOpen] = useState(false);
+
   const openModal = () => {
     setIsPostModalOpen(true);
     document.body.style.overflow = 'hidden';

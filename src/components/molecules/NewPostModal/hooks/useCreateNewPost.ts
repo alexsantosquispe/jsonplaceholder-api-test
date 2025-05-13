@@ -1,18 +1,35 @@
 import { useMutation } from '@tanstack/react-query';
 
+import { ALERT_TYPES } from '../../../../constants';
+import { useAlert } from '../../../../hooks/useAlert';
 import { createPost } from '../../../../services/api';
 import queryClient from '../../../../services/queryClient';
 
 export const useCreateNewPost = (onClose: () => void) => {
-  const { mutate, isPending, error } = useMutation({
+  const { addAlert } = useAlert();
+  const { mutate, isPending } = useMutation({
     mutationFn: createPost,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['posts'] });
-    },
-    onSettled: () => {
       onClose();
+      addAlert({
+        title: 'Success',
+        message: 'Post successfully created',
+        type: ALERT_TYPES.SUCCESS
+      });
+    },
+    onError: () => {
+      onClose();
+      addAlert({
+        title: 'Error',
+        message: 'Error creating post',
+        type: ALERT_TYPES.ERROR
+      });
     }
   });
 
-  return { createPostTrigger: mutate, isLoading: isPending, error };
+  return {
+    createPostTrigger: mutate,
+    isLoading: isPending
+  };
 };

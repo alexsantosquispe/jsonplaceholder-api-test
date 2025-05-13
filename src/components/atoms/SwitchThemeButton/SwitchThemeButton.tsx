@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { Theme } from '../../../context/ThemeContext';
-import { useTheme } from '../../../context/useTheme';
+import { useTheme } from '../../../hooks/useTheme';
 import { MoonIcon, SunIcon } from '../../../icons';
 
 interface SwitchThemeButtonProps {

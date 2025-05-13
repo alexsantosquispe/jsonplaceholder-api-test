@@ -13,7 +13,7 @@ export const Posts = () => {
   if (error || !data?.length) return null;
 
   return (
-    <div className="text-primary/90 flex flex-col gap-y-6 rounded-lg px-4 md:h-screen md:p-6 dark:text-white/80">
+    <div className="text-primary/90 flex flex-col gap-y-6 px-4 md:h-screen md:p-6 dark:text-white/80">
       <div className="flex rounded-lg md:grid md:grid-cols-9 md:overflow-hidden md:border md:border-gray-200 md:dark:border-white/10">
         <PostsSideBar
           data={data}
