@@ -26,9 +26,9 @@ export const PostCard = ({
         })
       )}
     >
-      <h4 className="text-base leading-7 font-medium capitalize md:text-sm md:leading-6">
+      <span className="text-base leading-7 font-medium capitalize md:text-sm md:leading-6">
         {title}
-      </h4>
+      </span>
       <p className="text-primary/70 text-sm leading-6 font-normal normal-case md:text-xs md:leading-5 dark:text-white/70">
         {body}.
       </p>
