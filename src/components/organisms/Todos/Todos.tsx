@@ -7,7 +7,7 @@ import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 import { TodoItem } from '../../atoms/TodoItem/TodoItem';
 
-export const Todos = () => {
+const Todos = () => {
   const { data, error, isLoading } = useQuery<Todo[]>({
     queryKey: ['todos'],
     queryFn: getTodos
@@ -33,3 +33,5 @@ export const Todos = () => {
     </div>
   );
 };
+
+export default Todos;

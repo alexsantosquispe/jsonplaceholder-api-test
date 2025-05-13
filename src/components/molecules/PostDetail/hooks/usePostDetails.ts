@@ -18,5 +18,5 @@ export const usePostDetails = (postId: number) => {
     enabled: !!postId
   });
 
-  return { post, comments, isPostLoading, isCommentsLoading };
+  return { post, comments, isLoading: isPostLoading || isCommentsLoading };
 };

@@ -5,7 +5,7 @@ import { ModalProps } from '../../atoms/Modal/Modal.types';
 
 type NewPostModalProps = Pick<ModalProps, 'onClose'>;
 
-export const NewPostModal = ({ onClose }: NewPostModalProps) => {
+const NewPostModal = ({ onClose }: NewPostModalProps) => {
   const { createPostTrigger, isLoading } = useCreateNewPost(onClose);
 
   return (
@@ -19,3 +19,5 @@ export const NewPostModal = ({ onClose }: NewPostModalProps) => {
     </Modal>
   );
 };
+
+export default NewPostModal;

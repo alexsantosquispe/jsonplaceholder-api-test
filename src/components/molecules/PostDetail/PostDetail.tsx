@@ -8,10 +8,9 @@ export const PostDetail = () => {
   const params = useParams();
   const postId = Number(params?.postId);
 
-  const { post, comments, isPostLoading, isCommentsLoading } =
-    usePostDetails(postId);
+  const { post, comments, isLoading } = usePostDetails(postId);
 
-  if (isPostLoading || isCommentsLoading) return <LoadingScreen />;
+  if (isLoading) return <LoadingScreen />;
 
   return post ? (
     <div className="flex w-full flex-col gap-4 rounded-lg md:gap-5">
