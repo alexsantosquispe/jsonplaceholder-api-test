@@ -8,8 +8,10 @@ import {
   Todo,
   User,
   SelectOption,
-  CreatePostArgs
+  CreatePostArgs,
+  PostResponse
 } from './api.types';
+import { LAST_PAGE_NUMBER, PAGE_SIZE_LIMIT } from '../constants';
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -19,16 +21,23 @@ const apiClient = axios.create({
   timeout: 3000
 });
 
-const PAGE_SIZE_LIMIT = 10;
-
-export const getPosts = async (): Promise<Post[]> => {
+export const getPosts = async ({
+  pageParam
+}: {
+  pageParam: number;
+}): Promise<PostResponse> => {
   const response = await apiClient.get<Post[]>('/posts', {
     params: {
-      _page: 1,
+      _page: pageParam,
       _limit: PAGE_SIZE_LIMIT
     }
   });
-  return response.data;
+  const nextPage = pageParam + 1;
+
+  return {
+    data: response.data,
+    nextPage: nextPage > LAST_PAGE_NUMBER ? undefined : nextPage
+  };
 };
 
 export const getPostById = async (id: number): Promise<Post> => {

@@ -6,17 +6,27 @@ import { PostDetailContainer } from '../../molecules/PostDetail/PostDetailContai
 import { PostsSideBar } from '../../molecules/PostsSideBar/PostsSideBar';
 
 const Posts = () => {
-  const { data, isLoading, error, postId, isMobile } = usePosts();
+  const {
+    posts,
+    isLoading,
+    error,
+    postId,
+    isMobile,
+    fetchNextPage,
+    hasNextPage
+  } = usePosts();
 
-  if (isLoading) return <LoadingScreen containerClassName="-mt-[4rem]" />;
+  if (isLoading) return <LoadingScreen containerClassName="-mt-14" />;
 
-  if (error || !data?.length) return null;
+  if (error) return null;
 
   return (
-    <div className="text-primary/90 flex flex-col gap-y-6 px-4 md:h-screen md:p-6 dark:text-white/80">
-      <div className="flex rounded-lg md:grid md:grid-cols-9 md:overflow-hidden md:border md:border-gray-200 md:dark:border-white/10">
+    <div className="px-4 md:p-6">
+      <div className="text-primary/90 flex rounded-lg md:grid md:h-[85vh] md:grid-cols-9 md:overflow-hidden md:border md:border-gray-200 dark:text-white/80 md:dark:border-white/10">
         <PostsSideBar
-          data={data}
+          data={posts}
+          showMore={() => fetchNextPage()}
+          hasNextPage={hasNextPage}
           className={isMobile ? cn({ hidden: postId, flex: !postId }) : ''}
         />
         <PostDetailContainer

@@ -17,6 +17,11 @@ type CompanyType = {
   bs: string;
 };
 
+export interface PostResponse {
+  data: Post[];
+  nextPage?: number;
+}
+
 export interface Post {
   id: number;
   userId: number;
