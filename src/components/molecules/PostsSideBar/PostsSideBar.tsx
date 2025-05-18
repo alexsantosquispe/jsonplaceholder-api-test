@@ -7,10 +7,17 @@ import { PostCard } from '../../atoms/PostCard/PostCard';
 
 interface PostsSideBarProps {
   data: Post[];
+  showMore: () => void;
+  hasNextPage?: boolean;
   className?: string;
 }
 
-export const PostsSideBar = ({ data, className = '' }: PostsSideBarProps) => {
+export const PostsSideBar = ({
+  data,
+  showMore,
+  hasNextPage = false,
+  className = ''
+}: PostsSideBarProps) => {
   const { postId } = useParams();
   const currentPostId = Number(postId);
 
@@ -28,6 +35,17 @@ export const PostsSideBar = ({ data, className = '' }: PostsSideBarProps) => {
             <PostCard {...post} isPostSelected={post.id === currentPostId} />
           </NavLink>
         ))}
+        {hasNextPage && (
+          <button
+            className={twMerge(
+              'text-primary/70 hover:text-primary cursor-pointer rounded-lg py-2 text-sm font-medium hover:bg-gray-100 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white',
+              'transition-colors duration-150 ease-in-out'
+            )}
+            onClick={showMore}
+          >
+            Show more posts
+          </button>
+        )}
       </aside>
     </div>
   );

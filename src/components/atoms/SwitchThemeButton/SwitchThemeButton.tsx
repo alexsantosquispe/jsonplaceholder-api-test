@@ -21,7 +21,7 @@ const SwitchThemeButtonComponent = ({
       aria-label={`${theme === Theme.light ? 'dark mode icon' : 'light mode icon'}`}
       onClick={toggleTheme}
       className={twMerge(
-        'cursor-pointer rounded-md p-4 text-black hover:bg-gray-100 md:p-2 dark:text-white dark:hover:bg-white/10',
+        'transition-color cursor-pointer rounded-md p-4 text-black duration-150 ease-in-out hover:bg-gray-100 md:p-2 dark:text-white dark:hover:bg-white/10',
         classNameContainer
       )}
     >
