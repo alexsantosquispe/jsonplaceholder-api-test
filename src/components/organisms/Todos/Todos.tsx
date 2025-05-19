@@ -1,34 +1,32 @@
-import { useQuery } from '@tanstack/react-query';
-import { Fragment } from 'react';
-
-import { getTodos } from '../../../services/api';
-import { Todo } from '../../../services/api.types';
+import { TodoTable } from './components/TodoTable';
+import { useTodos } from './hooks/useTodos';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
-import { TodoItem } from '../../atoms/TodoItem/TodoItem';
 
 const Todos = () => {
-  const { data, error, isLoading } = useQuery<Todo[]>({
-    queryKey: ['todos'],
-    queryFn: getTodos
-  });
+  const { data, users, error, isLoading } = useTodos();
 
   if (isLoading) {
     return <LoadingScreen containerClassName="-mt-[4rem]" />;
   }
 
-  if (error || !data?.length) return null;
+  if (error) return null;
 
   return (
-    <div className="flex flex-col gap-y-6 px-4 md:px-6 md:py-6">
-      <EndpointTitle methodLabel="GET" label="TODOS" />
+    <div className="px-4 md:p-6">
+      <div className="text-primary/90 flex flex-col gap-y-8 rounded-lg py-4 md:border md:border-gray-200 md:px-6 md:shadow-sm dark:text-white/80 md:dark:border-white/10">
+        <div className="flex flex-col gap-y-2">
+          <EndpointTitle label="TODOS" />
+          <span className="text-primary/80 text-sm leading-7 md:w-3/4 md:text-base dark:text-white/80">
+            This is an example of a task list for a team. By default, the tasks
+            are sorted by title. The table allows you to apply filters, sort by
+            columns, and adjust the number of tasks displayed per page.
+          </span>
+        </div>
 
-      <div className="grid gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
-        {data.map((todo: Todo) => (
-          <Fragment key={todo.id}>
-            <TodoItem {...todo} />
-          </Fragment>
-        ))}
+        <div className="flex flex-col gap-y-4">
+          <TodoTable todos={data} users={users} />
+        </div>
       </div>
     </div>
   );

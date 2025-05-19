@@ -11,7 +11,7 @@ import { HeartIcon } from './HeartIcon';
 import { InfoIcon } from './InfoIcon';
 import { MenuIcon } from './MenuIcon';
 import { MoonIcon } from './MoonIcon';
-import { PlusCircle } from './PlusCircle';
+import { PlusCircleIcon } from './PlusCircleIcon';
 import { SunIcon } from './SunIcon';
 
 export {
@@ -27,7 +27,7 @@ export {
   InfoIcon,
   MenuIcon,
   MoonIcon,
-  PlusCircle,
+  PlusCircleIcon,
   SunIcon,
   ChevronUpDownIcon
 };

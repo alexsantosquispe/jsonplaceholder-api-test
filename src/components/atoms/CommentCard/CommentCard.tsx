@@ -8,7 +8,7 @@ export const CommentCard = ({ name, email, body }: CommentCardProps) => {
     <div className="flex flex-col gap-4 text-sm">
       <div className="flex gap-2">
         <div className="h-10 w-10">
-          <AvatarIcon />
+          <AvatarIcon className="size-10 text-gray-200 dark:text-white/20" />
         </div>
 
         <div className="flex flex-col gap-4">

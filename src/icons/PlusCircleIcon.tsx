@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge';
 
 import { SvgIconProps } from '../types';
 
-export const PlusCircle = ({ className = '' }: SvgIconProps) => {
+export const PlusCircleIcon = ({ className = '' }: SvgIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

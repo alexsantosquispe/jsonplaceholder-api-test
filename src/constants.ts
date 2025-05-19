@@ -8,7 +8,15 @@ export const ALERT_TYPES = {
   INFO: 'info'
 };
 
-export const PAGE_SIZE_LIMIT = 10;
+export const ORDER_ASC = 'asc';
+
+export const SORT_BY_NAME = 'name';
+
+export const SORT_BY_TASK_TITLE = 'title';
+
+export const PAGE_SIZE_LIMIT_10 = 10;
+
+export const PAGE_SIZE_LIMIT_20 = 20;
 
 export const INITIAL_PAGE_NUMBER = 1;
 
