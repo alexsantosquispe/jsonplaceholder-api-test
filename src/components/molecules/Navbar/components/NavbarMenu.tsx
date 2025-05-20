@@ -18,7 +18,6 @@ export const NavbarMenu = ({ isMenuOpen, onSelectOption }: NavbarMenuProps) => {
       )}
     >
       <NavbarLink label="Posts" path="/posts" onClick={onSelectOption} />
-      <NavbarLink label="Albums" path="/albums" onClick={onSelectOption} />
       <NavbarLink label="Todos" path="/todos" onClick={onSelectOption} />
       <SwitchThemeButton
         classNameIcon="size-4"

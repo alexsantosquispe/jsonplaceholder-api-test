@@ -2,8 +2,6 @@ import axios from 'axios';
 
 import { PAGE_SIZES, SORT_BY_NAME, SORT_BY_TASK_TITLE } from './../constants';
 import {
-  Album,
-  Photo,
   Post,
   PostComment,
   Todo,
@@ -59,16 +57,6 @@ export const getCommentsByPostId = async (
   const response = await apiClient.get<PostComment[]>(
     `/posts/${postId}/comments`
   );
-  return response.data;
-};
-
-export const getAlbums = async (): Promise<Album[]> => {
-  const response = await apiClient.get<Album[]>('/albums');
-  return response.data;
-};
-
-export const getPhotosByAlbumId = async (albumId: number): Promise<Photo[]> => {
-  const response = await apiClient.get<Photo[]>(`/albums/${albumId}/photos`);
   return response.data;
 };
 
