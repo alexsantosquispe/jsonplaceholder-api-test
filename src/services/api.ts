@@ -2,7 +2,6 @@ import axios from 'axios';
 
 import {
   PAGE_SIZE_LIMIT_10,
-  PAGE_SIZE_LIMIT_20,
   SORT_BY_NAME,
   SORT_BY_TASK_TITLE
 } from './../constants';
@@ -79,7 +78,7 @@ export const getTodos = async (): Promise<Todo[]> => {
   const response = await apiClient.get<Todo[]>('/todos', {
     params: {
       _sort: SORT_BY_TASK_TITLE,
-      _limit: PAGE_SIZE_LIMIT_20
+      _limit: PAGE_SIZE_LIMIT_10
     }
   });
   return response.data;

@@ -1,0 +1,20 @@
+import { ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface WrapperProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export const Wrapper = ({ children, className }: WrapperProps) => {
+  return (
+    <div
+      className={twMerge(
+        'text-primary/90 rounded-lg md:border md:border-gray-200 md:px-6 md:shadow-sm dark:text-white/80 md:dark:border-white/10',
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};

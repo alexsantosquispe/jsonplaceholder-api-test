@@ -7,7 +7,8 @@ interface CellProps {
   isHeadCell?: boolean;
 }
 
-const CELL_STYLES = 'px-4 py-[0.625rem] text-start';
+const CELL_STYLES =
+  'text-primary/80 min-w-[7.25rem] px-4 py-2 text-start dark:text-white/90';
 
 export const Cell = ({
   children,
@@ -16,13 +17,7 @@ export const Cell = ({
 }: CellProps) => {
   if (isHeadCell)
     return (
-      <th
-        className={twMerge(
-          'min-w-20 px-4 py-[0.625rem] text-start',
-          'font-medium',
-          className
-        )}
-      >
+      <th className={twMerge(CELL_STYLES, 'font-medium', className)}>
         {children}
       </th>
     );

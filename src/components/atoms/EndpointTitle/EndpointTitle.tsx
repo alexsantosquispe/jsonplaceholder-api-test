@@ -11,7 +11,7 @@ export const EndpointTitle = ({ methodLabel, label }: EndpointTitleProps) => {
           {methodLabel}
         </span>
       )}
-      <h1 className="text-primary/90 text-2xl font-bold dark:text-white/80">
+      <h1 className="text-primary text-2xl font-bold dark:text-white/80">
         {label}
       </h1>
     </div>
