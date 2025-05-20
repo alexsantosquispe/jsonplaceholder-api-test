@@ -11,7 +11,7 @@ exports[`EndpointTitle Styles should match snapshot 1`] = `
       GET
     </span>
     <h1
-      class="text-primary/90 text-2xl font-bold dark:text-white/80"
+      class="text-primary text-2xl font-bold dark:text-white/80"
     >
       Posts
     </h1>
