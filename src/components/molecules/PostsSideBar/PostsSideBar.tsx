@@ -41,7 +41,7 @@ export const PostsSideBar = ({
             label="Show more posts"
             onClick={showMore}
             isSecondary
-            className="border-0"
+            className="border-0 shadow-none"
           />
         )}
       </aside>

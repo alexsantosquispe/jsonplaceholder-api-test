@@ -23,7 +23,7 @@ const Posts = () => {
 
   return (
     <div className="px-4 md:p-6">
-      <Wrapper className="flex md:grid md:h-[100dvh] md:grid-cols-9 md:overflow-hidden md:px-0">
+      <Wrapper className="flex md:grid md:h-[85dvh] md:grid-cols-9 md:overflow-hidden md:px-0">
         <PostsSideBar
           data={posts}
           showMore={() => fetchNextPage()}

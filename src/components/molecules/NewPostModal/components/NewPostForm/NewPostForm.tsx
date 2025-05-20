@@ -8,10 +8,7 @@ import {
 } from './NewPostForm.schema';
 import { NEW_POST_FORM_NAMES, NewPostFormValues } from './NewPostForm.types';
 import { getUserAsOptions } from '../../../../../services/api';
-import {
-  CreatePostArgs,
-  SelectOption
-} from '../../../../../services/api.types';
+import { CreatePostArgs, Option } from '../../../../../services/api.types';
 import { Button } from '../../../../atoms/Button/Button';
 import { InputField } from '../../../../atoms/InputField/InputField';
 import { LoadingScreen } from '../../../../atoms/LoadingScreen/LoadingScreen';
@@ -33,7 +30,7 @@ export const NewPostForm = ({ isLoading, onCreatePost }: NewPostFormProps) => {
     defaultValues: NewPostFormDefaultValues
   });
 
-  const { data: options } = useQuery<SelectOption[]>({
+  const { data: options } = useQuery<Option[]>({
     queryKey: ['users'],
     queryFn: getUserAsOptions
   });

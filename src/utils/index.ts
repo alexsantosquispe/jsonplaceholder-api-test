@@ -1,4 +1,4 @@
-import { THEME_KEY } from '../constants';
+import { DIGITS_LENGTH, THEME_KEY } from '../constants';
 import { Theme, ThemeType } from '../context/ThemeContext';
 
 export const getLSValue = (key: string) => localStorage.getItem(key);
@@ -30,4 +30,8 @@ export const getStoredTheme = (): ThemeType | null => {
   const storedTheme = getLSValue(THEME_KEY);
 
   return (storedTheme as ThemeType) || null;
+};
+
+export const getFormattedDigits = (value: number): string => {
+  return String(value).padStart(DIGITS_LENGTH, '0');
 };

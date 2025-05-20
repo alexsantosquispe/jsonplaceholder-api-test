@@ -2,7 +2,8 @@ import { ArrowLeftIcon } from './ArrowLeftIcon';
 import { AvatarIcon } from './AvatarIcon';
 import { ChatIcon } from './ChatIcon';
 import { CheckCircleIcon } from './CheckCircleIcon';
-import { CheckCircleOutlineIcon } from './CheckCircleOutlineIcon';
+import { CheckIcon } from './CheckIcon';
+import { ChevronDownIcon } from './ChevronDownIcon';
 import { ChevronRightIcon } from './ChevronRightIcon';
 import { ChevronUpDownIcon } from './ChevronUpDownIcon';
 import { ClockIcon } from './ClockIcon';
@@ -21,8 +22,9 @@ export {
   AvatarIcon,
   ChatIcon,
   ChevronRightIcon,
+  ChevronDownIcon,
   CheckCircleIcon,
-  CheckCircleOutlineIcon,
+  CheckIcon,
   CloseIcon,
   ClockIcon,
   ExclamationIcon,

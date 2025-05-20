@@ -7,11 +7,11 @@ import {
   INPUT_FIELD_STYLES
 } from '../../../constants/styles';
 import { ChevronUpDownIcon } from '../../../icons';
-import { SelectOption } from '../../../services/api.types';
+import { Option } from '../../../services/api.types';
 import { InputProps } from '../../../types';
 
 type SelectFieldProps = Omit<InputProps, 'type'> & {
-  options: SelectOption[];
+  options: Option[];
 };
 
 export const SelectField = ({
@@ -27,7 +27,7 @@ export const SelectField = ({
   const defaultValueOption = {
     value: '',
     label: placeholder
-  } satisfies SelectOption;
+  } satisfies Option;
   const optionsWithPlaceholder = [defaultValueOption, ...options];
 
   return (
@@ -60,7 +60,7 @@ export const SelectField = ({
                   })
                 )}
               >
-                {optionsWithPlaceholder.map((option: SelectOption) => (
+                {optionsWithPlaceholder.map((option: Option) => (
                   <option
                     key={option.value}
                     value={option.value}
