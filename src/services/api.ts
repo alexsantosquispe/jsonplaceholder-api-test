@@ -1,6 +1,11 @@
 import axios from 'axios';
 
 import {
+  PAGE_SIZE_LIMIT_10,
+  SORT_BY_NAME,
+  SORT_BY_TASK_TITLE
+} from './../constants';
+import {
   Album,
   Photo,
   Post,
@@ -11,7 +16,7 @@ import {
   CreatePostArgs,
   PostResponse
 } from './api.types';
-import { LAST_PAGE_NUMBER, PAGE_SIZE_LIMIT } from '../constants';
+import { LAST_PAGE_NUMBER, ORDER_ASC } from '../constants';
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -29,7 +34,7 @@ export const getPosts = async ({
   const response = await apiClient.get<Post[]>('/posts', {
     params: {
       _page: pageParam,
-      _limit: PAGE_SIZE_LIMIT
+      _limit: PAGE_SIZE_LIMIT_10
     }
   });
   const nextPage = pageParam + 1;
@@ -70,7 +75,12 @@ export const getPhotosByAlbumId = async (albumId: number): Promise<Photo[]> => {
 };
 
 export const getTodos = async (): Promise<Todo[]> => {
-  const response = await apiClient.get<Todo[]>('/todos');
+  const response = await apiClient.get<Todo[]>('/todos', {
+    params: {
+      _sort: SORT_BY_TASK_TITLE,
+      _limit: PAGE_SIZE_LIMIT_10
+    }
+  });
   return response.data;
 };
 
@@ -79,13 +89,25 @@ export const getTodosByUserId = async (userId: number): Promise<Todo[]> => {
   return response.data;
 };
 
-export const getUsers = async (): Promise<User[]> => {
+export const getUsersMap = async (): Promise<Record<string, User>> => {
   const response = await apiClient.get<User[]>('/users');
-  return response.data;
+
+  const usersMap: Record<string, User> =
+    response.data?.reduce((acc, curr) => {
+      return { ...acc, [curr.id]: curr };
+    }, {}) || {};
+
+  return usersMap;
 };
 
 export const getUserAsOptions = async (): Promise<SelectOption[]> => {
-  const response = await apiClient.get<User[]>('/users');
+  const response = await apiClient.get<User[]>('/users', {
+    params: {
+      _sort: SORT_BY_NAME,
+      _order: ORDER_ASC
+    }
+  });
+
   return (
     response.data?.map(({ id, name }) => ({
       value: id.toString(),

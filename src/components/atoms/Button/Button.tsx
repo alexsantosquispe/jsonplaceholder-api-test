@@ -24,12 +24,12 @@ export const Button = ({
   return (
     <button
       className={twMerge(
-        'flex cursor-pointer items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium',
+        'flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out',
         cn({
-          'bg-primary dark:text-primary text-white dark:bg-white/90':
+          'bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90':
             !isSecondary,
           'hover:bg-primary/80 dark:hover:bg-white/80': !isDisabled,
-          'text-primary/90 border border-black/10 bg-transparent hover:bg-black/5 dark:border-white/15 dark:text-white dark:hover:bg-white/15':
+          'text-primary/80 hover:text-primary border border-black/10 bg-transparent hover:bg-gray-100 dark:border-white/15 dark:text-white dark:hover:bg-white/15':
             isSecondary,
           'bg-primary/65 cursor-not-allowed dark:bg-white/25': isDisabled
         }),

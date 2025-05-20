@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from 'react';
 
-import { PlusCircle } from '../../../../icons';
+import { PlusCircleIcon } from '../../../../icons';
 import { Button } from '../../../atoms/Button/Button';
 import { EndpointTitle } from '../../../atoms/EndpointTitle/EndpointTitle';
 
@@ -30,7 +30,7 @@ export const PostsSideBarHeader = () => {
           label="New Post"
           type="button"
           onClick={openModal}
-          icon={<PlusCircle className="size-4" />}
+          icon={<PlusCircleIcon className="size-4" />}
         />
       </div>
       {isPostModalOpen && (

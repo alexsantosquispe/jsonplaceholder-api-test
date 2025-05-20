@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge';
 
 import { PostsSideBarHeader } from './components/PostsSideBarHeader';
 import { Post } from '../../../services/api.types';
+import { Button } from '../../atoms/Button/Button';
 import { PostCard } from '../../atoms/PostCard/PostCard';
 
 interface PostsSideBarProps {
@@ -36,15 +37,12 @@ export const PostsSideBar = ({
           </NavLink>
         ))}
         {hasNextPage && (
-          <button
-            className={twMerge(
-              'text-primary/70 hover:text-primary cursor-pointer rounded-lg py-2 text-sm font-medium hover:bg-gray-100 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white',
-              'transition-colors duration-150 ease-in-out'
-            )}
+          <Button
+            label="Show more posts"
             onClick={showMore}
-          >
-            Show more posts
-          </button>
+            isSecondary
+            className="border-0"
+          />
         )}
       </aside>
     </div>
