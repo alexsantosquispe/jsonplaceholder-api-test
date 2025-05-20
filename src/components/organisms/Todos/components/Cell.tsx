@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { ReactNode, HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface CellProps {
+interface CellProps extends HTMLAttributes<HTMLTableCellElement> {
   children: ReactNode;
   className?: string;
   isHeadCell?: boolean;
@@ -13,14 +13,26 @@ const CELL_STYLES =
 export const Cell = ({
   children,
   isHeadCell = false,
-  className
+  className,
+  ...rest
 }: CellProps) => {
-  if (isHeadCell)
+  const mergedClasses = twMerge(
+    CELL_STYLES,
+    isHeadCell && 'font-medium',
+    className
+  );
+
+  if (isHeadCell) {
     return (
-      <th className={twMerge(CELL_STYLES, 'font-medium', className)}>
+      <th scope="col" className={mergedClasses} {...rest}>
         {children}
       </th>
     );
+  }
 
-  return <td className={twMerge(CELL_STYLES, className)}>{children}</td>;
+  return (
+    <td className={mergedClasses} {...rest}>
+      {children}
+    </td>
+  );
 };

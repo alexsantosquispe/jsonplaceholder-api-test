@@ -23,15 +23,20 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
+      role="button"
+      aria-disabled={isDisabled}
       className={twMerge(
         'flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out',
         cn({
           'bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90':
             !isSecondary,
           'hover:bg-primary/80 dark:hover:bg-white/80': !isDisabled,
-          'text-primary/80 hover:text-primary border border-black/10 bg-transparent hover:bg-gray-100 dark:border-white/15 dark:text-white dark:hover:bg-white/15':
+          'text-primary/80 hover:text-primary border border-black/10 bg-transparent shadow-xs hover:bg-gray-100 dark:border-white/15 dark:text-white dark:hover:bg-white/15':
             isSecondary,
-          'bg-primary/65 cursor-not-allowed dark:bg-white/25': isDisabled
+          'text-primary/40 hover:text-primary/40 cursor-not-allowed border-black/5 hover:bg-transparent dark:border-white/10 dark:text-white/25 dark:hover:bg-transparent':
+            isSecondary && isDisabled,
+          'bg-primary/65 cursor-not-allowed dark:bg-white/25':
+            !isSecondary && isDisabled
         }),
         className
       )}

@@ -58,6 +58,13 @@ export interface Todo {
   completed: boolean;
 }
 
+export type SortByType = keyof Todo;
+
+export interface TodoResponse {
+  todos: Todo[];
+  totalItems: number;
+}
+
 export interface User {
   id: number;
   name: string;
@@ -69,9 +76,16 @@ export interface User {
   company: CompanyType;
 }
 
-export interface SelectOption {
-  value: string;
+export interface Option {
+  value: number | string;
   label: string;
 }
 
 export type CreatePostArgs = Omit<Post, 'id'>;
+
+export type GetTodosArgs = {
+  page: number;
+  limit: number;
+  sortBy?: string;
+  order?: string;
+};
