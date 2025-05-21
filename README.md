@@ -34,12 +34,6 @@ This project is a modern, scalable example of working with remote APIs using **R
 
 ### 📱 Responsive UI
 
-| Left columns | Right columns |
-| ------------ | :-----------: |
-| left foo     |   right foo   |
-| left bar     |   right bar   |
-| left baz     |   right baz   |
-
 ![Mobile light](./screenshots/mobile-light.png)
 ![Mobile dark](./screenshots/mobile-dark.png)
 
