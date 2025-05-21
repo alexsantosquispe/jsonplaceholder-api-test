@@ -8,7 +8,7 @@ interface CellProps extends HTMLAttributes<HTMLTableCellElement> {
 }
 
 const CELL_STYLES =
-  'text-primary/80 min-w-[7.25rem] px-4 py-2 text-start dark:text-white/90';
+  'text-primary/80 md:min-w-[7rem] px-4 py-2 text-start whitespace-nowrap dark:text-white/90';
 
 export const Cell = ({
   children,

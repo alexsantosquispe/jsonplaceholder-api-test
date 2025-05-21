@@ -9,6 +9,7 @@ import { ChevronUpDownIcon } from './ChevronUpDownIcon';
 import { ClockIcon } from './ClockIcon';
 import { CloseIcon } from './CloseIcon';
 import { ExclamationIcon } from './ExclamationIcon';
+import { ExclamationOutlineIcon } from './ExclamationOutlineIcon';
 import { FolderIcon } from './FolderIcon';
 import { HeartIcon } from './HeartIcon';
 import { InfoIcon } from './InfoIcon';
@@ -28,6 +29,7 @@ export {
   CloseIcon,
   ClockIcon,
   ExclamationIcon,
+  ExclamationOutlineIcon,
   FolderIcon,
   HeartIcon,
   InfoIcon,

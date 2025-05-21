@@ -39,71 +39,79 @@ export const TodoTable = ({
   onSortByColumn
 }: TodoTableProps) => {
   return (
-    <div className="w-full rounded-lg border border-gray-200 dark:border-white/10">
-      <table className="w-full text-sm">
-        <thead>
-          <tr>
-            {COLUMNS_MAP.map(({ key, label, isSortEnabled }) => (
-              <Cell
-                key={key}
-                isHeadCell
-                className={twMerge(
-                  isSortEnabled ? 'px-0 py-1' : 'text-[0.8125rem]'
-                )}
-              >
-                {isSortEnabled ? (
-                  <Button
-                    label={label}
-                    isSecondary
-                    onClick={() => {
-                      onSortByColumn(
-                        sortByValue === key ? null : (key as SortByType)
-                      );
-                    }}
-                    className={twMerge(
-                      'flex flex-row-reverse border-0 py-2 text-[0.8125rem] shadow-none',
-                      cn({
-                        'bg-gray-100 dark:bg-white/15': sortByValue === key
-                      })
-                    )}
-                    icon={<ChevronUpDownIcon className="size-4" />}
-                  />
-                ) : (
-                  label
-                )}
-              </Cell>
-            ))}
-          </tr>
-        </thead>
+    <div className="w-[90dvw] self-center overflow-auto rounded-lg border border-gray-200 md:w-full dark:border-white/10">
+      {todos.length ? (
+        <table className="w-full text-sm">
+          <thead>
+            <tr>
+              {COLUMNS_MAP.map(({ key, label, isSortEnabled }) => (
+                <Cell
+                  key={key}
+                  isHeadCell
+                  className={twMerge(
+                    isSortEnabled ? 'px-0 py-1' : 'text-[0.8125rem]'
+                  )}
+                >
+                  {isSortEnabled ? (
+                    <Button
+                      label={label}
+                      isSecondary
+                      onClick={() => {
+                        onSortByColumn(
+                          sortByValue === key ? null : (key as SortByType)
+                        );
+                      }}
+                      className={twMerge(
+                        'flex flex-row-reverse border-0 py-2 text-[0.8125rem] shadow-none',
+                        cn({
+                          'bg-gray-100 dark:bg-white/15': sortByValue === key
+                        })
+                      )}
+                      icon={<ChevronUpDownIcon className="size-4" />}
+                    />
+                  ) : (
+                    label
+                  )}
+                </Cell>
+              ))}
+            </tr>
+          </thead>
 
-        <tbody>
-          {todos.map((item) => {
-            const user = users?.[item.userId] || {};
-            return (
-              <tr
-                key={item.id}
-                className="border-t border-gray-200 hover:bg-gray-100 dark:border-white/10 dark:hover:bg-neutral-800"
-              >
-                <Cell>{`TASK-${getFormattedDigits(item.id)}`}</Cell>
-                <Cell>
-                  <div className="flex flex-col">
-                    <span>{user.name || 'Unknown'}</span>
-                    <span className="text-xs text-neutral-500 lowercase dark:text-white/70">
-                      {user.email || '--'}
+          <tbody>
+            {todos.map((item) => {
+              const user = users?.[item.userId] || {};
+              return (
+                <tr
+                  key={item.id}
+                  className="border-t border-gray-200 hover:bg-gray-100 dark:border-white/10 dark:hover:bg-neutral-800"
+                >
+                  <Cell>{`TASK-${getFormattedDigits(item.id)}`}</Cell>
+                  <Cell>
+                    <div className="flex flex-col">
+                      <span>{user.name || 'Unknown'}</span>
+                      <span className="text-xs text-neutral-500 lowercase dark:text-white/70">
+                        {user.email || '--'}
+                      </span>
+                    </div>
+                  </Cell>
+                  <Cell className="min-w-[15rem] whitespace-normal first-letter:uppercase">
+                    {item.title}
+                  </Cell>
+                  <Cell>
+                    <span className="flex items-center gap-x-1">
+                      {renderCompletedStatus(item.completed)}
                     </span>
-                  </div>
-                </Cell>
-                <Cell className="first-letter:uppercase">{item.title}</Cell>
-                <Cell>
-                  <span className="flex items-center gap-x-1">
-                    {renderCompletedStatus(item.completed)}
-                  </span>
-                </Cell>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                  </Cell>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <div className="text-primary/80 flex h-[50dvh] items-center justify-center dark:text-white/80">
+          There is no data to show
+        </div>
+      )}
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const useTodos = ({ page, limit, sortBy }: GetTodosArgs) => {
   });
 
   return {
-    data: data?.todos || [],
+    todos: data?.todos || [],
     totalItems: data?.totalItems || 0,
     users: users ?? {},
     error,
