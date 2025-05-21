@@ -24,10 +24,6 @@ This project is a modern, scalable example of working with remote APIs using **R
 
 ![Posts Page](./screenshots/posts-desk.png)
 
-### ✅ Todos page
-
-![Todos Page](./screenshots/todos-desk.png)
-
 ### 🌜 Dark Mode
 
 ![Dark Mode](./screenshots/dark-desk.png)
