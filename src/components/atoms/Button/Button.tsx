@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps {
-  label: string;
+  label?: string;
   type?: 'button' | 'submit';
   icon?: ReactNode;
   onClick?: () => void;
@@ -45,7 +45,7 @@ export const Button = ({
       onClick={onClick}
     >
       {icon && <span className="size-4">{icon}</span>}
-      {label}
+      {label && label}
     </button>
   );
 };

@@ -6,6 +6,7 @@ import { useTodos } from './hooks/useTodos';
 import { DEFAULT_OPTION, INITIAL_PAGE_NUMBER } from '../../../constants';
 import { Option, SortByType } from '../../../services/api.types';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
+import { ErrorScreen } from '../../atoms/ErrorScreen/ErrorScreen';
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 import { Wrapper } from '../../atoms/Wrapper/Wrapper';
 
@@ -18,7 +19,7 @@ const Todos = () => {
   const [pageSize, setPageSize] = useState<Option>(DEFAULT_OPTION);
   const [sortBy, setSortBy] = useState<SortByType | null>(null);
 
-  const { data, totalItems, users, error, isLoading } = useTodos({
+  const { todos, totalItems, users, error, isLoading } = useTodos({
     page: currentPage,
     limit: Number(pageSize.value),
     sortBy: sortBy || undefined
@@ -34,7 +35,7 @@ const Todos = () => {
 
   if (isLoading) return <LoadingScreen containerClassName="-mt-[4rem]" />;
 
-  if (error) return null;
+  if (!isLoading && error) return <ErrorScreen />;
 
   return (
     <div className="px-4 md:p-6">
@@ -48,20 +49,22 @@ const Todos = () => {
 
         <div className="flex flex-col gap-y-4 text-sm">
           <TodoTable
-            todos={data}
+            todos={todos}
             users={users}
             onSortByColumn={setSortBy}
             sortByValue={sortBy}
           />
 
-          <Pagination
-            currentPage={currentPage}
-            totalItems={totalItems}
-            pageSize={pageSize}
-            setPageSize={setPageSize}
-            handleNext={handleNext}
-            handlePrevious={handlePrevious}
-          />
+          {!!todos.length && (
+            <Pagination
+              currentPage={currentPage}
+              totalItems={totalItems}
+              pageSize={pageSize}
+              setPageSize={setPageSize}
+              handleNext={handleNext}
+              handlePrevious={handlePrevious}
+            />
+          )}
         </div>
       </Wrapper>
     </div>
