@@ -11,12 +11,16 @@ interface DropdownProps {
   optionSelected: Option;
   options: Option[];
   onSelect: (option: Option) => void;
+  alignment?: 'top' | 'bottom';
+  className?: string;
 }
 
 export const Dropdown = ({
   optionSelected,
   options,
-  onSelect
+  onSelect,
+  alignment = 'bottom',
+  className
 }: DropdownProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -43,7 +47,16 @@ export const Dropdown = ({
           isSecondary
         />
         {isMenuOpen && (
-          <div className="absolute top-full right-0 z-10 mt-1 flex flex-col gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-md dark:border-white/15 dark:bg-neutral-950">
+          <div
+            className={twMerge(
+              'absolute z-10 flex flex-col gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-md dark:border-white/15 dark:bg-neutral-950',
+              clsx({
+                'top-full right-0 mt-1': alignment === 'bottom',
+                'bottom-full left-0 mb-1': alignment === 'top'
+              }),
+              className
+            )}
+          >
             {options.map((item) => {
               const isSelected = item.value === optionSelected.value;
               return (

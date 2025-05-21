@@ -93,9 +93,7 @@ export const TodoTable = ({
                     </span>
                   </div>
                 </Cell>
-                <Cell className="font-medium first-letter:uppercase">
-                  {item.title}
-                </Cell>
+                <Cell className="first-letter:uppercase">{item.title}</Cell>
                 <Cell>
                   <span className="flex items-center gap-x-1">
                     {renderCompletedStatus(item.completed)}
