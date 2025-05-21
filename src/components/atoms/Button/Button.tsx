@@ -2,7 +2,7 @@ import cn from 'clsx';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface ButtonProps {
+export interface ButtonProps {
   label?: string;
   type?: 'button' | 'submit';
   icon?: ReactNode;

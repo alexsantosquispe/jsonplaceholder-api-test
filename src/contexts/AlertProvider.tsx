@@ -11,12 +11,12 @@ export const AlertProvider = ({ children }: AlertProviderProps) => {
   const [alerts, setAlerts] = useState<AlertType[]>([]);
 
   const addAlert = ({
+    id,
     title,
     message,
     type = ALERT_TYPES.INFO,
     timeout = ALERT_TIMEOUT_DEFAULT
-  }: Omit<AlertType, 'id'>) => {
-    const id = crypto.randomUUID();
+  }: AlertType) => {
     setAlerts((prev) => [...prev, { id, title, message, type }]);
     setTimeout(() => removeAlert(id), timeout);
   };

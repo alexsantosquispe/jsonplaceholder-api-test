@@ -1,22 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { EndpointTitle } from './EndpointTitle';
+import { LoadingScreen } from './LoadingScreen';
 
 const meta = {
-  title: 'Atoms/EndpointTitle',
-  component: EndpointTitle,
+  title: 'Atoms/LoadingScreen',
+  component: LoadingScreen,
   parameters: {
     layout: 'centered'
   }
-} satisfies Meta<typeof EndpointTitle>;
+} satisfies Meta<typeof LoadingScreen>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    methodLabel: 'GET',
-    label: 'Posts'
-  }
+  args: {}
 };

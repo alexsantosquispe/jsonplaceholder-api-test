@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should render the component correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="fixed inset-0 z-50 flex items-end md:items-center md:justify-center bg-black/80 backdrop-blur-xs dark:bg-black/15"
+      >
+        <div
+          class="flex w-full flex-col justify-between rounded-t-lg border md:rounded-lg md:w-[40rem] border-gray-100 bg-white dark:border-white/10 dark:bg-black"
+        >
+          <div
+            class="flex w-full items-start justify-between gap-8 px-4 py-2"
+          >
+            <span
+              class="py-1 text-lg font-medium"
+            >
+              Modal title
+            </span>
+            <button
+              class="text-gray-700 hover:cursor-pointer hover:text-black dark:text-white/70 dark:hover:text-white"
+            >
+              ✕
+            </button>
+          </div>
+          <div
+            class="flex flex-col overflow-auto px-2 md:px-4"
+          >
+            <span>
+              test
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="fixed inset-0 z-50 flex items-end md:items-center md:justify-center bg-black/80 backdrop-blur-xs dark:bg-black/15"
+    >
+      <div
+        class="flex w-full flex-col justify-between rounded-t-lg border md:rounded-lg md:w-[40rem] border-gray-100 bg-white dark:border-white/10 dark:bg-black"
+      >
+        <div
+          class="flex w-full items-start justify-between gap-8 px-4 py-2"
+        >
+          <span
+            class="py-1 text-lg font-medium"
+          >
+            Modal title
+          </span>
+          <button
+            class="text-gray-700 hover:cursor-pointer hover:text-black dark:text-white/70 dark:hover:text-white"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="flex flex-col overflow-auto px-2 md:px-4"
+        >
+          <span>
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

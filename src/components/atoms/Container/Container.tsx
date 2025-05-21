@@ -6,7 +6,7 @@ interface WrapperProps {
   className?: string;
 }
 
-export const Wrapper = ({ children, className }: WrapperProps) => {
+export const Container = ({ children, className }: WrapperProps) => {
   return (
     <div
       className={twMerge(

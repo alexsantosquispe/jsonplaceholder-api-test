@@ -5,6 +5,7 @@ import { SvgIconProps } from '../types';
 export const MoonIcon = ({ className = '' }: SvgIconProps) => {
   return (
     <svg
+      data-testid="moon-icon"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

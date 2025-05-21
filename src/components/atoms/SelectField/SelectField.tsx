@@ -10,7 +10,7 @@ import { ChevronUpDownIcon } from '../../../icons';
 import { Option } from '../../../services/api.types';
 import { InputProps } from '../../../types';
 
-type SelectFieldProps = Omit<InputProps, 'type'> & {
+export type SelectFieldProps = Omit<InputProps, 'type'> & {
   options: Option[];
 };
 
@@ -36,7 +36,7 @@ export const SelectField = ({
       control={control}
       render={({ field: { onChange, value } }) => {
         return (
-          <div className="flex flex-col">
+          <div className="flex w-full flex-col">
             <label htmlFor={name} className="mb-0.5 text-sm">
               {label}
               {isRequired && (
@@ -56,7 +56,8 @@ export const SelectField = ({
                   INPUT_FIELD_STYLES,
                   'appearance-none hover:cursor-pointer',
                   cn({
-                    'border-rose-600 dark:border-rose-400': !!errorMessage
+                    'border-rose-600 dark:border-rose-400': !!errorMessage,
+                    'bg-gray-100 hover:cursor-not-allowed': isDisabled
                   })
                 )}
               >
