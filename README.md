@@ -20,15 +20,19 @@ This project is a modern, scalable example of working with remote APIs using **R
 
 ## 🖼️ Screenshots
 
-### 📍 Home Page
+### 📍 Posts page
 
 ![Home Page](./screenshots/home.png)
 
-### 🖍️ Posts Section
+### 🖍️ Todos page
 
 ![Posts Section](./screenshots/posts.png)
 
 ### ✅ Dark Mode
+
+![Dark Mode](./screenshots/dark-mode.png)
+
+### 📱 Responsive UI
 
 ![Dark Mode](./screenshots/dark-mode.png)
 
