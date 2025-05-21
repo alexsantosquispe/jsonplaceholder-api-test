@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { PAGE_SIZES, SORT_BY_NAME, SORT_BY_TASK_TITLE } from './../constants';
+import { PAGE_SIZES, SORT_BY_NAME } from './../constants';
 import {
   Post,
   PostComment,
@@ -63,7 +63,7 @@ export const getCommentsByPostId = async (
 export const getTodos = async ({
   page,
   limit,
-  sortBy = SORT_BY_TASK_TITLE
+  sortBy
 }: GetTodosArgs): Promise<TodoResponse> => {
   const response = await apiClient.get<Todo[]>('/todos', {
     params: {

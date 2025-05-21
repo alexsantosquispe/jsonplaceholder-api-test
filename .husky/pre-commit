@@ -9,11 +9,8 @@ handle_error() {
 echo "🔍 Running code quality checks..."
 echo "⏳ Checking ESLint and Prettier rules..."
 
-# Run lint-staged with better error handling
 if ! npx lint-staged; then
     echo "❌ Code quality checks failed!"
-    echo "📝 Please fix the issues above and try committing again."
-    echo "💡 You can run 'npm run lint:fix' and 'npm run format' to auto-fix some issues."
     exit 1
 fi
 
