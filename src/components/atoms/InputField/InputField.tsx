@@ -24,7 +24,7 @@ export const InputField = ({
       name={name}
       render={({ field: { onChange, value } }) => {
         return (
-          <div className="flex flex-col">
+          <div className="flex w-full flex-col">
             <label htmlFor={name} className="mb-0.5 text-sm">
               {label}
               {isRequired && <span className="text-rose-600">&nbsp;*</span>}
@@ -40,7 +40,8 @@ export const InputField = ({
               className={twMerge(
                 INPUT_FIELD_STYLES,
                 cn({
-                  'border-rose-600 dark:border-rose-400': !!errorMessage
+                  'border-rose-600 dark:border-rose-400': !!errorMessage,
+                  'bg-gray-100 hover:cursor-not-allowed': isDisabled
                 })
               )}
             />

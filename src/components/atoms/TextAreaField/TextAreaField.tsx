@@ -43,7 +43,8 @@ export const TextAreaField = ({
                 INPUT_FIELD_STYLES,
                 'resize-none',
                 cn({
-                  'border-rose-600 dark:border-rose-400': !!errorMessage
+                  'border-rose-600 dark:border-rose-400': !!errorMessage,
+                  'bg-gray-100 hover:cursor-not-allowed': isDisabled
                 })
               )}
             />

@@ -1,5 +1,5 @@
 import { DIGITS_LENGTH, THEME_KEY } from '../constants';
-import { Theme, ThemeType } from '../context/ThemeContext';
+import { Theme, ThemeType } from '../contexts/ThemeContext';
 
 export const getLSValue = (key: string) => localStorage.getItem(key);
 

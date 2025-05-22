@@ -13,6 +13,7 @@ export const useCreateNewPost = (onClose: () => void) => {
       queryClient.invalidateQueries({ queryKey: ['posts'] });
       onClose();
       addAlert({
+        id: crypto.randomUUID(),
         title: 'Success',
         message: 'Post successfully created',
         type: ALERT_TYPES.SUCCESS
@@ -21,6 +22,7 @@ export const useCreateNewPost = (onClose: () => void) => {
     onError: () => {
       onClose();
       addAlert({
+        id: crypto.randomUUID(),
         title: 'Error',
         message: 'Error creating post',
         type: ALERT_TYPES.ERROR

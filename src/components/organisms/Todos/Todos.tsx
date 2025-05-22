@@ -5,10 +5,10 @@ import { TodoTable } from './components/TodoTable';
 import { useTodos } from './hooks/useTodos';
 import { DEFAULT_OPTION, INITIAL_PAGE_NUMBER } from '../../../constants';
 import { Option, SortByType } from '../../../services/api.types';
+import { Container } from '../../atoms/Container/Container';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
 import { ErrorScreen } from '../../atoms/ErrorScreen/ErrorScreen';
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
-import { Wrapper } from '../../atoms/Wrapper/Wrapper';
 
 const description = `This is an example of a task list for a team. By default, the tasks
 are sorted by title. The table allows you to apply filters, sort by
@@ -39,7 +39,7 @@ const Todos = () => {
 
   return (
     <div className="px-4 md:p-6">
-      <Wrapper className="flex flex-col gap-y-8 py-4">
+      <Container className="flex flex-col gap-y-8 py-4">
         <div className="flex flex-col gap-y-2">
           <EndpointTitle label="TODOS" />
           <span className="text-primary/80 text-sm leading-7 md:w-3/4 md:text-base dark:text-white/80">
@@ -66,7 +66,7 @@ const Todos = () => {
             />
           )}
         </div>
-      </Wrapper>
+      </Container>
     </div>
   );
 };

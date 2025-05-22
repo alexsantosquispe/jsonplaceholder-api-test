@@ -12,9 +12,10 @@ export type AlertType = {
 
 interface AlertContextType {
   alerts: AlertType[];
-  addAlert: (alert: Omit<AlertType, 'id'>) => void;
+  addAlert: (alert: AlertType) => void;
   removeAlert: (alertId: string) => void;
 }
+
 const AlertContext = createContext<AlertContextType | null>(null);
 
 export default AlertContext;
