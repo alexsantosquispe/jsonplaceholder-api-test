@@ -1,21 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostCard should match snapshot 1`] = `
-<div>
-  <div
-    class="flex h-auto w-full flex-col gap-2 rounded-lg border p-3 border-gray-200 hover:cursor-pointer hover:bg-gray-100 dark:border-white/10 dark:hover:bg-white/10"
-  >
-    <span
-      class="text-base leading-7 font-medium capitalize md:text-sm md:leading-6"
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex h-auto w-full flex-col gap-2 rounded-lg border p-3 border-gray-200 hover:cursor-pointer hover:bg-gray-100 dark:border-white/10 dark:hover:bg-white/10"
+      >
+        <span
+          class="text-base leading-7 font-medium capitalize md:text-sm md:leading-6"
+        >
+          post card test
+        </span>
+        <p
+          class="text-primary/70 text-sm leading-6 font-normal normal-case md:text-xs md:leading-5 dark:text-white/70"
+        >
+          post card test body
+          .
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex h-auto w-full flex-col gap-2 rounded-lg border p-3 border-gray-200 hover:cursor-pointer hover:bg-gray-100 dark:border-white/10 dark:hover:bg-white/10"
     >
-      post card test
-    </span>
-    <p
-      class="text-primary/70 text-sm leading-6 font-normal normal-case md:text-xs md:leading-5 dark:text-white/70"
-    >
-      post card test body
-      .
-    </p>
-  </div>
-</div>
+      <span
+        class="text-base leading-7 font-medium capitalize md:text-sm md:leading-6"
+      >
+        post card test
+      </span>
+      <p
+        class="text-primary/70 text-sm leading-6 font-normal normal-case md:text-xs md:leading-5 dark:text-white/70"
+      >
+        post card test body
+        .
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

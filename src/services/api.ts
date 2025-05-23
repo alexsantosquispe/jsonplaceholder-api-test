@@ -14,8 +14,8 @@ import {
 } from './api.types';
 import { LAST_PAGE_NUMBER, ORDER_ASC } from '../constants';
 
-const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+export const apiClient = axios.create({
+  baseURL: 'https://jsonplaceholder.typicode.com', //import.meta.env.VITE_API_URL,
   headers: {
     'Content-Type': 'application/json'
   },

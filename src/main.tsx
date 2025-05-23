@@ -13,7 +13,12 @@ import queryClient from './services/queryClient.ts';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true
+        }}
+      >
         <AlertProvider>
           <QueryClientProvider client={queryClient}>
             <App />

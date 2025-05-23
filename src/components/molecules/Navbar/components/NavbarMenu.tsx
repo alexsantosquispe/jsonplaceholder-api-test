@@ -2,6 +2,7 @@ import cn from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 import { NavbarLink } from './NavbarLink';
+import { useIsMobile } from '../../../../hooks/useIsMobile';
 import { SwitchThemeButton } from '../../../atoms/SwitchThemeButton/SwitchThemeButton';
 
 interface NavbarMenuProps {
@@ -10,6 +11,8 @@ interface NavbarMenuProps {
 }
 
 export const NavbarMenu = ({ isMenuOpen, onSelectOption }: NavbarMenuProps) => {
+  const isMobile = useIsMobile();
+
   return (
     <div
       className={twMerge(
@@ -19,10 +22,12 @@ export const NavbarMenu = ({ isMenuOpen, onSelectOption }: NavbarMenuProps) => {
     >
       <NavbarLink label="Posts" path="/posts" onClick={onSelectOption} />
       <NavbarLink label="Todos" path="/todos" onClick={onSelectOption} />
-      <SwitchThemeButton
-        classNameIcon="size-4"
-        classNameContainer="hidden md:block"
-      />
+      {!isMobile && (
+        <SwitchThemeButton
+          classNameIcon="size-4"
+          classNameContainer="hidden md:block"
+        />
+      )}
     </div>
   );
 };

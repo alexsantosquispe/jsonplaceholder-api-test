@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar should render the component correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <header
+        class="fixed z-40 flex w-full justify-center border-b border-b-gray-100 bg-white/70 backdrop-blur-sm md:h-14 dark:border-b-white/10 dark:bg-black/50"
+      >
+        <nav
+          class="flex w-full max-w-[80rem] flex-col items-center justify-between md:flex-row md:px-6"
+        >
+          <div
+            class="flex w-full items-center justify-between py-1 md:border-none"
+          >
+            <a
+              href="/"
+            >
+              <div
+                class="text-primary flex align-middle text-xl leading-4 md:p-0 md:text-2xl md:leading-9 dark:text-white/90"
+              >
+                <p
+                  class="font-light"
+                >
+                  <span
+                    class="font-bold"
+                  >
+                    { JSON }
+                  </span>
+                   Placeholder
+                  <span
+                    class="text-accent text-5xl leading-1 font-bold dark:text-orange-400"
+                  >
+                    .
+                  </span>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="flex w-full flex-col items-start overflow-hidden text-[0.9375rem] md:flex-row md:items-center md:justify-end md:gap-x-2 md:text-black/50 dark:text-white/60 h-0 md:h-auto"
+          >
+            <a
+              class="w-full py-3 px-4 md:w-fit hover:text-primary dark:hover:text-white"
+              href="/posts"
+            >
+              Posts
+            </a>
+            <a
+              class="w-full py-3 px-4 md:w-fit hover:text-primary dark:hover:text-white"
+              href="/todos"
+            >
+              Todos
+            </a>
+            <button
+              aria-label="dark mode icon"
+              class="transition-color cursor-pointer rounded-md p-4 text-black duration-150 ease-in-out hover:bg-gray-100 md:p-2 dark:text-white dark:hover:bg-white/10 hidden md:block"
+            >
+              <svg
+                class="size-4"
+                data-testid="moon-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </body>,
+  "container": <div>
+    <header
+      class="fixed z-40 flex w-full justify-center border-b border-b-gray-100 bg-white/70 backdrop-blur-sm md:h-14 dark:border-b-white/10 dark:bg-black/50"
+    >
+      <nav
+        class="flex w-full max-w-[80rem] flex-col items-center justify-between md:flex-row md:px-6"
+      >
+        <div
+          class="flex w-full items-center justify-between py-1 md:border-none"
+        >
+          <a
+            href="/"
+          >
+            <div
+              class="text-primary flex align-middle text-xl leading-4 md:p-0 md:text-2xl md:leading-9 dark:text-white/90"
+            >
+              <p
+                class="font-light"
+              >
+                <span
+                  class="font-bold"
+                >
+                  { JSON }
+                </span>
+                 Placeholder
+                <span
+                  class="text-accent text-5xl leading-1 font-bold dark:text-orange-400"
+                >
+                  .
+                </span>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div
+          class="flex w-full flex-col items-start overflow-hidden text-[0.9375rem] md:flex-row md:items-center md:justify-end md:gap-x-2 md:text-black/50 dark:text-white/60 h-0 md:h-auto"
+        >
+          <a
+            class="w-full py-3 px-4 md:w-fit hover:text-primary dark:hover:text-white"
+            href="/posts"
+          >
+            Posts
+          </a>
+          <a
+            class="w-full py-3 px-4 md:w-fit hover:text-primary dark:hover:text-white"
+            href="/todos"
+          >
+            Todos
+          </a>
+          <button
+            aria-label="dark mode icon"
+            class="transition-color cursor-pointer rounded-md p-4 text-black duration-150 ease-in-out hover:bg-gray-100 md:p-2 dark:text-white dark:hover:bg-white/10 hidden md:block"
+          >
+            <svg
+              class="size-4"
+              data-testid="moon-icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

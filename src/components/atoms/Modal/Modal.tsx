@@ -3,6 +3,7 @@ import { twMerge } from 'tailwind-merge';
 import { FooterModal } from './components/FooterModal';
 import { HeaderModal } from './components/HeaderModal';
 import { ModalProps } from './Modal.types';
+import useKeyPress from '../../../hooks/useKeyPress';
 
 const MODAL_STYLES =
   'fixed inset-0 z-50 flex items-end md:items-center md:justify-center bg-black/80 backdrop-blur-xs dark:bg-black/15';
@@ -18,8 +19,10 @@ export const Modal = ({
   onAccept,
   className
 }: ModalProps) => {
+  useKeyPress('Escape', onClose);
+
   return (
-    <div className={MODAL_STYLES}>
+    <div className={MODAL_STYLES} data-testid="modal">
       <div
         className={twMerge(
           'flex w-full flex-col justify-between rounded-t-lg border md:rounded-lg',
