@@ -8,14 +8,12 @@ describe('PostCard', () => {
     title: 'post card test',
     body: 'post card test body'
   };
-  it('should render correctly', () => {
-    render(<PostCard {...props} />);
-
-    expect(screen.getByText(props.title)).toBeInTheDocument();
-  });
 
   it('should match snapshot', () => {
-    const { container } = render(<PostCard {...props} />);
-    expect(container).toMatchSnapshot();
+    const component = render(<PostCard {...props} />);
+
+    expect(component).toMatchSnapshot();
+
+    expect(screen.getByText(props.title)).toBeInTheDocument();
   });
 });

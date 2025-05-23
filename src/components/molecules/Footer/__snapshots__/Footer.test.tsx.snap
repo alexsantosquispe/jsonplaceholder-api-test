@@ -1,73 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal should render the component correctly 1`] = `
+exports[`Footer should render the component correctly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="fixed inset-0 z-50 flex items-end md:items-center md:justify-center bg-black/80 backdrop-blur-xs dark:bg-black/15"
-        data-testid="modal"
+      <footer
+        class="flex w-full justify-center border-t border-gray-200 py-5 md:h-14 dark:border-white/10"
       >
         <div
-          class="flex w-full flex-col justify-between rounded-t-lg border md:rounded-lg md:w-[40rem] border-gray-100 bg-white dark:border-white/10 dark:bg-black"
+          class="flex w-[80rem] items-center justify-center gap-x-2"
         >
-          <div
-            class="flex w-full items-start justify-between gap-8 px-4 py-2"
+          <p
+            class="text-primary/65 text-xs font-light md:text-sm dark:text-white/65"
           >
+            Built by
             <span
-              class="py-1 text-lg font-medium"
+              class="text-primary dark:text-white"
             >
-              Modal title
+               Alex Santos.
             </span>
-            <button
-              class="text-gray-700 hover:cursor-pointer hover:text-black dark:text-white/70 dark:hover:text-white"
+             Source code available on  
+            <a
+              class="text-primary underline dark:text-white"
+              href="https://github.com/alexsantosquispe/jsonplaceholder-api-test"
+              rel="noopener noreferrer"
+              target="_blank"
             >
-              ✕
-            </button>
-          </div>
-          <div
-            class="flex flex-col overflow-auto px-2 md:px-4"
-          >
-            <span>
-              test
-            </span>
-          </div>
+              Github
+            </a>
+          </p>
         </div>
-      </div>
+      </footer>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="fixed inset-0 z-50 flex items-end md:items-center md:justify-center bg-black/80 backdrop-blur-xs dark:bg-black/15"
-      data-testid="modal"
+    <footer
+      class="flex w-full justify-center border-t border-gray-200 py-5 md:h-14 dark:border-white/10"
     >
       <div
-        class="flex w-full flex-col justify-between rounded-t-lg border md:rounded-lg md:w-[40rem] border-gray-100 bg-white dark:border-white/10 dark:bg-black"
+        class="flex w-[80rem] items-center justify-center gap-x-2"
       >
-        <div
-          class="flex w-full items-start justify-between gap-8 px-4 py-2"
+        <p
+          class="text-primary/65 text-xs font-light md:text-sm dark:text-white/65"
         >
+          Built by
           <span
-            class="py-1 text-lg font-medium"
+            class="text-primary dark:text-white"
           >
-            Modal title
+             Alex Santos.
           </span>
-          <button
-            class="text-gray-700 hover:cursor-pointer hover:text-black dark:text-white/70 dark:hover:text-white"
+           Source code available on  
+          <a
+            class="text-primary underline dark:text-white"
+            href="https://github.com/alexsantosquispe/jsonplaceholder-api-test"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            ✕
-          </button>
-        </div>
-        <div
-          class="flex flex-col overflow-auto px-2 md:px-4"
-        >
-          <span>
-            test
-          </span>
-        </div>
+            Github
+          </a>
+        </p>
       </div>
-    </div>
+    </footer>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -5,7 +5,9 @@ import { Modal } from './Modal';
 import { ModalProps } from './Modal.types';
 import { Button } from '../Button/Button';
 
-const TestContentModal = (props: Omit<ModalProps, 'children' | 'onClose'>) => {
+const TestComponentModal = (
+  props: Omit<ModalProps, 'children' | 'onClose'>
+) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -40,7 +42,7 @@ describe('Modal', () => {
 
   describe('Behavior', () => {
     it('should open the modal', async () => {
-      render(<TestContentModal {...props} />);
+      render(<TestComponentModal {...props} />);
 
       const openModalButton = screen.getByText('Open modal');
 
@@ -58,7 +60,7 @@ describe('Modal', () => {
     });
 
     it('should close the modal', async () => {
-      render(<TestContentModal {...props} />);
+      render(<TestComponentModal {...props} />);
 
       fireEvent.click(screen.getByText('Open modal'));
 
@@ -69,6 +71,27 @@ describe('Modal', () => {
       const closeButton = screen.getAllByRole('button')[1];
 
       fireEvent.click(closeButton);
+
+      await waitFor(() => {
+        expect(screen.queryByText(props.title)).not.toBeInTheDocument();
+      });
+    });
+
+    it('should close the modal using the Escape key', async () => {
+      render(<TestComponentModal {...props} />);
+
+      fireEvent.click(screen.getByText('Open modal'));
+
+      const modal = screen.getByTestId('modal');
+
+      expect(modal).toBeInTheDocument();
+
+      fireEvent.keyDown(modal, {
+        key: 'Escape',
+        code: 'Escape',
+        keyCode: 27,
+        charCode: 27
+      });
 
       await waitFor(() => {
         expect(screen.queryByText(props.title)).not.toBeInTheDocument();

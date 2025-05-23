@@ -5,10 +5,12 @@ import { twMerge } from 'tailwind-merge';
 import { MenuButton } from './components/MenuButton';
 import { NavbarLogo } from './components/NavbarLogo';
 import { NavbarMenu } from './components/NavbarMenu';
+import { useIsMobile } from '../../../hooks/useIsMobile';
 import { SwitchThemeButton } from '../../atoms/SwitchThemeButton/SwitchThemeButton';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -29,9 +31,9 @@ export const Navbar = () => {
             })
           )}
         >
-          <MenuButton isOpen={isMenuOpen} onClick={toggleMenu} />
+          {isMobile && <MenuButton isOpen={isMenuOpen} onClick={toggleMenu} />}
           <NavbarLogo />
-          <SwitchThemeButton classNameContainer="md:hidden" />
+          {isMobile && <SwitchThemeButton />}
         </div>
 
         <NavbarMenu isMenuOpen={isMenuOpen} onSelectOption={closeMenu} />

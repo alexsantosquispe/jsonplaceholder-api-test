@@ -47,6 +47,7 @@ export const NewPostForm = ({ isLoading, onCreatePost }: NewPostFormProps) => {
 
   return (
     <form
+      role="form"
       onSubmit={handleSubmit(onSubmit)}
       className="flex w-full flex-col gap-y-4"
     >
