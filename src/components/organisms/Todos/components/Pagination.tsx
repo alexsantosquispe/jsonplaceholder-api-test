@@ -13,6 +13,7 @@ interface PaginationProps {
   setPageSize: (option: Option) => void;
   handleNext: () => void;
   handlePrevious: () => void;
+  resetPage: () => void;
 }
 
 export const Pagination = ({
@@ -21,7 +22,8 @@ export const Pagination = ({
   pageSize,
   setPageSize,
   handleNext,
-  handlePrevious
+  handlePrevious,
+  resetPage
 }: PaginationProps) => {
   const totalPages = useMemo(() => {
     return totalItems && pageSize.value
@@ -37,7 +39,10 @@ export const Pagination = ({
       <Dropdown
         optionSelected={pageSize}
         options={PAGE_SIZES}
-        onSelect={setPageSize}
+        onSelect={(option: Option) => {
+          resetPage();
+          setPageSize(option);
+        }}
         alignment="top"
       />
 
