@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import { PlusCircleIcon } from '../../../../icons';
 import { Button } from '../../../atoms/Button/Button';
@@ -10,7 +11,7 @@ const NewPostModal = lazy(() =>
   }))
 );
 
-export const PostsSideBarHeader = () => {
+export const PostsSideBarHeader = ({ className }: { className?: string }) => {
   const [isPostModalOpen, setIsPostModalOpen] = useState(false);
 
   const openModal = () => {
@@ -24,7 +25,12 @@ export const PostsSideBarHeader = () => {
 
   return (
     <>
-      <div className="sticky top-15 flex min-h-14 items-center justify-between bg-white md:relative md:top-0 md:border-b md:border-gray-200 md:px-4 dark:bg-black md:dark:border-white/10">
+      <div
+        className={twMerge(
+          'sticky top-15 flex min-h-14 items-center justify-between bg-white md:relative md:top-0 md:border-b md:border-gray-200 md:px-4 dark:bg-black md:dark:border-white/10',
+          className
+        )}
+      >
         <EndpointTitle label="POSTS" />
         <Button
           label="New Post"

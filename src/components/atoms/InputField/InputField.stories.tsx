@@ -25,7 +25,7 @@ export const Default: Story = () => {
         <InputField
           control={control as Control<FieldValues>}
           label="Input label"
-          name="firstName"
+          name="input-1"
           placeholder="Enter text..."
         />
       </Wrapper>
@@ -33,7 +33,7 @@ export const Default: Story = () => {
         <InputField
           control={control as Control<FieldValues>}
           label="Input required"
-          name="lastName"
+          name="input-2"
           placeholder="Enter text..."
           isRequired
         />
@@ -42,7 +42,7 @@ export const Default: Story = () => {
         <InputField
           control={control as Control<FieldValues>}
           label="Input disabled"
-          name="desc"
+          name="input-3"
           placeholder="Enter text..."
           isDisabled
         />
@@ -51,7 +51,7 @@ export const Default: Story = () => {
         <InputField
           control={control as Control<FieldValues>}
           label="Input with error message"
-          name="desc"
+          name="input-4"
           placeholder="Enter text..."
           errorMessage="This field has an error"
         />
