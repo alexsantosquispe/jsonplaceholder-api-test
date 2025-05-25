@@ -17,15 +17,15 @@ export const AlertProviderWrapper = ({ children }: ProviderType) => {
   );
 };
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: false
-    }
-  }
-});
-
 export const QueryClientProviderWrapper = ({ children }: ProviderType) => {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false
+      }
+    }
+  });
+
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
