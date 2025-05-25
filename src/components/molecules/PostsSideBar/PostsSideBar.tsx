@@ -6,18 +6,20 @@ import { Post } from '../../../services/api.types';
 import { Button } from '../../atoms/Button/Button';
 import { PostCard } from '../../atoms/PostCard/PostCard';
 
-interface PostsSideBarProps {
+export interface PostsSideBarProps {
   data: Post[];
   showMore: () => void;
   hasNextPage?: boolean;
   className?: string;
+  headerClassName?: string;
 }
 
 export const PostsSideBar = ({
   data,
   showMore,
   hasNextPage = false,
-  className = ''
+  className,
+  headerClassName
 }: PostsSideBarProps) => {
   const { postId } = useParams();
   const currentPostId = Number(postId);
@@ -29,7 +31,7 @@ export const PostsSideBar = ({
         className
       )}
     >
-      <PostsSideBarHeader />
+      <PostsSideBarHeader className={headerClassName} />
       <aside className="flex w-full flex-col gap-y-3 md:gap-y-2 md:overflow-auto md:p-4">
         {data.map((post: Post) => (
           <NavLink key={post.id} to={`/posts/${post.id}`}>

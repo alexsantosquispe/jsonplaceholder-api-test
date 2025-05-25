@@ -24,7 +24,7 @@ export const Default: Story = () => {
       <Wrapper>
         <TextAreaField
           label="Textarea label"
-          name="firstName"
+          name="textarea-1"
           control={control as Control<FieldValues>}
           placeholder="Enter text..."
         />
@@ -32,7 +32,7 @@ export const Default: Story = () => {
       <Wrapper>
         <TextAreaField
           label="Textarea required"
-          name="lastName"
+          name="textarea-2"
           control={control as Control<FieldValues>}
           placeholder="Enter text..."
           isRequired
@@ -42,7 +42,7 @@ export const Default: Story = () => {
         <TextAreaField
           control={control as Control<FieldValues>}
           label="Textarea disabled"
-          name="desc"
+          name="textarea-3"
           placeholder="Enter text..."
           isDisabled
         />
@@ -51,7 +51,7 @@ export const Default: Story = () => {
         <TextAreaField
           control={control as Control<FieldValues>}
           label="Textarea with error message"
-          name="desc"
+          name="textarea-4"
           placeholder="Enter text..."
           errorMessage="This field has an error"
         />

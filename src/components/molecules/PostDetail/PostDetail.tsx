@@ -3,14 +3,16 @@ import { useParams } from 'react-router-dom';
 import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 import { Comments } from '../Comments/Comments';
 import { usePostDetails } from './hooks/usePostDetails';
+import { ErrorScreen } from '../../atoms/ErrorScreen/ErrorScreen';
 
 export const PostDetail = () => {
   const params = useParams();
   const postId = Number(params?.postId);
-
-  const { post, comments, isLoading } = usePostDetails(postId);
+  const { post, comments, isLoading, error } = usePostDetails(postId);
 
   if (isLoading) return <LoadingScreen />;
+
+  if (error) return <ErrorScreen />;
 
   return post ? (
     <div className="flex w-full flex-col gap-4 rounded-lg md:gap-5">
