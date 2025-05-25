@@ -4,7 +4,7 @@ import { INITIAL_PAGE_NUMBER, PAGE_SIZES } from '../../../../constants';
 import { ChevronRightIcon } from '../../../../icons';
 import { Option } from '../../../../services/api.types';
 import { Button } from '../../../atoms/Button/Button';
-import { Dropdown } from '../../../molecules/Dropdown/Dropdown';
+import { Dropdown } from '../../../atoms/Dropdown/Dropdown';
 
 interface PaginationProps {
   currentPage: number;
@@ -13,6 +13,7 @@ interface PaginationProps {
   setPageSize: (option: Option) => void;
   handleNext: () => void;
   handlePrevious: () => void;
+  resetPage: () => void;
 }
 
 export const Pagination = ({
@@ -21,7 +22,8 @@ export const Pagination = ({
   pageSize,
   setPageSize,
   handleNext,
-  handlePrevious
+  handlePrevious,
+  resetPage
 }: PaginationProps) => {
   const totalPages = useMemo(() => {
     return totalItems && pageSize.value
@@ -37,8 +39,11 @@ export const Pagination = ({
       <Dropdown
         optionSelected={pageSize}
         options={PAGE_SIZES}
-        onSelect={setPageSize}
-        alignment="top"
+        onSelect={(option: Option) => {
+          resetPage();
+          setPageSize(option);
+        }}
+        verticalAlignment="top"
       />
 
       <div className="flex items-center gap-x-2 md:gap-x-8">

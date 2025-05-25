@@ -14,7 +14,10 @@ export const LoadingScreen = ({
 }: LoadingScreenProps) => {
   return (
     <div
-      className={twMerge('flex h-screen w-full', containerClassName)}
+      className={twMerge(
+        'flex h-screen w-full items-center',
+        containerClassName
+      )}
       role="status"
       aria-label="Loading"
     >

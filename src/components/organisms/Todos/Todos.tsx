@@ -33,7 +33,9 @@ const Todos = () => {
     setCurrentPage((prev) => prev - 1);
   };
 
-  if (isLoading) return <LoadingScreen containerClassName="-mt-[4rem]" />;
+  const resetPage = () => {
+    setCurrentPage(INITIAL_PAGE_NUMBER);
+  };
 
   if (!isLoading && error) return <ErrorScreen />;
 
@@ -47,25 +49,30 @@ const Todos = () => {
           </span>
         </div>
 
-        <div className="flex flex-col gap-y-4 text-sm">
-          <TodoTable
-            todos={todos}
-            users={users}
-            onSortByColumn={setSortBy}
-            sortByValue={sortBy}
-          />
+        {isLoading && <LoadingScreen containerClassName="md:h-[68dvh]" />}
 
-          {!!todos.length && (
-            <Pagination
-              currentPage={currentPage}
-              totalItems={totalItems}
-              pageSize={pageSize}
-              setPageSize={setPageSize}
-              handleNext={handleNext}
-              handlePrevious={handlePrevious}
+        {!isLoading && (
+          <div className="flex flex-col gap-y-4 text-sm">
+            <TodoTable
+              todos={todos}
+              users={users}
+              onSortByColumn={setSortBy}
+              sortByValue={sortBy}
             />
-          )}
-        </div>
+
+            {!!todos.length && (
+              <Pagination
+                currentPage={currentPage}
+                totalItems={totalItems}
+                pageSize={pageSize}
+                setPageSize={setPageSize}
+                handleNext={handleNext}
+                handlePrevious={handlePrevious}
+                resetPage={resetPage}
+              />
+            )}
+          </div>
+        )}
       </Container>
     </div>
   );

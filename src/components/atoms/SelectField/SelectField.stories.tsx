@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Control, FieldValues, useForm } from 'react-hook-form';
 
 import { SelectField } from './SelectField';
-import { optionsMock } from '../../../constants/mocks';
+import { OptionsMock } from '../../../constants/mocks';
 import { Wrapper } from '../../../utils/stories-utils';
 
 const meta = {
@@ -27,7 +27,7 @@ export const Default: Story = () => {
           label="Select field default"
           name="select-1"
           control={control as Control<FieldValues>}
-          options={optionsMock}
+          options={OptionsMock}
         />
       </Wrapper>
       <Wrapper className="w-full">
@@ -35,7 +35,7 @@ export const Default: Story = () => {
           label="Select field required"
           name="select-2"
           control={control as Control<FieldValues>}
-          options={optionsMock}
+          options={OptionsMock}
           isRequired
         />
       </Wrapper>
@@ -44,7 +44,7 @@ export const Default: Story = () => {
           label="Select field disabled"
           name="select-3"
           control={control as Control<FieldValues>}
-          options={optionsMock}
+          options={OptionsMock}
           isDisabled
         />
       </Wrapper>
@@ -53,7 +53,7 @@ export const Default: Story = () => {
           label="Select with error"
           name="select-4"
           control={control as Control<FieldValues>}
-          options={optionsMock}
+          options={OptionsMock}
           errorMessage="This field has an error"
         />
       </Wrapper>
