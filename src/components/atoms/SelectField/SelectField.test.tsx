@@ -4,7 +4,7 @@ import { act } from 'react';
 import { Control, FieldValues, useForm } from 'react-hook-form';
 
 import { SelectField, SelectFieldProps } from './SelectField';
-import { optionsMock } from '../../../constants/mocks';
+import { OptionsMock } from '../../../constants/mocks';
 
 const SelectFieldWrapper = (props: Omit<SelectFieldProps, 'control'>) => {
   const { control } = useForm();
@@ -16,7 +16,7 @@ describe('SelectField', () => {
   const props = {
     label: 'Select field',
     name: 'options',
-    options: optionsMock
+    options: OptionsMock
   };
 
   beforeEach(() => {
@@ -49,7 +49,7 @@ describe('SelectField', () => {
     });
 
     const selectedOption = screen.getByRole('option', {
-      name: 'option 3'
+      name: 'Option 3'
     }) as HTMLOptionElement;
 
     expect(selectedOption.selected).toBe(true);

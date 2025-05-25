@@ -5,13 +5,14 @@ import { twMerge } from 'tailwind-merge';
 import { useClickOutside } from '../../../hooks/useClickOutside';
 import { ChevronDownIcon } from '../../../icons';
 import { Option } from '../../../services/api.types';
-import { Button } from '../../atoms/Button/Button';
+import { Button } from '../Button/Button';
 
 interface DropdownProps {
   optionSelected: Option;
   options: Option[];
   onSelect: (option: Option) => void;
-  alignment?: 'top' | 'bottom';
+  verticalAlignment?: 'top' | 'bottom';
+  horizontalAlignment?: 'left' | 'right';
   className?: string;
 }
 
@@ -19,7 +20,8 @@ export const Dropdown = ({
   optionSelected,
   options,
   onSelect,
-  alignment = 'bottom',
+  verticalAlignment = 'bottom',
+  horizontalAlignment = 'left',
   className
 }: DropdownProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +40,7 @@ export const Dropdown = ({
 
   return (
     <div className="relative" ref={dropdownRef}>
-      <div className="flex flex-col justify-end gap-y-1">
+      <div className="flex flex-col gap-y-1">
         <Button
           label={optionSelected.label}
           onClick={handleOpenMenu}
@@ -51,8 +53,10 @@ export const Dropdown = ({
             className={twMerge(
               'absolute z-10 flex flex-col gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-md dark:border-white/15 dark:bg-neutral-950',
               clsx({
-                'top-full right-0 mt-1': alignment === 'bottom',
-                'bottom-full left-0 mb-1': alignment === 'top'
+                'top-full mt-1': verticalAlignment === 'bottom',
+                'bottom-full mb-1': verticalAlignment === 'top',
+                'left-0': horizontalAlignment === 'left',
+                'right-0': horizontalAlignment === 'right'
               }),
               className
             )}
@@ -64,7 +68,7 @@ export const Dropdown = ({
                   key={item.value}
                   onClick={() => onSelectOption(item)}
                   className={twMerge(
-                    'flex min-w-28 items-center justify-between rounded-md px-3 py-2 hover:cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-white/15',
+                    'flex min-w-40 items-center justify-between rounded-md px-3 py-2 whitespace-nowrap hover:cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-white/15',
                     clsx({
                       'bg-gray-100 dark:bg-white/15': isSelected
                     })

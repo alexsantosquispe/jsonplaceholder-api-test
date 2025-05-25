@@ -32,37 +32,37 @@ exports[`SelectField should render the component correctly 1`] = `
               class="text-red-300"
               value="1"
             >
-              option 1
+              Option 1
             </option>
             <option
               class="text-red-300"
               value="2"
             >
-              option 2
+              Option 2
             </option>
             <option
               class="text-red-300"
               value="3"
             >
-              option 3
+              Option 3
             </option>
             <option
               class="text-red-300"
               value="4"
             >
-              option 4
+              Option 4
             </option>
             <option
               class="text-red-300"
               value="5"
             >
-              option 5
+              Option 5
             </option>
             <option
               class="text-red-300"
               value="6"
             >
-              option 6
+              Option 6
             </option>
           </select>
           <svg
@@ -111,37 +111,37 @@ exports[`SelectField should render the component correctly 1`] = `
             class="text-red-300"
             value="1"
           >
-            option 1
+            Option 1
           </option>
           <option
             class="text-red-300"
             value="2"
           >
-            option 2
+            Option 2
           </option>
           <option
             class="text-red-300"
             value="3"
           >
-            option 3
+            Option 3
           </option>
           <option
             class="text-red-300"
             value="4"
           >
-            option 4
+            Option 4
           </option>
           <option
             class="text-red-300"
             value="5"
           >
-            option 5
+            Option 5
           </option>
           <option
             class="text-red-300"
             value="6"
           >
-            option 6
+            Option 6
           </option>
         </select>
         <svg
@@ -247,37 +247,37 @@ exports[`SelectField should render the component correctly 2`] = `
               class="text-red-300"
               value="1"
             >
-              option 1
+              Option 1
             </option>
             <option
               class="text-red-300"
               value="2"
             >
-              option 2
+              Option 2
             </option>
             <option
               class="text-red-300"
               value="3"
             >
-              option 3
+              Option 3
             </option>
             <option
               class="text-red-300"
               value="4"
             >
-              option 4
+              Option 4
             </option>
             <option
               class="text-red-300"
               value="5"
             >
-              option 5
+              Option 5
             </option>
             <option
               class="text-red-300"
               value="6"
             >
-              option 6
+              Option 6
             </option>
           </select>
           <svg
@@ -330,37 +330,37 @@ exports[`SelectField should render the component correctly 2`] = `
               class="text-red-300"
               value="1"
             >
-              option 1
+              Option 1
             </option>
             <option
               class="text-red-300"
               value="2"
             >
-              option 2
+              Option 2
             </option>
             <option
               class="text-red-300"
               value="3"
             >
-              option 3
+              Option 3
             </option>
             <option
               class="text-red-300"
               value="4"
             >
-              option 4
+              Option 4
             </option>
             <option
               class="text-red-300"
               value="5"
             >
-              option 5
+              Option 5
             </option>
             <option
               class="text-red-300"
               value="6"
             >
-              option 6
+              Option 6
             </option>
           </select>
           <svg
@@ -414,37 +414,37 @@ exports[`SelectField should render the component correctly 2`] = `
             class="text-red-300"
             value="1"
           >
-            option 1
+            Option 1
           </option>
           <option
             class="text-red-300"
             value="2"
           >
-            option 2
+            Option 2
           </option>
           <option
             class="text-red-300"
             value="3"
           >
-            option 3
+            Option 3
           </option>
           <option
             class="text-red-300"
             value="4"
           >
-            option 4
+            Option 4
           </option>
           <option
             class="text-red-300"
             value="5"
           >
-            option 5
+            Option 5
           </option>
           <option
             class="text-red-300"
             value="6"
           >
-            option 6
+            Option 6
           </option>
         </select>
         <svg

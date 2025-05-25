@@ -4,7 +4,7 @@ import { INITIAL_PAGE_NUMBER, PAGE_SIZES } from '../../../../constants';
 import { ChevronRightIcon } from '../../../../icons';
 import { Option } from '../../../../services/api.types';
 import { Button } from '../../../atoms/Button/Button';
-import { Dropdown } from '../../../molecules/Dropdown/Dropdown';
+import { Dropdown } from '../../../atoms/Dropdown/Dropdown';
 
 interface PaginationProps {
   currentPage: number;
@@ -43,7 +43,7 @@ export const Pagination = ({
           resetPage();
           setPageSize(option);
         }}
-        alignment="top"
+        verticalAlignment="top"
       />
 
       <div className="flex items-center gap-x-2 md:gap-x-8">

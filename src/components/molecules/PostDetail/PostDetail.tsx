@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 
-import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
-import { Comments } from '../Comments/Comments';
+import { Comments } from './components/Comments';
 import { usePostDetails } from './hooks/usePostDetails';
 import { ErrorScreen } from '../../atoms/ErrorScreen/ErrorScreen';
+import { LoadingScreen } from '../../atoms/LoadingScreen/LoadingScreen';
 
 export const PostDetail = () => {
   const params = useParams();
