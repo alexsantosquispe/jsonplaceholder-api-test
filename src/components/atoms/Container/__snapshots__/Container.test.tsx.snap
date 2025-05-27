@@ -6,7 +6,7 @@ exports[`ErrorScreen should render the component correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="text-primary/90 rounded-lg md:border md:border-gray-200 md:px-6 md:shadow-sm dark:text-white/80 md:dark:border-white/10 bg-yellow-300"
+        class="text-primary/90 rounded-lg md:border md:border-gray-200 md:px-6 md:shadow-xs dark:text-white/80 md:dark:border-white/10 bg-yellow-300"
       >
         <div>
           test
@@ -16,7 +16,7 @@ exports[`ErrorScreen should render the component correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="text-primary/90 rounded-lg md:border md:border-gray-200 md:px-6 md:shadow-sm dark:text-white/80 md:dark:border-white/10 bg-yellow-300"
+      class="text-primary/90 rounded-lg md:border md:border-gray-200 md:px-6 md:shadow-xs dark:text-white/80 md:dark:border-white/10 bg-yellow-300"
     >
       <div>
         test
