@@ -8,274 +8,28 @@ exports[`NewPostModal should render the component correctly 1`] = `
       <div
         class="fixed top-[8.5rem] z-40 flex w-full flex-col items-center gap-y-2 md:top-[4.5rem]"
       />
-      <div
-        class="fixed inset-0 z-50 flex items-end md:items-center md:justify-center bg-black/80 backdrop-blur-xs dark:bg-black/15"
-        data-testid="modal"
+      <button
+        aria-disabled="false"
+        class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90 hover:bg-primary/80 dark:hover:bg-white/80"
+        role="button"
+        type="button"
       >
-        <div
-          class="flex w-full flex-col justify-between rounded-t-lg border md:rounded-lg border-gray-100 bg-white dark:border-white/10 dark:bg-black md:w-[32rem]"
-        >
-          <div
-            class="flex w-full items-start justify-between gap-8 px-4 py-2"
-          >
-            <span
-              class="py-1 text-lg font-medium"
-            >
-              New Post
-            </span>
-            <button
-              class="text-gray-700 hover:cursor-pointer hover:text-black dark:text-white/70 dark:hover:text-white"
-            >
-              ✕
-            </button>
-          </div>
-          <div
-            class="flex flex-col overflow-auto px-2 md:px-4 pb-4 md:pb-2"
-          >
-            <form
-              class="flex w-full flex-col gap-y-4"
-              role="form"
-            >
-              <div
-                class="flex w-full flex-col"
-              >
-                <label
-                  class="mb-0.5 text-sm"
-                  for="userId"
-                >
-                  User
-                  <span
-                    class="text-rose-600 dark:text-rose-400"
-                  >
-                     *
-                  </span>
-                </label>
-                <div
-                  class="relative"
-                >
-                  <select
-                    class="w-full rounded-lg border border-gray-200 px-4 py-2 text-sm dark:border-white/30 focus:ring-primary/60 focus:border-primary/60 focus:ring-1 focus:outline-none dark:focus:border-white/65 dark:focus:ring-white/65 appearance-none hover:cursor-pointer"
-                    id="userId"
-                    name="userId"
-                  >
-                    <option
-                      class="text-red-300"
-                      value=""
-                    >
-                      Select a user
-                    </option>
-                  </select>
-                  <svg
-                    class="size-4 text-primary/80 pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 dark:text-white/80"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="flex w-full flex-col"
-              >
-                <label
-                  class="mb-0.5 text-sm"
-                  for="title"
-                >
-                  Title
-                  <span
-                    class="text-rose-600"
-                  >
-                     *
-                  </span>
-                </label>
-                <input
-                  class="w-full rounded-lg border border-gray-200 px-4 py-2 text-sm dark:border-white/30 focus:ring-primary/60 focus:border-primary/60 focus:ring-1 focus:outline-none dark:focus:border-white/65 dark:focus:ring-white/65"
-                  id="title"
-                  name="title"
-                  placeholder="Enter title"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <div
-                class="flex flex-col gap-y-0.5"
-              >
-                <label
-                  class="mb-0.5 text-sm"
-                  for="description"
-                >
-                  Description
-                  <span
-                    class="text-rose-600"
-                  >
-                     *
-                  </span>
-                </label>
-                <textarea
-                  class="w-full rounded-lg border border-gray-200 px-4 py-2 text-sm dark:border-white/30 focus:ring-primary/60 focus:border-primary/60 focus:ring-1 focus:outline-none dark:focus:border-white/65 dark:focus:ring-white/65 resize-none"
-                  cols="50"
-                  id="description"
-                  name="description"
-                  placeholder="Enter description..."
-                  rows="6"
-                />
-              </div>
-              <button
-                aria-disabled="false"
-                class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90 hover:bg-primary/80 dark:hover:bg-white/80 mt-2 w-fit self-end"
-                role="button"
-                type="submit"
-              >
-                Create Post
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+        Open modal
+      </button>
     </div>
   </body>,
   "container": <div>
     <div
       class="fixed top-[8.5rem] z-40 flex w-full flex-col items-center gap-y-2 md:top-[4.5rem]"
     />
-    <div
-      class="fixed inset-0 z-50 flex items-end md:items-center md:justify-center bg-black/80 backdrop-blur-xs dark:bg-black/15"
-      data-testid="modal"
+    <button
+      aria-disabled="false"
+      class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90 hover:bg-primary/80 dark:hover:bg-white/80"
+      role="button"
+      type="button"
     >
-      <div
-        class="flex w-full flex-col justify-between rounded-t-lg border md:rounded-lg border-gray-100 bg-white dark:border-white/10 dark:bg-black md:w-[32rem]"
-      >
-        <div
-          class="flex w-full items-start justify-between gap-8 px-4 py-2"
-        >
-          <span
-            class="py-1 text-lg font-medium"
-          >
-            New Post
-          </span>
-          <button
-            class="text-gray-700 hover:cursor-pointer hover:text-black dark:text-white/70 dark:hover:text-white"
-          >
-            ✕
-          </button>
-        </div>
-        <div
-          class="flex flex-col overflow-auto px-2 md:px-4 pb-4 md:pb-2"
-        >
-          <form
-            class="flex w-full flex-col gap-y-4"
-            role="form"
-          >
-            <div
-              class="flex w-full flex-col"
-            >
-              <label
-                class="mb-0.5 text-sm"
-                for="userId"
-              >
-                User
-                <span
-                  class="text-rose-600 dark:text-rose-400"
-                >
-                   *
-                </span>
-              </label>
-              <div
-                class="relative"
-              >
-                <select
-                  class="w-full rounded-lg border border-gray-200 px-4 py-2 text-sm dark:border-white/30 focus:ring-primary/60 focus:border-primary/60 focus:ring-1 focus:outline-none dark:focus:border-white/65 dark:focus:ring-white/65 appearance-none hover:cursor-pointer"
-                  id="userId"
-                  name="userId"
-                >
-                  <option
-                    class="text-red-300"
-                    value=""
-                  >
-                    Select a user
-                  </option>
-                </select>
-                <svg
-                  class="size-4 text-primary/80 pointer-events-none absolute top-1/2 right-2 -translate-y-1/2 dark:text-white/80"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="flex w-full flex-col"
-            >
-              <label
-                class="mb-0.5 text-sm"
-                for="title"
-              >
-                Title
-                <span
-                  class="text-rose-600"
-                >
-                   *
-                </span>
-              </label>
-              <input
-                class="w-full rounded-lg border border-gray-200 px-4 py-2 text-sm dark:border-white/30 focus:ring-primary/60 focus:border-primary/60 focus:ring-1 focus:outline-none dark:focus:border-white/65 dark:focus:ring-white/65"
-                id="title"
-                name="title"
-                placeholder="Enter title"
-                type="text"
-                value=""
-              />
-            </div>
-            <div
-              class="flex flex-col gap-y-0.5"
-            >
-              <label
-                class="mb-0.5 text-sm"
-                for="description"
-              >
-                Description
-                <span
-                  class="text-rose-600"
-                >
-                   *
-                </span>
-              </label>
-              <textarea
-                class="w-full rounded-lg border border-gray-200 px-4 py-2 text-sm dark:border-white/30 focus:ring-primary/60 focus:border-primary/60 focus:ring-1 focus:outline-none dark:focus:border-white/65 dark:focus:ring-white/65 resize-none"
-                cols="50"
-                id="description"
-                name="description"
-                placeholder="Enter description..."
-                rows="6"
-              />
-            </div>
-            <button
-              aria-disabled="false"
-              class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90 hover:bg-primary/80 dark:hover:bg-white/80 mt-2 w-fit self-end"
-              role="button"
-              type="submit"
-            >
-              Create Post
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+      Open modal
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -13,10 +13,10 @@ const NewPostModalWrapper = () => {
   return (
     <AlertProviderWrapper>
       <QueryClientProviderWrapper>
-        <div>
+        <>
           <Button label="Open modal" onClick={() => setIsOpen(true)} />
           {isOpen && <NewPostModal onClose={() => setIsOpen(false)} />}
-        </div>
+        </>
       </QueryClientProviderWrapper>
     </AlertProviderWrapper>
   );
@@ -28,13 +28,7 @@ describe('NewPostModal', () => {
   });
 
   it('should render the component correctly', () => {
-    const component = render(
-      <AlertProviderWrapper>
-        <QueryClientProviderWrapper>
-          <NewPostModal onClose={() => {}} />
-        </QueryClientProviderWrapper>
-      </AlertProviderWrapper>
-    );
+    const component = render(<NewPostModalWrapper />);
 
     expect(component).toMatchSnapshot();
   });
