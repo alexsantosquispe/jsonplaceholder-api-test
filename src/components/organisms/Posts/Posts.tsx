@@ -23,9 +23,9 @@ const Posts = () => {
   if (!isLoading && error) return <ErrorScreen />;
 
   return (
-    <div className="px-4 md:p-6">
+    <div className="px-4 py-6 md:border-x md:border-dashed md:border-gray-200 md:px-6 md:py-12 md:dark:border-white/15">
       {posts.length ? (
-        <Container className="flex md:grid md:h-[85dvh] md:grid-cols-9 md:overflow-hidden md:px-0">
+        <Container className="flex md:grid md:h-[88dvh] md:grid-cols-9 md:overflow-hidden md:px-0">
           <PostsSideBar
             data={posts}
             showMore={() => fetchNextPage()}

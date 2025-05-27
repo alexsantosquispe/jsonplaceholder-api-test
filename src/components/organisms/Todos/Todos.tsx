@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Pagination } from './components/Pagination';
 import { TodoTable } from './components/TodoTable';
 import { useTodos } from './hooks/useTodos';
-import { DEFAULT_OPTION, INITIAL_PAGE_NUMBER } from '../../../constants';
+import { DEFAULT_PAGE_SIZE, INITIAL_PAGE_NUMBER } from '../../../constants';
 import { Option, SortByType } from '../../../services/api.types';
 import { Container } from '../../atoms/Container/Container';
 import { EndpointTitle } from '../../atoms/EndpointTitle/EndpointTitle';
@@ -16,7 +16,7 @@ columns, and adjust the number of tasks displayed per page.`;
 
 const Todos = () => {
   const [currentPage, setCurrentPage] = useState(INITIAL_PAGE_NUMBER);
-  const [pageSize, setPageSize] = useState<Option>(DEFAULT_OPTION);
+  const [pageSize, setPageSize] = useState<Option>(DEFAULT_PAGE_SIZE);
   const [sortBy, setSortBy] = useState<SortByType | null>(null);
 
   const { todos, totalItems, users, error, isLoading } = useTodos({
@@ -40,7 +40,7 @@ const Todos = () => {
   if (!isLoading && error) return <ErrorScreen />;
 
   return (
-    <div className="px-4 md:p-6">
+    <div className="px-4 py-6 md:border md:border-y-0 md:border-dashed md:border-gray-200 md:px-6 md:py-12 md:dark:border-white/15">
       <Container className="flex flex-col gap-y-8 py-4">
         <div className="flex flex-col gap-y-2">
           <EndpointTitle label="TODOS" />

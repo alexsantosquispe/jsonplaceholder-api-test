@@ -29,7 +29,7 @@ export const PAGE_SIZES: Option[] = [
   { value: 50, label: '50' }
 ];
 
-export const DEFAULT_OPTION: Option = PAGE_SIZES[0];
+export const DEFAULT_PAGE_SIZE: Option = PAGE_SIZES[1];
 
 export const COLUMNS_MAP = [
   { key: 'id', label: 'Code', isSortEnabled: true },
