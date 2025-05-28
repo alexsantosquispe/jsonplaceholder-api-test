@@ -48,7 +48,7 @@ describe('Navbar', () => {
       </ThemeProvider>
     );
 
-    expect(screen.getByText('{ JSON }')).toBeInTheDocument();
+    expect(screen.getByText('JSON')).toBeInTheDocument();
     expect(screen.getByText('Placeholder')).toBeInTheDocument();
     expect(screen.getByText('Posts')).toBeInTheDocument();
     expect(screen.getByText('Todos')).toBeInTheDocument();

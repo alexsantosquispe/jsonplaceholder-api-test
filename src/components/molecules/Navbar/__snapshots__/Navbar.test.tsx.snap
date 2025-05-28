@@ -18,19 +18,29 @@ exports[`Navbar should render the component correctly 1`] = `
               href="/"
             >
               <div
-                class="text-primary flex align-middle text-xl leading-4 md:p-0 md:text-2xl md:leading-9 dark:text-white/90"
+                class="text-primary flex align-middle text-xl leading-4 md:p-0 dark:text-white"
               >
                 <p
-                  class="font-light"
+                  class="font-extrabold"
                 >
                   <span
-                    class="font-bold"
+                    class="text-accent dark:text-orange-500"
                   >
-                    { JSON }
+                    { 
                   </span>
-                   Placeholder
+                  JSON
                   <span
-                    class="text-accent text-5xl leading-1 font-bold dark:text-orange-400"
+                    class="text-accent dark:text-orange-500"
+                  >
+                     }
+                  </span>
+                  <span
+                    class="font-light"
+                  >
+                     Placeholder
+                  </span>
+                  <span
+                    class="text-accent text-4xl leading-2 dark:text-orange-500"
                   >
                     .
                   </span>
@@ -92,19 +102,29 @@ exports[`Navbar should render the component correctly 1`] = `
             href="/"
           >
             <div
-              class="text-primary flex align-middle text-xl leading-4 md:p-0 md:text-2xl md:leading-9 dark:text-white/90"
+              class="text-primary flex align-middle text-xl leading-4 md:p-0 dark:text-white"
             >
               <p
-                class="font-light"
+                class="font-extrabold"
               >
                 <span
-                  class="font-bold"
+                  class="text-accent dark:text-orange-500"
                 >
-                  { JSON }
+                  { 
                 </span>
-                 Placeholder
+                JSON
                 <span
-                  class="text-accent text-5xl leading-1 font-bold dark:text-orange-400"
+                  class="text-accent dark:text-orange-500"
+                >
+                   }
+                </span>
+                <span
+                  class="font-light"
+                >
+                   Placeholder
+                </span>
+                <span
+                  class="text-accent text-4xl leading-2 dark:text-orange-500"
                 >
                   .
                 </span>
