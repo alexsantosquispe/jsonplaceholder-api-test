@@ -24,14 +24,14 @@ This project is a modern, scalable example of working with remote APIs using **R
 
 <div style="display:flex; gap: 10px;">
   <img src="./screenshots/desk-light.png" alt="Desktop view" width="69%"/>
-  <img src="./screenshots/mobile-light.png" alt="Mobile view" width="19.3%"/>
+  <img src="./screenshots/mobile-light.png" alt="Mobile view" width="21.75%"/>
 </div>
 
 ### Dark
 
 <div style="display:flex; gap: 10px;">
   <img src="./screenshots/desk-dark.png" alt="Desktop view" width="69%"/>
-  <img src="./screenshots/mobile-dark.png" alt="Mobile view" width="19.6%"/>
+  <img src="./screenshots/mobile-dark.png" alt="Mobile view" width="21.75%"/>
 </div>
 
 ---
