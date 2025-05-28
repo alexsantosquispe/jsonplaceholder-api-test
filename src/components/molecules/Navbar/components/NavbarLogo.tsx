@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 export const NavbarLogo = () => {
   return (
     <Link to="/">
-      <div className="text-primary flex align-middle text-xl leading-4 md:p-0 md:text-2xl md:leading-9 dark:text-white/90">
-        <p className="font-light">
-          <span className="font-bold">{'{ JSON }'}</span> Placeholder
-          <span className="text-accent text-5xl leading-1 font-bold dark:text-orange-400">
+      <div className="text-primary flex align-middle text-xl leading-4 md:p-0 dark:text-white">
+        <p className="font-extrabold">
+          <span className="text-accent dark:text-orange-500">{'{ '}</span>JSON
+          <span className="text-accent dark:text-orange-500">{' }'}</span>
+          <span className="font-light"> Placeholder</span>
+          <span className="text-accent text-4xl leading-2 dark:text-orange-500">
             .
           </span>
         </p>
