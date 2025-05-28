@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ErrorScreen } from './ErrorScreen';
+import { Wrapper } from '../../../utils/stories-utils';
 
 const meta = {
   title: 'Atoms/ErrorScreen',
@@ -12,8 +13,14 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof ErrorScreen>;
 
-export const Default: Story = {
-  args: {}
+export const Default: Story = () => {
+  return (
+    <Wrapper>
+      <ErrorScreen />
+    </Wrapper>
+  );
 };
+
+Default.args = {};

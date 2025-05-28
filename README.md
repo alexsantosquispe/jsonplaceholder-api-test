@@ -20,15 +20,19 @@ This project is a modern, scalable example of working with remote APIs using **R
 
 ## 🖼️ Screenshots
 
-### Desktop
+### Light
 
-![Desktop light](./screenshots/desk-light.png)
-![Desktop dark](./screenshots/desk-dark.png)
+<div style="display:flex; gap: 10px;">
+  <img src="./screenshots/desk-light.png" alt="Desktop view" width="64%"/>
+  <img src="./screenshots/mobile-light.png" alt="Mobile view" width="19.3%"/>
+</div>
 
-### Mobile
+### Dark
 
-![Mobile light](./screenshots/mobile-light.png)
-![Mobile dark](./screenshots/mobile-dark.png)
+<div style="display:flex; gap: 10px;">
+  <img src="./screenshots/desk-dark.png" alt="Desktop view" width="64%"/>
+  <img src="./screenshots/mobile-dark.png" alt="Mobile view" width="19.6%"/>
+</div>
 
 ---
 

@@ -11,7 +11,7 @@ export const Wrapper = ({
   return (
     <div
       className={twMerge(
-        'flex w-full min-w-[20rem] items-center justify-center gap-4 border border-gray-200 p-8',
+        'dark:bg-primary/90 text-primary flex w-full min-w-[20rem] items-center justify-center gap-4 border border-gray-200 p-8 dark:text-white/15',
         className
       )}
     >

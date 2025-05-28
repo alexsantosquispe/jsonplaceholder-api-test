@@ -5,6 +5,7 @@ import { useState } from 'react';
 import NewPostModal from './NewPostModal';
 import { AlertProvider } from '../../../contexts/AlertProvider';
 import queryClient from '../../../services/queryClient';
+import { Wrapper } from '../../../utils/stories-utils';
 import { AlertStack } from '../../atoms/AlertStack/AlertStack';
 import { Button } from '../../atoms/Button/Button';
 
@@ -14,7 +15,7 @@ const NewPostModalWrapper = () => {
   return (
     <AlertProvider>
       <QueryClientProvider client={queryClient}>
-        <div>
+        <Wrapper className="flex-col items-start justify-start">
           <Button label="Open New Post Modal" onClick={() => setIsOpen(true)} />
           <div className="flex items-baseline pt-6 text-sm text-neutral-600">
             <strong>Note:&nbsp;&nbsp;</strong>Press the
@@ -24,7 +25,7 @@ const NewPostModalWrapper = () => {
             key in order to close the modaL
           </div>
           {isOpen && <NewPostModal onClose={() => setIsOpen(false)} />}
-        </div>
+        </Wrapper>
         <AlertStack />
       </QueryClientProvider>
     </AlertProvider>

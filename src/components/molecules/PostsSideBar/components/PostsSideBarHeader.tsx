@@ -27,7 +27,7 @@ export const PostsSideBarHeader = ({ className }: { className?: string }) => {
     <>
       <div
         className={twMerge(
-          'sticky top-15 flex min-h-14 items-center justify-between bg-white md:relative md:top-0 md:border-b md:border-gray-200 md:px-4 dark:bg-black/95 md:dark:border-white/10',
+          'sticky top-15 flex min-h-14 items-center justify-between bg-white md:relative md:top-0 md:border-b md:border-gray-200 md:px-4 dark:bg-black/95 md:dark:border-white/10 md:dark:bg-transparent',
           className
         )}
       >

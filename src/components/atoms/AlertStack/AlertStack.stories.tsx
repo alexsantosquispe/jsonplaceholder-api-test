@@ -1,14 +1,16 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ALERT_TYPES } from '../../../constants';
+import { ThemeProvider } from '../../../contexts/ThemeProvider';
 import { useAlert } from '../../../hooks/useAlert';
+import { Wrapper } from '../../../utils/stories-utils';
 import { AlertProviderWrapper } from '../../../utils/test-utils';
 import { Button } from '../Button/Button';
 
 const WrappedComponent = () => {
   const { addAlert } = useAlert();
   return (
-    <div className="flex gap-4 border border-gray-200 p-10">
+    <Wrapper>
       <Button
         label="Success Alert"
         onClick={() =>
@@ -43,15 +45,17 @@ const WrappedComponent = () => {
           })
         }
       />
-    </div>
+    </Wrapper>
   );
 };
 
 const AlertStackStory = () => {
   return (
-    <AlertProviderWrapper>
-      <WrappedComponent />
-    </AlertProviderWrapper>
+    <ThemeProvider>
+      <AlertProviderWrapper>
+        <WrappedComponent />
+      </AlertProviderWrapper>
+    </ThemeProvider>
   );
 };
 
