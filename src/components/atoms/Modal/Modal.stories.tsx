@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
 import { Modal } from './Modal';
+import { Wrapper } from '../../../utils/stories-utils';
 import { Button } from '../Button/Button';
 
 const meta = {
@@ -17,11 +18,11 @@ export const Default: Story = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex">
+    <Wrapper className="flex">
       <Button label="Open modal" onClick={() => setIsOpen(true)} />
       {isOpen && (
         <Modal title="Modal test" onClose={() => setIsOpen(false)}>
-          <div className="flex w-full flex-col py-4">
+          <div className="text-primary flex w-full flex-col py-4 dark:text-white">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
             deserunt dicta voluptates ipsam in modi dignissimos facilis nesciunt
             ab, voluptatibus incidunt autem tempora nostrum veritatis doloremque
@@ -36,7 +37,7 @@ export const Default: Story = () => {
           </div>
         </Modal>
       )}
-    </div>
+    </Wrapper>
   );
 };
 

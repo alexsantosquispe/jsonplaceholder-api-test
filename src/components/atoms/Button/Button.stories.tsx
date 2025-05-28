@@ -20,19 +20,19 @@ export const Default: Story = (args: Partial<ButtonProps>) => {
     <div className="grid grid-cols-4 gap-4">
       <Wrapper className="flex-col">
         <Button label={args.label} />
-        <span className="text-sm">Default</span>
+        <span className="text-sm dark:text-white">Default</span>
       </Wrapper>
       <Wrapper className="flex-col">
         <Button label={args.label} isDisabled />
-        <span className="text-sm">Disabled</span>
+        <span className="text-sm dark:text-white">Disabled</span>
       </Wrapper>
       <Wrapper className="flex-col">
         <Button label="Secondary" isSecondary />
-        <span className="text-sm">Secondary</span>
+        <span className="text-sm dark:text-white">Secondary</span>
       </Wrapper>
       <Wrapper className="flex-col">
         <Button label="Secondary" isSecondary isDisabled />
-        <span className="text-sm">Disabled</span>
+        <span className="text-sm dark:text-white">Disabled</span>
       </Wrapper>
     </div>
   );

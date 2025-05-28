@@ -6,6 +6,7 @@ import { PostsSideBar } from './PostsSideBar';
 import { AlertProvider } from '../../../contexts/AlertProvider';
 import { PostsMock } from '../../../services/mocks';
 import queryClient from '../../../services/queryClient';
+import { Wrapper } from '../../../utils/stories-utils';
 
 const PostDetailWrapper = () => {
   return (
@@ -43,9 +44,11 @@ type Story = StoryObj<typeof PostsSideBar>;
 
 export const Default: Story = () => {
   return (
-    <div className="flex overflow-hidden border-0 border-gray-200 p-0 md:h-[90dvh] md:rounded-lg md:border">
-      <PostDetailWrapper />
-    </div>
+    <Wrapper>
+      <div className="flex overflow-hidden border-0 border-gray-200 p-0 md:h-[90dvh] md:rounded-lg md:border dark:border-white/15">
+        <PostDetailWrapper />
+      </div>
+    </Wrapper>
   );
 };
 

@@ -44,7 +44,8 @@ export const TextAreaField = ({
                 'resize-none',
                 cn({
                   'border-rose-600 dark:border-rose-400': !!errorMessage,
-                  'bg-gray-100 hover:cursor-not-allowed': isDisabled
+                  'bg-gray-100 placeholder:text-gray-200 hover:cursor-not-allowed dark:bg-white/15 dark:placeholder:text-white/10':
+                    isDisabled
                 })
               )}
             />

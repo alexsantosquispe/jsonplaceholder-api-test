@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { EndpointTitle } from './EndpointTitle';
+import { Wrapper } from '../../../utils/stories-utils';
 
 const meta = {
   title: 'Atoms/EndpointTitle',
@@ -12,11 +13,14 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof EndpointTitle>;
 
-export const Default: Story = {
-  args: {
-    methodLabel: 'GET',
-    label: 'Posts'
-  }
+export const Default: Story = () => {
+  return (
+    <Wrapper>
+      <EndpointTitle methodLabel="GET" label="Posts" />
+    </Wrapper>
+  );
 };
+
+Default.args = {};

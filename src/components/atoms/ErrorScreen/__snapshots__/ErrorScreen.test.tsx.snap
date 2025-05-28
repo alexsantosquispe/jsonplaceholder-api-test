@@ -6,7 +6,7 @@ exports[`ErrorScreen should render the component correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="-mt-[4rem] flex w-full items-center justify-center px-4"
+        class="flex w-full items-center justify-center px-4"
       >
         <div
           class="flex flex-col items-center justify-center gap-y-4 rounded-xl border border-gray-200 p-8 shadow-xs md:p-40 dark:border-white/10"
@@ -36,7 +36,7 @@ exports[`ErrorScreen should render the component correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="-mt-[4rem] flex w-full items-center justify-center px-4"
+      class="flex w-full items-center justify-center px-4"
     >
       <div
         class="flex flex-col items-center justify-center gap-y-4 rounded-xl border border-gray-200 p-8 shadow-xs md:p-40 dark:border-white/10"
