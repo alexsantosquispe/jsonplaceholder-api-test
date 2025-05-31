@@ -11,6 +11,7 @@
   --font-poppins: 'Poppins', sans-serif;
   --color-primary: #171717;
   --color-accent: var(--color-blue-600);
+  --color-accent-dark: var(--color-orange-500);
 }
 
 body {

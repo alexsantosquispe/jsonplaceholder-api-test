@@ -6,7 +6,7 @@ exports[`Navbar should render the component correctly 1`] = `
   "baseElement": <body>
     <div>
       <header
-        class="fixed z-40 flex w-full justify-center border-b border-dashed border-gray-200 bg-white md:h-14 md:bg-white/70 md:backdrop-blur-sm dark:border-white/15 dark:bg-black/95 md:dark:bg-black/50"
+        class="fixed z-40 flex w-full justify-center border-b border-dashed border-gray-200 bg-white/70 backdrop-blur-sm md:h-14 dark:border-white/15 dark:bg-black/50"
       >
         <nav
           class="flex w-full max-w-[80rem] flex-col items-center justify-between md:flex-row md:border-x md:border-dashed md:border-gray-200 md:px-6 md:dark:border-white/15"
@@ -24,13 +24,13 @@ exports[`Navbar should render the component correctly 1`] = `
                   class="font-extrabold"
                 >
                   <span
-                    class="text-accent dark:text-orange-500"
+                    class="text-accent dark:text-accent-dark"
                   >
                     { 
                   </span>
                   JSON
                   <span
-                    class="text-accent dark:text-orange-500"
+                    class="text-accent dark:text-accent-dark"
                   >
                      }
                   </span>
@@ -40,7 +40,7 @@ exports[`Navbar should render the component correctly 1`] = `
                      Placeholder
                   </span>
                   <span
-                    class="text-accent text-4xl leading-2 dark:text-orange-500"
+                    class="text-accent dark:text-accent-dark text-4xl leading-2"
                   >
                     .
                   </span>
@@ -90,7 +90,7 @@ exports[`Navbar should render the component correctly 1`] = `
   </body>,
   "container": <div>
     <header
-      class="fixed z-40 flex w-full justify-center border-b border-dashed border-gray-200 bg-white md:h-14 md:bg-white/70 md:backdrop-blur-sm dark:border-white/15 dark:bg-black/95 md:dark:bg-black/50"
+      class="fixed z-40 flex w-full justify-center border-b border-dashed border-gray-200 bg-white/70 backdrop-blur-sm md:h-14 dark:border-white/15 dark:bg-black/50"
     >
       <nav
         class="flex w-full max-w-[80rem] flex-col items-center justify-between md:flex-row md:border-x md:border-dashed md:border-gray-200 md:px-6 md:dark:border-white/15"
@@ -108,13 +108,13 @@ exports[`Navbar should render the component correctly 1`] = `
                 class="font-extrabold"
               >
                 <span
-                  class="text-accent dark:text-orange-500"
+                  class="text-accent dark:text-accent-dark"
                 >
                   { 
                 </span>
                 JSON
                 <span
-                  class="text-accent dark:text-orange-500"
+                  class="text-accent dark:text-accent-dark"
                 >
                    }
                 </span>
@@ -124,7 +124,7 @@ exports[`Navbar should render the component correctly 1`] = `
                    Placeholder
                 </span>
                 <span
-                  class="text-accent text-4xl leading-2 dark:text-orange-500"
+                  class="text-accent dark:text-accent-dark text-4xl leading-2"
                 >
                   .
                 </span>
