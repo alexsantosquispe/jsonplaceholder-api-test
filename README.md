@@ -1,3 +1,5 @@
+[![CI Pipeline](https://github.com/alexsantosquispe/jsonplaceholder-api-test/actions/workflows/github_ci.yml/badge.svg)](https://github.com/alexsantosquispe/jsonplaceholder-api-test/actions/workflows/github_ci.yml)
+
 # JSONPlaceholder API Test
 
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
