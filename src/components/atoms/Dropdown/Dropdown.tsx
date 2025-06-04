@@ -14,6 +14,7 @@ interface DropdownProps {
   verticalAlignment?: 'top' | 'bottom';
   horizontalAlignment?: 'left' | 'right';
   className?: string;
+  ariaLabel?: string;
 }
 
 export const Dropdown = ({
@@ -22,7 +23,8 @@ export const Dropdown = ({
   onSelect,
   verticalAlignment = 'bottom',
   horizontalAlignment = 'left',
-  className
+  className,
+  ariaLabel
 }: DropdownProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -47,6 +49,7 @@ export const Dropdown = ({
           icon={<ChevronDownIcon className="size-4" />}
           className="w-fit flex-row-reverse items-center gap-x-4 self-end py-[0.375rem]"
           isSecondary
+          ariaLabel={ariaLabel}
         />
         {isMenuOpen && (
           <div

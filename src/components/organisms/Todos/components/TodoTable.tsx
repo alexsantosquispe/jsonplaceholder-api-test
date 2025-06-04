@@ -68,6 +68,7 @@ export const TodoTable = ({
                         })
                       )}
                       icon={<ChevronUpDownIcon className="size-4" />}
+                      ariaLabel={`Short button by ${label}`}
                     />
                   ) : (
                     label

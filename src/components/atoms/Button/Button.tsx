@@ -10,6 +10,7 @@ export interface ButtonProps {
   isSecondary?: boolean;
   isDisabled?: boolean;
   className?: string;
+  ariaLabel?: string;
 }
 
 export const Button = ({
@@ -19,12 +20,14 @@ export const Button = ({
   icon = null,
   isDisabled = false,
   isSecondary = false,
-  className = ''
+  className = '',
+  ariaLabel
 }: ButtonProps) => {
   return (
     <button
       role="button"
       aria-disabled={isDisabled}
+      aria-label={ariaLabel}
       className={twMerge(
         'flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out',
         cn({

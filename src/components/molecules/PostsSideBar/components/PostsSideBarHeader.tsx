@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react';
+import { Suspense, lazy, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { PlusCircleIcon } from '../../../../icons';
@@ -37,6 +37,7 @@ export const PostsSideBarHeader = ({ className }: { className?: string }) => {
           type="button"
           onClick={openModal}
           icon={<PlusCircleIcon className="size-4" />}
+          ariaLabel="New post button"
         />
       </div>
       {isPostModalOpen && (

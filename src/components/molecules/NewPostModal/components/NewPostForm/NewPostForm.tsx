@@ -80,6 +80,7 @@ export const NewPostForm = ({ isLoading, onCreatePost }: NewPostFormProps) => {
         label="Create Post"
         type="submit"
         className="mt-2 w-fit self-end"
+        ariaLabel="Create post button"
       />
     </form>
   );
