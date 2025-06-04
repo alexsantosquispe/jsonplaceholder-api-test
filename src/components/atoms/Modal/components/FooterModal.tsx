@@ -21,6 +21,7 @@ export const FooterModal = ({
           label={cancelLabel || 'Cancel'}
           onClick={onCancel}
           isSecondary
+          ariaLabel="Cancel button modal"
         />
       )}
       {onAccept && (
@@ -28,6 +29,7 @@ export const FooterModal = ({
           label={acceptLabel || 'Accept'}
           onClick={onAccept}
           type="submit"
+          ariaLabel="Accept button modal"
         />
       )}
     </div>

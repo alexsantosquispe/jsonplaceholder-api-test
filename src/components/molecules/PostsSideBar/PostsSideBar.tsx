@@ -44,6 +44,7 @@ export const PostsSideBar = ({
             onClick={showMore}
             isSecondary
             className="border-0 shadow-none"
+            ariaLabel="show more posts flat button"
           />
         )}
       </aside>

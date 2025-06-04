@@ -55,6 +55,7 @@ export const Pagination = ({
             isSecondary
             isDisabled={isFirstPage}
             className="py-[0.375rem]"
+            ariaLabel="Previous page"
           />
           <Button
             icon={<ChevronRightIcon className="size-4" />}
@@ -62,6 +63,7 @@ export const Pagination = ({
             isSecondary
             isDisabled={isLastPage}
             className="py-[0.375rem]"
+            ariaLabel="Next page"
           />
         </div>
       </div>
