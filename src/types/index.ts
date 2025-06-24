@@ -19,3 +19,12 @@ export type TextAreaProps = Omit<InputProps, 'type'> & {
   rows?: number;
   cols?: number;
 };
+
+export const METHODS = {
+  GET: 'GET',
+  POST: 'POST',
+  PUT: 'PUT',
+  DELETE: 'DELETE'
+} as const;
+
+export type MethodsTypes = (typeof METHODS)[keyof typeof METHODS];

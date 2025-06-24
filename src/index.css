@@ -12,6 +12,8 @@
   --color-primary: #171717;
   --color-accent: var(--color-blue-600);
   --color-accent-dark: var(--color-orange-500);
+  --pattern-fg: var(--color-gray-100);
+  --pattern-fg-dark: #ffffff15;
 }
 
 body {

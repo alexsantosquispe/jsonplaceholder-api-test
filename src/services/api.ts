@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-import { PAGE_SIZES, SORT_BY_NAME } from './../constants';
 import {
+  CreatePostArgs,
+  GetTodosArgs,
+  Option,
   Post,
   PostComment,
-  Todo,
-  User,
-  Option,
-  CreatePostArgs,
   PostResponse,
+  Todo,
   TodoResponse,
-  GetTodosArgs
+  User
 } from './api.types';
 import { LAST_PAGE_NUMBER, ORDER_ASC } from '../constants';
+import { PAGE_SIZES, SORT_BY_NAME } from './../constants';
 
 export const apiClient = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com', //import.meta.env.VITE_API_URL,
@@ -79,6 +79,7 @@ export const getTodos = async ({
   };
 };
 
+//TODO: This endpoint is not used anymore, but it will be need it for the next features
 export const getTodosByUserId = async (userId: number): Promise<Todo[]> => {
   const response = await apiClient.get<Todo[]>(`/users/${userId}/todos`);
   return response.data;

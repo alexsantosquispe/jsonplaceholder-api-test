@@ -11,38 +11,6 @@ exports[`Button Styles should render the component correctly for primary type 1`
         role="button"
         type="button"
       >
-        <span
-          class="size-4"
-        >
-          <svg
-            class="size-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </span>
-        Primary button
-      </button>
-    </div>
-  </body>,
-  "container": <div>
-    <button
-      aria-disabled="false"
-      class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90 hover:bg-primary/80 dark:hover:bg-white/80"
-      role="button"
-      type="button"
-    >
-      <span
-        class="size-4"
-      >
         <svg
           class="size-6"
           fill="none"
@@ -57,7 +25,31 @@ exports[`Button Styles should render the component correctly for primary type 1`
             stroke-linejoin="round"
           />
         </svg>
-      </span>
+        Primary button
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      aria-disabled="false"
+      class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out bg-primary dark:text-primary text-white shadow-xs dark:bg-white/90 hover:bg-primary/80 dark:hover:bg-white/80"
+      role="button"
+      type="button"
+    >
+      <svg
+        class="size-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
       Primary button
     </button>
   </div>,
@@ -126,38 +118,6 @@ exports[`Button Styles should render the component correctly for secondary type 
         role="button"
         type="button"
       >
-        <span
-          class="size-4"
-        >
-          <svg
-            class="size-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </span>
-        Secondary button
-      </button>
-    </div>
-  </body>,
-  "container": <div>
-    <button
-      aria-disabled="false"
-      class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out text-primary/80 hover:text-primary border border-black/10 bg-transparent shadow-xs hover:bg-gray-100 dark:border-white/15 dark:text-white dark:hover:bg-white/15"
-      role="button"
-      type="button"
-    >
-      <span
-        class="size-4"
-      >
         <svg
           class="size-6"
           fill="none"
@@ -172,7 +132,31 @@ exports[`Button Styles should render the component correctly for secondary type 
             stroke-linejoin="round"
           />
         </svg>
-      </span>
+        Secondary button
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      aria-disabled="false"
+      class="flex cursor-pointer items-center justify-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-150 ease-in-out text-primary/80 hover:text-primary border border-black/10 bg-transparent shadow-xs hover:bg-gray-100 dark:border-white/15 dark:text-white dark:hover:bg-white/15"
+      role="button"
+      type="button"
+    >
+      <svg
+        class="size-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
       Secondary button
     </button>
   </div>,

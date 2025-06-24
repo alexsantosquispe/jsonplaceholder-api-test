@@ -16,6 +16,7 @@ import { InfoIcon } from './InfoIcon';
 import { MenuIcon } from './MenuIcon';
 import { MoonIcon } from './MoonIcon';
 import { PlusCircleIcon } from './PlusCircleIcon';
+import { PlusIcon } from './PlusIcon';
 import { SunIcon } from './SunIcon';
 
 export {
@@ -36,6 +37,7 @@ export {
   MenuIcon,
   MoonIcon,
   PlusCircleIcon,
+  PlusIcon,
   SunIcon,
   ChevronUpDownIcon
 };
