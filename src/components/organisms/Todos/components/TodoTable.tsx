@@ -21,7 +21,7 @@ interface TodoTableProps {
 
 const renderCompletedStatus = (completed: boolean) => {
   return (
-    <div className="flex items-center gap-2 rounded-md border border-gray-200 px-1 py-0.5 text-[0.8125rem] dark:border-white/10">
+    <div className="flex items-center gap-2 rounded-md border border-gray-200 px-2 py-0.5 text-xs dark:border-white/10">
       {completed ? (
         <>
           <CheckCircleIcon className="size-4 text-green-600 dark:text-emerald-500" />
