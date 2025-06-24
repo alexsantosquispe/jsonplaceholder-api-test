@@ -3,18 +3,18 @@
 exports[`EndpointTitle Styles should match snapshot 1`] = `
 <div>
   <div
-    class="flex gap-4"
+    class="flex gap-x-2 rounded border border-gray-200 bg-gray-50 p-1 text-xs md:text-sm dark:border-white/10 dark:bg-white/10"
   >
-    <span
-      class="rounded-sm bg-green-100 px-2 py-1 text-base font-normal text-green-800 uppercase dark:bg-green-950 dark:text-green-400"
+    <code
+      class="min-w-[4rem] rounded-xs px-2 py-0.5 text-center uppercase bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-400"
     >
       GET
-    </span>
-    <h1
-      class="text-primary text-2xl font-bold dark:text-white/80"
+    </code>
+    <code
+      class="text-primary font-bold dark:text-white/80"
     >
-      Posts
-    </h1>
+      /Posts
+    </code>
   </div>
 </div>
 `;

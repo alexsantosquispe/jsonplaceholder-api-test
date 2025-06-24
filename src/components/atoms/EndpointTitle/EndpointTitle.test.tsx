@@ -15,7 +15,7 @@ describe('EndpointTitle', () => {
       render(<EndpointTitle methodLabel="GET" label="Posts" />);
 
       expect(screen.getByText('GET')).toBeInTheDocument();
-      expect(screen.getByText('Posts')).toBeInTheDocument();
+      expect(screen.getByText('/Posts')).toBeInTheDocument();
     });
   });
 });

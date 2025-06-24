@@ -10,7 +10,7 @@ export const Container = ({ children, className }: WrapperProps) => {
   return (
     <div
       className={twMerge(
-        'text-primary/90 rounded-lg md:border md:border-gray-200 md:px-6 md:shadow-xs dark:text-white/80 md:dark:border-white/10',
+        'text-primary/90 rounded-lg border-gray-200 bg-white md:px-6 dark:border-white/10 dark:bg-black/95 dark:text-white/80',
         className
       )}
     >

@@ -3,7 +3,6 @@ import { twMerge } from 'tailwind-merge';
 
 import { PlusCircleIcon } from '../../../../icons';
 import { Button } from '../../../atoms/Button/Button';
-import { EndpointTitle } from '../../../atoms/EndpointTitle/EndpointTitle';
 
 const NewPostModal = lazy(() =>
   import('../../NewPostModal/NewPostModal').then((module) => ({
@@ -31,7 +30,9 @@ export const PostsSideBarHeader = ({ className }: { className?: string }) => {
           className
         )}
       >
-        <EndpointTitle label="POSTS" />
+        <h2 className="text-primary text-2xl font-bold dark:text-white/80">
+          POSTS
+        </h2>
         <Button
           label="New Post"
           type="button"

@@ -19,18 +19,23 @@ interface TodoTableProps {
   onSortByColumn: (column: SortByType | null) => void;
 }
 
-const renderCompletedStatus = (completed: boolean) =>
-  completed ? (
-    <>
-      <CheckCircleIcon className="size-5 text-green-600 dark:text-emerald-500" />
-      Done
-    </>
-  ) : (
-    <>
-      <ClockIcon className="size-5 text-neutral-500 dark:text-white/90" />
-      Pending
-    </>
+const renderCompletedStatus = (completed: boolean) => {
+  return (
+    <div className="flex items-center gap-2 rounded-md border border-gray-200 px-1 py-0.5 text-[0.8125rem] dark:border-white/10">
+      {completed ? (
+        <>
+          <CheckCircleIcon className="size-4 text-green-600 dark:text-emerald-500" />
+          Done
+        </>
+      ) : (
+        <>
+          <ClockIcon className="size-4 text-neutral-500 dark:text-white/90" />
+          Pending
+        </>
+      )}
+    </div>
   );
+};
 
 export const TodoTable = ({
   todos,

@@ -47,7 +47,7 @@ export const Button = ({
       type={type}
       onClick={onClick}
     >
-      {icon && <span className="size-4">{icon}</span>}
+      {icon && icon}
       {label && label}
     </button>
   );
