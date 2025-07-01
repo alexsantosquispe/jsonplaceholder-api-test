@@ -38,69 +38,6 @@ This project is a modern, scalable example of working with remote APIs using **R
 
 ---
 
-## ✨ Key Highlights
-
-### ⚙️ Data Fetching & API Integration
-
-- Uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/) for mock REST API.
-- API requests handled by a custom-configured **Axios** instance.
-- Efficient server state management via **React Query**.
-- Graceful error and loading state handling.
-
-### 💻 Developer Experience
-
-- Fast dev environment with **Vite**.
-- Component documentation and UI testing with **Storybook**.
-- Unit and integration testing using **Jest** and **React Testing Library**.
-- Fully responsive UI built with **Tailwind CSS**.
-
-### 🧼 Code Quality
-
-- **TypeScript** for static typing and safer code.
-- **Prettier** for consistent formatting.
-- **ESLint** with custom rules for code hygiene.
-- **Husky** hooks for pre-commit/push checks:
-
-  - Linting
-  - Type checks
-  - Tests
-  - Auto-formatting
-
-### 🧱 Architecture
-
-- Follows **Atomic Design** for component hierarchy.
-- Modular and maintainable codebase.
-- Uses **custom hooks** for reusable logic.
-- Context-based state management (e.g., theme).
-
----
-
-## 🚀 Technologies
-
-- Vite
-- React
-- TypeScript
-- Axios
-- React Query
-- React Router
-- Tailwind CSS
-- Jest + React Testing Library
-- Storybook
-- ESLint + Prettier
-- Husky (Git hooks)
-
----
-
-## 📋 Features
-
-- API communication with error/loading state UI.
-- Light/dark mode toggle using Context API.
-- Reusable Axios setup.
-- Modular, component-based design.
-- Fully responsive UI.
-
----
-
 ## 🛠 Getting Started
 
 ### ✅ Prerequisites
@@ -123,6 +60,16 @@ npm run dev
 ```
 
 Visit `http://localhost:5173` to view the app.
+
+---
+
+## 📋 Features
+
+- API communication with error/loading state UI.
+- Light/dark mode toggle using Context API.
+- Reusable Axios setup.
+- Modular, component-based design.
+- Fully responsive UI.
 
 ---
 
@@ -152,6 +99,52 @@ Visit `http://localhost:5173` to view the app.
 │   ├── .eslintrc.cjs
 │   └── .prettierrc
 ```
+
+---
+
+## ✨ Key Highlights
+
+### 🧱 Architecture
+
+- Follows **Atomic Design** for component hierarchy.
+- Modular and maintainable codebase.
+- Uses **custom hooks** for reusable logic.
+- Context-based state management (e.g., theme).
+
+### ⚙️ Data Fetching & API Integration
+
+- Uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/) for mock REST API.
+- API requests handled by a custom-configured **Axios** instance.
+- Efficient server state management via **React Query**.
+- Graceful error and loading state handling.
+
+### 🧼 Code Quality
+
+- **TypeScript** for static typing and safer code.
+- **Prettier** for consistent formatting.
+- **ESLint** with custom rules for code hygiene.
+- **Husky** hooks for pre-commit/push checks:
+
+  - Linting
+  - Type checks
+  - Tests
+  - Auto-formatting
+
+---
+
+## 🚀 Technologies
+
+- Vite
+- React
+- TypeScript
+- Axios
+- React Query
+- React Router
+- Tailwind CSS
+- Jest + React Testing Library
+- Storybook
+- ESLint + Prettier
+- Husky (Git hooks)
 
 ---
 
