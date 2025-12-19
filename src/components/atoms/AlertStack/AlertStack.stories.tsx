@@ -1,7 +1,7 @@
+import { ThemeProvider } from '@aes/use-theme-hook';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ALERT_TYPES } from '../../../constants';
-import { ThemeProvider } from '../../../contexts/ThemeProvider';
 import { useAlert } from '../../../hooks/useAlert';
 import { Wrapper } from '../../../utils/stories-utils';
 import { AlertProviderWrapper } from '../../../utils/test-utils';
