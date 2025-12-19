@@ -1,5 +1,6 @@
+import { THEME_TYPES, type ThemeType } from '@aes/use-theme-hook';
+
 import { DIGITS_LENGTH, THEME_KEY } from '../constants';
-import { Theme, ThemeType } from '../contexts/ThemeContext';
 
 export const getLSValue = (key: string) => localStorage.getItem(key);
 
@@ -7,20 +8,20 @@ export const setLSValue = (key: string, value: string | number | boolean) =>
   localStorage.setItem(key, String(value));
 
 export const getSystemTheme = (): ThemeType => {
-  if (typeof window === 'undefined') return Theme.light;
+  if (typeof window === 'undefined') return THEME_TYPES.LIGHT;
 
   return window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? Theme.dark
-    : Theme.light;
+    ? THEME_TYPES.DARK
+    : THEME_TYPES.LIGHT;
 };
 
 export const applyThemeToDocument = (theme: ThemeType) => {
   const root = window.document.documentElement;
 
-  if (theme === Theme.dark) {
-    root.classList.add(Theme.dark);
+  if (theme === THEME_TYPES.DARK) {
+    root.classList.add(THEME_TYPES.DARK);
   } else {
-    root.classList.remove(Theme.dark);
+    root.classList.remove(THEME_TYPES.DARK);
   }
 };
 

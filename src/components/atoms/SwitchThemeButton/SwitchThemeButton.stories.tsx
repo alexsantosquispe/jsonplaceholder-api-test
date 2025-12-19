@@ -1,7 +1,7 @@
+import { ThemeProvider } from '@aes/use-theme-hook';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SwitchThemeButton } from './SwitchThemeButton';
-import { ThemeProvider } from '../../../contexts/ThemeProvider';
 import { EndpointTitle } from '../EndpointTitle/EndpointTitle';
 
 const meta: Meta<typeof SwitchThemeButton> = {
