@@ -1,4 +1,4 @@
-import { THEME_TYPES, type ThemeType } from '@aes/use-theme-hook';
+import { THEME_TYPES, type ThemeType } from '@alexsantosquispe/use-theme-hook';
 
 import { DIGITS_LENGTH, THEME_KEY } from '../constants';
 
