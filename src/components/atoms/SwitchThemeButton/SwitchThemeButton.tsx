@@ -1,4 +1,4 @@
-import { THEME_TYPES, useTheme } from '@aes/use-theme-hook';
+import { THEME_TYPES, useTheme } from '@alexsantosquispe/use-theme-hook';
 import { memo } from 'react';
 import { twMerge } from 'tailwind-merge';
 

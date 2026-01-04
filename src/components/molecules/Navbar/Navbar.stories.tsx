@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@aes/use-theme-hook';
+import { ThemeProvider } from '@alexsantosquispe/use-theme-hook';
 import { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 

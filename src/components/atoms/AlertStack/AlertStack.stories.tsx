@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@aes/use-theme-hook';
+import { ThemeProvider } from '@alexsantosquispe/use-theme-hook';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ALERT_TYPES } from '../../../constants';

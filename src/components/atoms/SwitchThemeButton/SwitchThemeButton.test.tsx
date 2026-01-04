@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@aes/use-theme-hook';
+import { ThemeProvider } from '@alexsantosquispe/use-theme-hook';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import { SwitchThemeButton } from './SwitchThemeButton';

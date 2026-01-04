@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@aes/use-theme-hook';
+import { ThemeProvider } from '@alexsantosquispe/use-theme-hook';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SwitchThemeButton } from './SwitchThemeButton';

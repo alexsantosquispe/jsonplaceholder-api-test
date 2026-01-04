@@ -9,16 +9,18 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
     "test": "jest",
     "test:coverage": "npm test -- --watchAll=false --coverage",
     "test:update": "jest --updateSnapshot",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@aes/use-theme-hook": "file:aes-use-theme-hook-1.0.1-beta.1.tgz",
+    "@alexsantosquispe/use-theme-hook": "1.0.3",
     "@hookform/resolvers": "^5.0.1",
     "@tailwindcss/vite": "^4.1.5",
     "@tanstack/react-query": "^5.74.4",
